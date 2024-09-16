@@ -10,6 +10,10 @@ import {
 } from "@/components/ui/carousel";
 import { Card ,CardContent} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
+import Autoplay from "embla-carousel-autoplay"
+import ImageCarousel from './components/carousel';
+
 export default function Home () {
   return (
    
@@ -18,24 +22,7 @@ export default function Home () {
      <div className='col-start-3 col-span-8'> <Nav/></div> 
       <div></div>
       <div className='col-start-2 col-end-12'>
-      <Carousel >
-      <CarouselContent >
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex items-center justify-center h-screen">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-    
-      </CarouselContent>
-      <CarouselPrevious  className='w-14 h-14'/>
-      <CarouselNext className='w-14 h-14' />
-    </Carousel>
+      <ImageCarousel/>
     </div>
     <div className='col-start-2 col-end-12'></div>
     </div>

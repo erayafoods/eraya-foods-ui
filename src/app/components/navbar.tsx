@@ -47,7 +47,7 @@ import {
 
        { /* Mobile component  */}
       
-
+       
       </Navbar>
     );
   }
