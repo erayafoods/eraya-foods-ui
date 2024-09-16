@@ -15,10 +15,10 @@ import '../globals.css'
 export default function ImageCarousel(){
     return (<Carousel  plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 3000,
         }),
       ]} >
-      <CarouselContent >
+      <CarouselContent  >
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
