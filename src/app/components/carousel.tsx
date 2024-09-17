@@ -32,7 +32,7 @@ export default function ImageCarousel(){
         ))}
     
       </CarouselContent>
-      <CarouselPrevious  className='w-14 h-14'/>
-      <CarouselNext className='w-14 h-14' />
+      <CarouselPrevious  className='w-20 h-20 left-4'/>
+      <CarouselNext className='w-20 h-20 right-4' />
     </Carousel>);
 };

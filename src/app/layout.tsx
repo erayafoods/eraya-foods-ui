@@ -5,6 +5,7 @@ export const metadata = {
 import Nav from "./components/navbar"
 import Footer from "./components/footer"
 import { Navbar } from "@nextui-org/navbar"
+import './globals.css'
 export default function RootLayout({
   children,
 }: {
@@ -13,10 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
      
-      <body>
+      <body className="flex flex-col min-h-screen">
         <Nav/>
         {children}
-        <Footer/>
+       <div className="mt-auto"><Footer /></div> 
         </body>
     </html>
   )
