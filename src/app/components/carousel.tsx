@@ -17,6 +17,7 @@ export default function ImageCarousel(){
         Autoplay({
           delay: 3000,
         }),
+        
       ]} >
       <CarouselContent  >
         {Array.from({ length: 5 }).map((_, index) => (

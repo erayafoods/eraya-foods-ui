@@ -5,27 +5,12 @@ export default function Footer(){
  
 
     const footerNavs = [
-        {
-            label: "Company",
-            items: [
-                {
-                    href: 'javascript:void()',
-                    name: 'Partners'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Blog'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Team'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Careers'
-                },
-            ],
-        },
+        
+         {
+          label:"",
+          items:[],
+         },
+
         {
             label: "Resources",
             items: [
@@ -130,7 +115,7 @@ export default function Footer(){
             </div>
             <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
                 <div className="mt-4 sm:mt-0">
-                    &copy; 2022 Eraya Foods All rights reserved.
+                    &copy; {(new Date().getFullYear())} Eraya Foods All rights reserved.
                 </div>
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">
@@ -166,7 +151,7 @@ export default function Footer(){
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> 
             </div>
             <style jsx>{`
                 .svg-icon path,
