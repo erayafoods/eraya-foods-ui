@@ -43,14 +43,14 @@ import {
           <NavbarItem isActive={currentPath=='/'}>
             <Link color='foreground' href='/' >Home</Link>
           </NavbarItem>
-          <NavbarItem isActive={currentPath=='/products'}>
-            <Link color='foreground' href='/products' >
-              Products
-            </Link>
-          </NavbarItem>
           <NavbarItem isActive={currentPath=='/about'}>
             <Link color='foreground' href='/about' >
               About us
+            </Link>
+          </NavbarItem>
+          <NavbarItem isActive={currentPath=='/products'}>
+            <Link color='foreground' href='/products' >
+              Products
             </Link>
           </NavbarItem>
           <NavbarItem isActive={currentPath=='/contact'}>
