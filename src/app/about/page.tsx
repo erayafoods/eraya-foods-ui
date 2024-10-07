@@ -20,10 +20,9 @@ export default function about () {
 
       <div>
         <h2 className='py-10 font-semibold font-mono text-center text-3xl'>
-          {' '}
           WHO ARE WE
         </h2>
-        <div className='px-10 md:px-28'>
+        <div className='px-8 lg:px-28 md:px-16 '>
           Since 2016, we have proudly embraced the rich heritage of Bihar, the
           birthplace of our exceptional foxnuts. We are honored to extend our
           family legacy of domestic trade into the international market,
@@ -34,8 +33,8 @@ export default function about () {
         <h2 className='md:py-10 font-semibold font-sans text-center text-3xl '>
           Our Commitment to Quality
         </h2>
-        <div className='grid grid-rows-3 bg-[#F7FCFE]'>
-          <div className='grid grid-cols-12 gap-1'>
+        <div className='hidden md:grid md:grid-rows-3 md:bg-[#F7FCFE]'>
+          <div className='grid grid-cols-12 gap-1 px-8 lg:px-28 md:px-16'>
             <Image
               src={handpick}
               width={500}
@@ -92,6 +91,25 @@ export default function about () {
           </div>
         </div>
       </div>
+      <div className='grid grid-rows-2 md:gap-20  md:py-10 gap-8 py-4 px-8 lg:px-28 md:px-16'>
+        <div className=''><div className='font-extrabold'>Mission</div>
+        Our mission is to be a trusted partner, delivering high-quality, pure foxnuts that surpass expectations. We prioritize sustainability, ensuring eco-friendly practices that benefit both the environment and our farmers. With a focus on hygiene and excellence, we provide products that are safe and delightful. Our goal is to foster strong relationships with importers and buyers through mutual respect, offering cost-effective solutions and timely support. Inspired by  <div className='font-semibold'>Vasudhaiva Kutumbakam—the world as one family </div> We aim to unite global communities through our commitment to quality and shared values.
+        </div>
+        <div className=''><div className='font-extrabold'>Vision</div>
+        Our vision is to make premium-quality foxnuts a staple in every home, promoting a healthier lifestyle. We aim to position our foxnuts as a go-to superfood, providing a nutritious alternative to unhealthy snacks for diabetics, pregnant women, and children. As part of a global initiative for well-being, we envision a future where nations collaborate for health and sustainability. Honoring our farmers' dedication, we are committed to their success and recognition, ensuring our values of quality and sustainability remain the foundation of our brand
+       </div>
+       </div>
+       <h3 className='md:pt-32 font-semibold font-sans px-8 lg:px-28 md:px-16 pt-6 text-2xl'>
+          Certificates & Recognitions
+        </h3>
+       <div className='grid grid-cols-12 gap:10 px-8 lg:px-28 md:px-16'>
+        <div className='col-start-2 col-span-2'>A</div>
+        <div className='col-start-4 col-span-2'>B</div>
+        <div className='col-start-6 col-span-2'>C</div>
+        <div className='col-start-8 col-span-2'>D</div>
+       </div>
+       
+
     </>
   )
 }

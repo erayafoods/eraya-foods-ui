@@ -85,7 +85,7 @@ export default function Footer(){
                         </div>
                     </form>
                 </div>
-                <div className="flex-1 mt-10 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0">
+                <div className="md:flex-1 md:mt-10 md:space-y-6 md:items-center md:justify-between sm:flex md:space-y-0 md:mt-0">
                     {
                         footerNavs.map((item, idx) => (
                             <ul
