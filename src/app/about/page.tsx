@@ -1,10 +1,10 @@
 import { CardContent, CardTitle } from '@/components/ui/card'
 import '../globals.css'
 import { Card, CardBody, CardHeader, CardFooter } from '@nextui-org/react'
-import aboutPic from '../images/about-bg-image.jpeg'
-import network from '../images/network.jpeg'
-import artisans from '../images/artisans.jpeg'
-import handpick from '../images/handpick.jpg'
+import aboutPic from '../../public/about-bg-image.jpeg'
+import network from '../../public/network.jpeg'
+import artisans from '../../public/artisans.jpeg'
+import handpick from '../../public/handpick.jpg'
 import Image from 'next/image'
 
 export default function about () {
@@ -15,7 +15,7 @@ export default function about () {
       </h2>
 
       <div className='h-[600px]'>
-        <Image src={aboutPic}  className='w-full h-5/6' alt='aboutPic'></Image>
+        <Image src={aboutPic} className='w-full h-5/6' alt='aboutPic'></Image>
       </div>
 
       <div>
@@ -95,24 +95,43 @@ export default function about () {
         </div>
       </div>
       <div className='grid grid-rows-2 md:gap-20  md:py-10 gap-8 py-4 px-8 lg:px-28 md:px-16'>
-        <div className=''><div className='font-extrabold'>Mission</div>
-        Our mission is to be a trusted partner, delivering high-quality, pure foxnuts that surpass expectations. We prioritize sustainability, ensuring eco-friendly practices that benefit both the environment and our farmers. With a focus on hygiene and excellence, we provide products that are safe and delightful. Our goal is to foster strong relationships with importers and buyers through mutual respect, offering cost-effective solutions and timely support. Inspired by  <div className='font-semibold'>Vasudhaiva Kutumbakam—the world as one family </div> We aim to unite global communities through our commitment to quality and shared values.
+        <div className=''>
+          <div className='font-extrabold'>Mission</div>
+          Our mission is to be a trusted partner, delivering high-quality, pure
+          foxnuts that surpass expectations. We prioritize sustainability,
+          ensuring eco-friendly practices that benefit both the environment and
+          our farmers. With a focus on hygiene and excellence, we provide
+          products that are safe and delightful. Our goal is to foster strong
+          relationships with importers and buyers through mutual respect,
+          offering cost-effective solutions and timely support. Inspired by{' '}
+          <div className='font-semibold'>
+            Vasudhaiva Kutumbakam—the world as one family{' '}
+          </div>{' '}
+          We aim to unite global communities through our commitment to quality
+          and shared values.
         </div>
-        <div className=''><div className='font-extrabold'>Vision</div>
-        Our vision is to make premium-quality foxnuts a staple in every home, promoting a healthier lifestyle. We aim to position our foxnuts as a go-to superfood, providing a nutritious alternative to unhealthy snacks for diabetics, pregnant women, and children. As part of a global initiative for well-being, we envision a future where nations collaborate for health and sustainability. Honoring our farmers' dedication, we are committed to their success and recognition, ensuring our values of quality and sustainability remain the foundation of our brand
-       </div>
-       </div>
-       <h3 className='md:pt-32 font-semibold font-sans px-8 lg:px-28 md:px-16 pt-6 text-2xl'>
-          Certificates & Recognitions
-        </h3>
-       <div className='grid grid-cols-12 gap:10 px-8 lg:px-28 md:px-16'>
+        <div className=''>
+          <div className='font-extrabold'>Vision</div>
+          Our vision is to make premium-quality foxnuts a staple in every home,
+          promoting a healthier lifestyle. We aim to position our foxnuts as a
+          go-to superfood, providing a nutritious alternative to unhealthy
+          snacks for diabetics, pregnant women, and children. As part of a
+          global initiative for well-being, we envision a future where nations
+          collaborate for health and sustainability. Honoring our farmers'
+          dedication, we are committed to their success and recognition,
+          ensuring our values of quality and sustainability remain the
+          foundation of our brand
+        </div>
+      </div>
+      <h3 className='md:pt-32 font-semibold font-sans px-8 lg:px-28 md:px-16 pt-6 text-2xl'>
+        Certificates & Recognitions
+      </h3>
+      <div className='grid grid-cols-12 gap:10 px-8 lg:px-28 md:px-16'>
         <div className='col-start-2 col-span-2'>A</div>
         <div className='col-start-4 col-span-2'>B</div>
         <div className='col-start-6 col-span-2'>C</div>
         <div className='col-start-8 col-span-2'>D</div>
-       </div>
-       
-
+      </div>
     </>
   )
 }
