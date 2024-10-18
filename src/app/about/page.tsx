@@ -15,7 +15,7 @@ export default function about () {
       </h2>
 
       <div className='h-[600px]'>
-        <Image src={aboutPic}  className='w-full h-5/6'></Image>
+        <Image src={aboutPic}  className='w-full h-5/6' alt='aboutPic'></Image>
       </div>
 
       <div>
@@ -39,6 +39,7 @@ export default function about () {
               src={handpick}
               width={500}
               className='col-start-2 col-span-3 pt-36 rounded-lg'
+              alt='Handpick'
             ></Image>{' '}
             <div className='col-start-7 col-span-5 text-center pt-40'>
               Excellence is at the heart of our business. We are devoted to
@@ -70,6 +71,7 @@ export default function about () {
               src={network}
               width={500}
               className='col-start-9 col-span-3 pt-36 rounded-lg'
+              alt='network'
             ></Image>{' '}
           </div>
 
@@ -78,6 +80,7 @@ export default function about () {
               src={artisans}
               width={500}
               className='col-start-2 col-span-3 pt-36 rounded-lg '
+              alt='artisans'
             ></Image>{' '}
             <div className='col-start-7 col-span-5 text-center pt-40'>
               We understand that the quality of our foxnuts directly impacts
