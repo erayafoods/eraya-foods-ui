@@ -1,10 +1,7 @@
-
-
-export default function about() {
-    return (
-      <>
-   
-        <div>products wala section</div>
-      </>
-    )
-  }
+export default function about () {
+  return (
+    <>
+      <div>products wala section</div>
+    </>
+  )
+}
