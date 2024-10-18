@@ -8,9 +8,9 @@ import { Navbar } from "@nextui-org/navbar"
 import './globals.css'
 import Head from "next/head";
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode;
 }) {
   return (
     <html lang="en">
