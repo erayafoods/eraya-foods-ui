@@ -1,89 +1,103 @@
-'use client'
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem
-} from '@nextui-org/navbar'
-import Logo from '../../public/eraya.svg'
-import { Link } from '@nextui-org/react'
-import '../globals.css'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+"use client";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import eraya from "@/public/eraya1.webp";
+import { usePathname } from "next/navigation";
 
-export default function Nav () {
-  const currentPath = usePathname()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About us', href: '/about' },
-    { name: 'Products', href: '/products' },
-    { name: 'Contact us', href: '/contact' }
-  ]
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathName = usePathname();
+  console.log(pathName, "pathName");
+
+  // Here I'm adding a scroll event listener to check if the page has been scrolled down
+  useEffect(() => {
+    const handleScroll = () => {
+      // Checking if the page has been scrolled down by more than 50px (or adjust this value)
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Adding the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <Navbar className='sm:flex justify-evenly' onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent>
-        <NavbarBrand>
-          <Logo style={{ width: '50px', padding: '3px' }} />
-        </NavbarBrand>
-
-        {/*  Mobile Navbar menu Toggler  */}
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className='sm:hidden'
-        />
-      </NavbarContent>
-
-      {/* Desktop component  */}
-
-      <NavbarContent className='hidden sm:flex  gap-14 justify-end '>
-        <NavbarItem isActive={currentPath == '/'}>
-          <Link color='foreground' href='/'>
+    <nav
+      className={`fixed inset-x-0 top-0 z-20 transition-colors duration-300 ${
+        isScrolled ? "bg-white" : "bg-transparent"
+      }`}
+    >
+      <div className="wrapper flex items-center justify-between py-3 text-white">
+        <Link
+          href="/"
+          title="home page link"
+          className="flex h-10 w-10 items-center"
+        >
+          <Image
+            src={eraya}
+            alt="brand_logo"
+            title="brand logo"
+            className="h-full w-full"
+          />
+        </Link>
+        <div className="hidden items-center gap-x-5 md:flex">
+          <Link
+            href="/"
+            title="home"
+            className={`${
+              pathName === "/"
+                ? "text-primary"
+                : `${isScrolled ? "text-black" : "text-white"}`
+            }`}
+          >
             Home
           </Link>
-        </NavbarItem>
-        <NavbarItem isActive={currentPath == '/about'}>
-          <Link color='foreground' href='/about'>
-            About us
+          <Link
+            href="/about"
+            title="about us page"
+            className={`${
+              pathName === "/about"
+                ? "text-primary"
+                : `${isScrolled ? "text-black" : "text-white"}`
+            }`}
+          >
+            About Us
           </Link>
-        </NavbarItem>
-        <NavbarItem isActive={currentPath == '/products'}>
-          <Link color='foreground' href='/products'>
+          <Link
+            href="/products"
+            title="products page"
+            className={`${
+              pathName === "/products"
+                ? "text-primary"
+                : `${isScrolled ? "text-black" : "text-white"}`
+            }`}
+          >
             Products
           </Link>
-        </NavbarItem>
-        <NavbarItem isActive={currentPath == '/contact'}>
-          <Link color='foreground' href='/contact'>
-            Contact us
+          <Link
+            href="/contact"
+            title="contact us page"
+            className={`${
+              pathName === "/contact"
+                ? "text-primary"
+                : `${isScrolled ? "text-black" : "text-white"}`
+            }`}
+          >
+            Contact Us
           </Link>
-        </NavbarItem>
-      </NavbarContent>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-      {/* Mobile component Menu  */}
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item.name}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? 'primary'
-                  : index === menuItems.length - 1
-                  ? 'danger'
-                  : 'foreground'
-              }
-              className='w-full'
-              href={item.href}
-              size='lg'
-            >
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
-  )
-}
+export default Navbar;
