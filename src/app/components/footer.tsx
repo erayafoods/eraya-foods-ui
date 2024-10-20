@@ -1,6 +1,6 @@
 'use client'
 import '../globals.css'
-
+import Logo from '../../public/eraya.svg'
 export default function Footer () {
   const footerNavs = [
     {
@@ -13,19 +13,19 @@ export default function Footer () {
       items: [
         {
           href: '#',
-          name: 'contact'
+          name: 'Guidelines'
         },
         {
           href: '#',
-          name: 'Support'
+          name: 'Insights'
         },
         {
           href: '#',
-          name: 'Docs'
+          name: 'Specifications'
         },
         {
           href: '#',
-          name: 'Pricing'
+          name: 'Logistics'
         }
       ]
     },
@@ -53,18 +53,20 @@ export default function Footer () {
   ]
 
   return (
-    <footer className='text-gray-500 bg-white  px-4 py-5 max-w-screen-xl mx-auto md:px-8'>
-      <div className='gap-6 justify-between md:flex'>
+    <footer className='text-gray-500 bg-white  py-5 max-w-screen-xl mx-auto md:px-8'>
+      <div className=' justify-between md:flex'>
         <div className='flex-1'>
           <div className='max-w-xs'>
-            <img src='https://www.floatui.com/logo.svg' className='w-32' />
+            {/* <img src={Logo} className='w-32' /> */}
+            <Logo style={{ width: '70px', padding: '3px' }} />
             <p className='leading-relaxed mt-2 text-[15px]'>
-              Lorem Ipsum has been the industry standard dummy text ever since
-              the 1500s.
+              Crafting Premium Foxnut Experiences Since 2016.
             </p>
           </div>
           <form onSubmit={e => e.preventDefault()}>
-            <label className='block pt-4 pb-2'>Stay up to date</label>
+            <label className='block pt-4 pb-2'>
+              Get the Latest Insights and Updates on Premium Foxnuts
+            </label>
             <div className='max-w-sm flex items-center border rounded-md p-1'>
               <input
                 type='email'

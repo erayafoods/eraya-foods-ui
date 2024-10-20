@@ -18,16 +18,19 @@ import ImageCarousel from './components/carousel'
 export default function Home () {
   return (
     <>
-      {/* <div className='grid grid-cols-12 gap-2'>
-      <div></div>
-     <div className='col-start-3 col-span-8'> <Nav/></div> 
-      <div></div>
-      <div className='col-start-2 col-end-12'> */}
       <ImageCarousel />
-      {/* </div>
-    <div className='col-start-2 col-end-12'></div>
-    </div>
-   <Footer/> */}
+      {/*  cool text*/}
+      <div className='text-left font-sans p-12'>
+        Since 2016, Eraya Foods has been proudly delivering the finest premium
+        foxnuts, handpicked and meticulously crafted by skilled artisans in
+        India. Our unwavering commitment to quality is reflected in every
+        step—from sourcing the best raw materials to ensuring each nut is popped
+        with precision for a crisp, flavorful experience. We blend tradition
+        with innovation, bringing you a product that honors India's rich
+        heritage while meeting modern standards of excellence. Whether for
+        snacking or culinary use, our foxnuts offer unmatched taste, nutrition,
+        and purity. Experience the natural goodness of Eraya Foods in every bite
+      </div>
     </>
   )
 }

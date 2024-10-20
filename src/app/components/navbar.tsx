@@ -28,7 +28,7 @@ export default function Nav () {
     <Navbar className='sm:flex justify-evenly' onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarBrand>
-          <Logo style={{ width: '50px', padding: '3px' }} />
+          <Logo style={{ width: '70px', padding: '3px' }} />
         </NavbarBrand>
 
         {/*  Mobile Navbar menu Toggler  */}
