@@ -25,7 +25,7 @@ export default function Nav () {
   ]
 
   return (
-    <Navbar className='sm:flex justify-evenly' onMenuOpenChange={setIsMenuOpen}>
+    <Navbar className='sm:flex justify-around' onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarBrand>
           <Logo style={{ width: '70px', padding: '3px' }} />

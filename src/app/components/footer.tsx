@@ -33,19 +33,19 @@ export default function Footer () {
       label: 'Navigation',
       items: [
         {
-          href: '#',
+          href: '/about',
           name: 'About us'
         },
         {
-          href: '#',
+          href: '/products',
           name: 'Products'
         },
         {
-          href: '#',
+          href: '/contact',
           name: 'Contact us'
         },
         {
-          href: '#',
+          href: '/faqs',
           name: 'FAQs'
         }
       ]

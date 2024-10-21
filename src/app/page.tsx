@@ -43,7 +43,7 @@ export default function Home () {
             WHY CHOOSE US
           </h2>
 
-          <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
+          <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 '>
             Choose us for our unwavering commitment to quality, blending
             tradition with innovation to deliver premium products that are
             sourced responsibly and crafted with care, ensuring a natural,
@@ -51,7 +51,7 @@ export default function Home () {
           </p>
         </div>
 
-        <div className='mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3'>
+        <div className='mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 '>
           <div className='relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2'>
             <div className='flex h-[180px] flex-col justify-between rounded-md p-6'>
               {/* Image1 here  */}
