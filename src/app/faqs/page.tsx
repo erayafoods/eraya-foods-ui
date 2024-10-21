@@ -3,7 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { FaSearch, FaPlus, FaMinus } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
-
+interface FAQ {
+  id: number
+  question: string
+  answer: string
+}
 const FAQSection = () => {
   const [faqs, setFaqs] = useState([
     {
@@ -101,7 +105,7 @@ const FAQSection = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [expandAll, setExpandAll] = useState(false)
   const [activeItems, setActiveItems] = useState<number[]>([])
-  const [searchResults, setSearchResults] = useState([])
+  const [searchResults, setSearchResults] = useState<FAQ[]>([])
   const [error, setError] = useState('')
 
   const searchRef = useRef(null)
