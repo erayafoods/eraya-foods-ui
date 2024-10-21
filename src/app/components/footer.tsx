@@ -30,23 +30,23 @@ export default function Footer () {
       ]
     },
     {
-      label: 'About',
+      label: 'Navigation',
       items: [
         {
           href: '#',
-          name: 'Terms'
+          name: 'About us'
         },
         {
           href: '#',
-          name: 'License'
+          name: 'Products'
         },
         {
           href: '#',
-          name: 'Privacy'
+          name: 'Contact us'
         },
         {
           href: '#',
-          name: 'About US'
+          name: 'FAQs'
         }
       ]
     }
