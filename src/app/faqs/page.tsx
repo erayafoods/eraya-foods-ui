@@ -100,7 +100,7 @@ const FAQSection = () => {
 
   const [searchTerm, setSearchTerm] = useState('')
   const [expandAll, setExpandAll] = useState(false)
-  const [activeItems, setActiveItems] = useState([])
+  const [activeItems, setActiveItems] = useState<number[]>([])
   const [searchResults, setSearchResults] = useState([])
   const [error, setError] = useState('')
 
