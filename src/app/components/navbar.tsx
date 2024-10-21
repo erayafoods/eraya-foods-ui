@@ -40,24 +40,36 @@ export default function Nav () {
 
       {/* Desktop component  */}
 
-      <NavbarContent className='hidden sm:flex  gap-14 justify-end '>
+      <NavbarContent className='hidden sm:flex  gap-14 justify-end'>
         <NavbarItem isActive={currentPath == '/'}>
-          <Link color='foreground' href='/'>
+          <Link color='foreground' href='/' className='hover:text-amber-600'>
             Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive={currentPath == '/about'}>
-          <Link color='foreground' href='/about'>
+          <Link
+            color='foreground'
+            href='/about'
+            className='hover:text-amber-600'
+          >
             About us
           </Link>
         </NavbarItem>
         <NavbarItem isActive={currentPath == '/products'}>
-          <Link color='foreground' href='/products'>
+          <Link
+            color='foreground'
+            href='/products'
+            className='hover:text-amber-600'
+          >
             Products
           </Link>
         </NavbarItem>
         <NavbarItem isActive={currentPath == '/contact'}>
-          <Link color='foreground' href='/contact'>
+          <Link
+            color='foreground'
+            href='/contact'
+            className='hover:text-amber-600'
+          >
             Contact us
           </Link>
         </NavbarItem>

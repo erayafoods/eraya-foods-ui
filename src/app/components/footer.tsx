@@ -53,7 +53,7 @@ export default function Footer () {
   ]
 
   return (
-    <footer className='text-gray-500 bg-white  py-5 max-w-screen-xl mx-auto md:px-8'>
+    <footer className='text-gray-500 bg-zinc-50 rounded-2xl py-5 max-w-screen-xl mx-auto md:px-8'>
       <div className=' justify-between md:flex'>
         <div className='flex-1'>
           <div className='max-w-xs'>
