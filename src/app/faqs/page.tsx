@@ -141,7 +141,7 @@ const FAQSection = () => {
     )
   }
 
-  const handleSearch = e => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value)
   }
 
