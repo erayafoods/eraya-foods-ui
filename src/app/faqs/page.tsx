@@ -133,7 +133,7 @@ const FAQSection = () => {
     }
   }, [searchTerm, faqs])
 
-  const toggleItem = id => {
+  const toggleItem = (id: number) => {
     setActiveItems(prevActiveItems =>
       prevActiveItems.includes(id)
         ? prevActiveItems.filter(itemId => itemId !== id)
@@ -145,7 +145,7 @@ const FAQSection = () => {
     setSearchTerm(e.target.value)
   }
 
-  const scrollToFAQ = id => {
+  const scrollToFAQ = (id: number) => {
     const element = document.getElementById(`faq-${id}`)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
