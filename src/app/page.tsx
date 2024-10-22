@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button'
 import Autoplay from 'embla-carousel-autoplay'
 import ImageCarousel from './components/carousel'
 import Tea from '../public/tea.svg'
+import WhyChooseUs from './components/why'
 export default function Home () {
   return (
     <>
@@ -34,7 +35,7 @@ export default function Home () {
         and purity. Experience the natural goodness of Eraya Foods in every bite
       </div>
 
-      <section
+      {/*<section
         id='features'
         className='container mx-auto px-2 space-y-6 py-8 md:py-12 lg:py-20'
       >
@@ -54,7 +55,7 @@ export default function Home () {
         <div className='mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 '>
           <div className='relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2'>
             <div className='flex h-[180px] flex-col justify-between rounded-md p-6'>
-              {/* Image1 here  */}
+            
               <Image src={Tea} alt='Handpicked' width={12} height={12} />
 
               <div className='space-y-2'>
@@ -155,6 +156,8 @@ export default function Home () {
           </div>
         </div>
       </section>
+      */}
+      <WhyChooseUs />
     </>
   )
 }

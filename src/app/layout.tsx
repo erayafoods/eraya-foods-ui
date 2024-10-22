@@ -2,8 +2,8 @@ export const metadata = {
   title: 'Eraya Foods',
   description: 'From India’s Fields to the World’s Tables'
 }
-import Nav from './components/navbar'
-import Footer from './components/footer'
+import Nav from './components/navbar2'
+import Footer from './components/footer2'
 import { Navbar } from '@nextui-org/navbar'
 import './globals.css'
 import Head from 'next/head'
