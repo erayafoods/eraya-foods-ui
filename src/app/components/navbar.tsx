@@ -65,7 +65,7 @@ const Navbar = () => {
                     <div>
                       <button
                         onClick={toggleDropdown}
-                        className='text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                        className='text-gray-600 hover:text-amber-600 px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                         aria-expanded={isDropdownOpen}
                         aria-haspopup='true'
                       >
@@ -94,7 +94,7 @@ const Navbar = () => {
                       className={`${
                         currentPath === `/${link.id}`
                           ? 'font-bold text-black'
-                          : 'text-gray-600 hover:text-indigo-600'
+                          : 'text-gray-600 hover:text-amber-600'
                       } px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ease-in-out`}
                       aria-current={
                         currentPath === `/${link.id}` ? 'page' : undefined
@@ -110,7 +110,7 @@ const Navbar = () => {
           <div className='-mr-2 flex md:hidden'>
             <button
               onClick={toggleNavbar}
-              className='bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:font-bold'
+              className='bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-amber-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:font-bold'
               aria-expanded='false'
             >
               <span className='sr-only'>Open main menu</span>
@@ -129,7 +129,7 @@ const Navbar = () => {
                   <div>
                     <button
                       onClick={toggleDropdown}
-                      className='w-full text-left text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:font-bold'
+                      className='w-full text-left text-gray-600 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:font-bold'
                       aria-expanded={isDropdownOpen}
                       aria-haspopup='true'
                     >
@@ -158,7 +158,7 @@ const Navbar = () => {
                     className={`${
                       currentPath === `/${link.id}`
                         ? 'font-bold text-black'
-                        : 'text-gray-600 hover:text-indigo-600'
+                        : 'text-gray-600 hover:text-amber-600'
                     } block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ease-in-out`}
                     aria-current={
                       currentPath === `/${link.id}` ? 'page' : undefined
