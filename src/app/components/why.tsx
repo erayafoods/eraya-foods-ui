@@ -1,63 +1,63 @@
 'use client'
 import React from 'react'
 import {
-  FaUserShield,
-  FaRocket,
+  FaHandHoldingHeart,
+  FaTools,
   FaLightbulb,
-  FaChartLine,
-  FaHandshake,
-  FaCog
+  FaCheckCircle,
+  FaMapMarkerAlt,
+  FaLeaf
 } from 'react-icons/fa'
 
 const WhyChooseUs = () => {
   const features = [
     {
-      title: 'Unparalleled Security',
+      title: 'Handpicked Foxnuts',
       description:
-        'State-of-the-art encryption and multi-factor authentication to keep your data safe.',
-      icon: <FaUserShield className='text-4xl text-blue-500' />,
+        'Carefully selected from local farms, each foxnut is handpicked to ensure the best quality and taste.',
+      icon: <FaHandHoldingHeart className='text-4xl text-green-500' />,
       image:
-        'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+        'https://images.unsplash.com/photo-1506808547685-e2ba962ded36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
     },
     {
-      title: 'Lightning-Fast Performance',
+      title: 'Artisanal Craftsmanship',
       description:
-        'Optimized infrastructure ensuring quick load times and smooth user experience.',
-      icon: <FaRocket className='text-4xl text-red-500' />,
+        'Our artisans use traditional methods, carefully popping each foxnut to achieve the perfect texture and flavor.',
+      icon: <FaTools className='text-4xl text-blue-500' />,
       image:
-        'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+        'https://images.unsplash.com/photo-1563245371-bf340eb86f78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
     },
     {
-      title: 'Innovative Solutions',
+      title: 'Quality Assurance',
       description:
-        'Cutting-edge technology to solve complex problems with elegant simplicity.',
-      icon: <FaLightbulb className='text-4xl text-yellow-500' />,
+        'We maintain stringent quality checks, ensuring that each batch of foxnuts meets our high standards for freshness and flavor.',
+      icon: <FaCheckCircle className='text-4xl text-yellow-500' />,
       image:
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80'
+        'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
     },
     {
-      title: 'Data-Driven Insights',
+      title: 'Authentic Sourcing',
       description:
-        'Advanced analytics to help you make informed decisions and drive growth.',
-      icon: <FaChartLine className='text-4xl text-green-500' />,
+        'Sourced directly from the fertile plains of Bihar, India, our foxnuts carry the authenticity of their origin.',
+      icon: <FaMapMarkerAlt className='text-4xl text-red-500' />,
       image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+        'https://images.unsplash.com/photo-1536184071535-705a10c539b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
     },
     {
-      title: '24/7 Customer Support',
+      title: 'Natural Goodness',
       description:
-        'Round-the-clock assistance to ensure your success and satisfaction.',
-      icon: <FaHandshake className='text-4xl text-purple-500' />,
+        'Our foxnuts are 100% natural and free from artificial additives, offering the pure goodness of nature in every bite.',
+      icon: <FaLeaf className='text-4xl text-green-500' />,
       image:
-        'https://images.unsplash.com/photo-1521790797524-b2497295b8a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80'
+        'https://images.unsplash.com/photo-1573164574391-d0a908e33fdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
     },
     {
-      title: 'Seamless Integration',
+      title: 'Tradition Meets Innovation',
       description:
-        'Easy-to-use APIs and plugins for smooth integration with your existing systems.',
-      icon: <FaCog className='text-4xl text-gray-500' />,
+        'We blend the rich tradition of foxnut harvesting with modern techniques to bring you a premium, innovative product.',
+      icon: <FaLightbulb className='text-4xl text-orange-500' />,
       image:
-        'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+        'https://images.unsplash.com/photo-1558976825-198b2b1e295c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
     }
   ]
 
