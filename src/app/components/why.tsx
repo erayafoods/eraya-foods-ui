@@ -9,8 +9,15 @@ import {
   FaLeaf
 } from 'react-icons/fa'
 
-const WhyChooseUs = () => {
-  const features = [
+interface Feature {
+  title: string
+  description: string
+  icon: JSX.Element
+  image: string
+}
+
+const WhyChooseUs: React.FC = () => {
+  const features: Feature[] = [
     {
       title: 'Handpicked Foxnuts',
       description:
@@ -72,7 +79,7 @@ const WhyChooseUs = () => {
             <div
               key={index}
               className='bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500'
-              tabIndex='0'
+              tabIndex={0} // Change '0' to 0 (number)
               role='article'
               aria-label={`Feature: ${feature.title}`}
             >
