@@ -1,15 +1,22 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { FaHome, FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { FiChevronDown } from 'react-icons/fi'
 import Logo from '../../public/eraya.svg'
 import { usePathname } from 'next/navigation'
 
-const Navbar = () => {
+// Define the structure of the nav link
+interface NavLink {
+  name: string
+  id: string
+  dropdown?: NavLink[] // Optional dropdown property
+}
+
+const Navbar: React.FC = () => {
   const currentPath = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const [error, setError] = useState(null)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,10 +29,11 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const toggleNavbar = () => setIsOpen(!isOpen)
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen)
+  const toggleNavbar = () => setIsOpen(prev => !prev)
+  const toggleDropdown = () => setIsDropdownOpen(prev => !prev)
 
-  const handleLinkClick = link => {
+  // Specify the parameter type for link
+  const handleLinkClick = (link: string) => {
     setIsOpen(false)
     setIsDropdownOpen(false)
 
@@ -35,7 +43,7 @@ const Navbar = () => {
     }
   }
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { name: 'Home', id: '' },
     { name: 'About', id: 'about' },
     { name: 'FAQs', id: 'faqs' },
