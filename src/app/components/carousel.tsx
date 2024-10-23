@@ -1,41 +1,154 @@
-'use client'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from '@/components/ui/carousel'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
+import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa'
+import Image from 'next/image'
+import family from '../../public/family.jpeg'
+import handpick from '../../public/handpick.jpg'
+import network from '../../public/network.jpeg'
+import artisans from '../../public/artisans.jpeg'
+interface ImageType {
+  src: string
+  alt: string
+}
 
-import Autoplay from 'embla-carousel-autoplay'
-import '../globals.css'
+const ImageCarousel: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
+  const [isPlaying, setIsPlaying] = useState<boolean>(true)
+  const timerRef = useRef<NodeJS.Timeout | null>(null)
 
-export default function ImageCarousel () {
+  const images: ImageType[] = [
+    {
+      src: handpick,
+      alt: 'Handpicked'
+    },
+    {
+      src: family,
+      alt: 'Family'
+    },
+    {
+      src: network,
+      alt: 'Network'
+    },
+    {
+      src: artisans,
+      alt: 'Artisans'
+    }
+  ]
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex(prevIndex => (prevIndex + 1) % images.length)
+  }, [images.length])
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      prevIndex => (prevIndex - 1 + images.length) % images.length
+    )
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+  }
+
+  const togglePlayPause = () => {
+    setIsPlaying(prev => !prev)
+  }
+
+  useEffect(() => {
+    if (isPlaying) {
+      timerRef.current = setInterval(nextSlide, 4000)
+    } else if (timerRef.current) {
+      clearInterval(timerRef.current)
+    }
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current)
+    }
+  }, [isPlaying, nextSlide])
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') {
+      prevSlide()
+    } else if (e.key === 'ArrowRight') {
+      nextSlide()
+    } else if (e.key === ' ') {
+      togglePlayPause()
+    }
+  }
+
   return (
-    <Carousel
-      plugins={[
-        Autoplay({
-          delay: 3000
-        })
-      ]}
+    <div
+      className='relative max-w-full mx-auto overflow-hidden shadow-lg rounded-lg'
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role='region'
+      aria-label='Image carousel'
     >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className='p-1'>
-              <Card>
-                <CardContent className='flex items-center justify-center h-screen'>
-                  <span className='text-4xl font-semibold'>{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
+      {/* Carousel images */}
+      <div
+        className='flex transition-transform duration-700 ease-in-out'
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            className='w-full h-[75vh] md:h-[80vh] object-cover flex-shrink-0 transition-opacity duration-700 ease-in-out'
+            style={{ opacity: currentIndex === index ? 1 : 0.5 }}
+            width={1920}
+            height={1080}
+            priority
+          />
         ))}
-      </CarouselContent>
-      <CarouselPrevious className='w-20 h-20 left-4' />
-      <CarouselNext className='w-20 h-20 right-4' />
-    </Carousel>
+      </div>
+
+      {/* Text overlay */}
+      <div className='absolute inset-0 flex justify-center items-center'>
+        <h1 className='text-white text-6xl md:text-[8vw] font-bold tracking-wide'>
+          Eraya Foods
+        </h1>
+      </div>
+
+      {/* Previous/Next buttons */}
+      <button
+        onClick={prevSlide}
+        className='absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+        aria-label='Previous image'
+      >
+        <FaChevronLeft />
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className='absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+        aria-label='Next image'
+      >
+        <FaChevronRight />
+      </button>
+
+      {/* Carousel indicators */}
+      <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2'>
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full ${
+              index === currentIndex ? 'bg-white' : 'bg-gray-400'
+            } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white`}
+            aria-label={`Go to image ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Play/Pause button */}
+      {/* <button
+        onClick={togglePlayPause}
+        className='absolute top-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+        aria-label={isPlaying ? 'Pause' : 'Play'}
+      >
+        {isPlaying ? <FaPause /> : <FaPlay />}
+      </button> */}
+    </div>
   )
 }
+
+export default ImageCarousel
