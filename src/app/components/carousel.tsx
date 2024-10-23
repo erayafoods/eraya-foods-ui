@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import family from '../../public/family.jpeg'
 import handpick from '../../public/handpick.jpg'
 import network from '../../public/network.jpeg'
 import artisans from '../../public/artisans.jpeg'
 interface ImageType {
-  src: string
+  src: StaticImageData
   alt: string
 }
 
