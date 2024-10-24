@@ -154,84 +154,96 @@ const FAQSection = () => {
   }
 
   return (
-    <div className='max-w-full  p-20 bg-white'>
-      <h2 className='text-3xl font-bold mb-6 text-center text-gray-800'>
-        Frequently Asked Questions
-      </h2>
-      <div className='relative mb-6'>
-        <input
-          type='text'
-          placeholder='Search FAQs...'
-          value={searchTerm}
-          onChange={handleSearch}
-          className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-          ref={searchRef}
-        />
-        <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />
+    <>
+      <div className='p-5 md:p-10 w-full'>
+        <h2 className='breadcrumb'>
+          <span className='text-gray-600 hover:text-gray-900 cursor-pointer'>
+            Home
+          </span>{' '}
+          / Contact us
+        </h2>
       </div>
-      {error && <p className='text-red-500 mb-4'>{error}</p>}
-      {searchResults.length > 0 && (
-        <div className='mb-6 p-4 bg-gray-100 rounded-md'>
-          <h3 className='font-semibold mb-2'>Search Results:</h3>
-          <ul>
-            {searchResults.map(faq => (
-              <li key={faq.id} className='mb-1'>
-                <button
-                  onClick={() => scrollToFAQ(faq.id)}
-                  className='text-blue-600 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 rounded'
-                >
-                  {faq.question}
-                </button>
-              </li>
-            ))}
-          </ul>
+      <div className='max-w-full  p-20 bg-white'>
+        <h2 className='text-3xl font-bold mb-6 text-center text-gray-800'>
+          Frequently Asked Questions
+        </h2>
+        <div className='relative mb-6'>
+          <input
+            type='text'
+            placeholder='Search FAQs...'
+            value={searchTerm}
+            onChange={handleSearch}
+            className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+            ref={searchRef}
+          />
+          <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />
         </div>
-      )}
-      <button
-        onClick={() => setExpandAll(!expandAll)}
-        className='mb-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-      >
-        {expandAll ? 'Collapse All' : 'Expand All'}
-      </button>
-      <div className='space-y-4'>
-        {faqs.map(faq => (
-          <div
-            key={faq.id}
-            id={`faq-${faq.id}`}
-            className='border border-gray-200 rounded-md overflow-hidden'
-          >
-            <button
-              onClick={() => toggleItem(faq.id)}
-              className='flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500'
-              aria-expanded={activeItems.includes(faq.id)}
-              aria-controls={`faq-answer-${faq.id}`}
-            >
-              <span className='font-medium text-gray-900'>{faq.question}</span>
-              {activeItems.includes(faq.id) ? (
-                <FaMinus className='text-gray-500' />
-              ) : (
-                <FaPlus className='text-gray-500' />
-              )}
-            </button>
-            <AnimatePresence>
-              {activeItems.includes(faq.id) && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  id={`faq-answer-${faq.id}`}
-                >
-                  <div className='p-4 bg-white'>
-                    <p className='text-gray-700'>{faq.answer}</p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+        {error && <p className='text-red-500 mb-4'>{error}</p>}
+        {searchResults.length > 0 && (
+          <div className='mb-6 p-4 bg-gray-100 rounded-md'>
+            <h3 className='font-semibold mb-2'>Search Results:</h3>
+            <ul>
+              {searchResults.map(faq => (
+                <li key={faq.id} className='mb-1'>
+                  <button
+                    onClick={() => scrollToFAQ(faq.id)}
+                    className='text-blue-600 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 rounded'
+                  >
+                    {faq.question}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
+        )}
+        <button
+          onClick={() => setExpandAll(!expandAll)}
+          className='mb-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+        >
+          {expandAll ? 'Collapse All' : 'Expand All'}
+        </button>
+        <div className='space-y-4'>
+          {faqs.map(faq => (
+            <div
+              key={faq.id}
+              id={`faq-${faq.id}`}
+              className='border border-gray-200 rounded-md overflow-hidden'
+            >
+              <button
+                onClick={() => toggleItem(faq.id)}
+                className='flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500'
+                aria-expanded={activeItems.includes(faq.id)}
+                aria-controls={`faq-answer-${faq.id}`}
+              >
+                <span className='font-medium text-gray-900'>
+                  {faq.question}
+                </span>
+                {activeItems.includes(faq.id) ? (
+                  <FaMinus className='text-gray-500' />
+                ) : (
+                  <FaPlus className='text-gray-500' />
+                )}
+              </button>
+              <AnimatePresence>
+                {activeItems.includes(faq.id) && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    id={`faq-answer-${faq.id}`}
+                  >
+                    <div className='p-4 bg-white'>
+                      <p className='text-gray-700'>{faq.answer}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
