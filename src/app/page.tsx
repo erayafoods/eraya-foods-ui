@@ -5,7 +5,7 @@ import './globals.css'
 import ImageCarousel from './components/carousel'
 
 import WhyChooseUs from './components/why'
-import AnimateEraya from './components/animation'
+
 export default function Home () {
   return (
     <>

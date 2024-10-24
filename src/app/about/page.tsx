@@ -1,6 +1,5 @@
-import { CardContent, CardTitle } from '@/components/ui/card'
 import '../globals.css'
-import { Card, CardBody, CardHeader, CardFooter } from '@nextui-org/react'
+
 import aboutPic from '../../public/about-bg-image.jpeg'
 import network from '../../public/network.jpeg'
 import artisans from '../../public/artisans.jpeg'

@@ -45,8 +45,8 @@ export default function Footer () {
           name: 'Contact us'
         },
         {
-          href: '/faqs',
-          name: 'FAQs'
+          href: '/help',
+          name: 'Help Center'
         }
       ]
     }

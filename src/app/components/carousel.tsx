@@ -103,8 +103,18 @@ const ImageCarousel: React.FC = () => {
 
       {/* Text overlay */}
       <div className='absolute inset-0 flex justify-center items-center'>
-        <h1 className='text-white text-6xl md:text-[8vw] font-bold tracking-wide'>
-          Eraya Foods
+        <h1 className='text-white text-6xl md:text-[8vw] font-bold tracking-wide text-white font-bold text-5xl flex space-x-2'>
+          <div className='animate-wave-1'>E</div>
+          <div className='animate-wave-2'>R</div>
+          <div className='animate-wave-3'>A</div>
+          <div className='animate-wave-4'>Y</div>
+          <div className='animate-wave-5'>A</div>
+          <div className='w-4'></div> {/* Space between words */}
+          <div className='animate-wave-6'>F</div>
+          <div className='animate-wave-7'>O</div>
+          <div className='animate-wave-8'>O</div>
+          <div className='animate-wave-9'>D</div>
+          <div className='animate-wave-10'>S</div>
         </h1>
       </div>
 
@@ -138,15 +148,6 @@ const ImageCarousel: React.FC = () => {
           />
         ))}
       </div>
-
-      {/* Play/Pause button */}
-      {/* <button
-        onClick={togglePlayPause}
-        className='absolute top-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-        aria-label={isPlaying ? 'Pause' : 'Play'}
-      >
-        {isPlaying ? <FaPause /> : <FaPlay />}
-      </button> */}
     </div>
   )
 }
