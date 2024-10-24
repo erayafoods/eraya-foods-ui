@@ -41,53 +41,63 @@ export default function About () {
         </h2>
 
         {/* Responsive Grid Section */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 px-6 lg:px-32'>
-          <div className='flex flex-col items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-32'>
+          {/* Handpicked Section */}
+          <div className='relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
               src={handpick}
               alt='Handpicked Foxnuts'
               width={500}
               height={350}
-              className='rounded-lg'
+              className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
-            <p className='pt-6 text-center'>
-              Excellence is at the heart of our business. We are devoted to
-              delivering only the finest foxnuts, sourced from Bihar's native
-              growing regions. Our extensive network of grassroots farmers
-              employs sustainable practices that benefit both the planet and
-              economy.
-            </p>
+            <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
+              <p className='text-white text-lg font-medium px-6 text-center'>
+                Excellence is at the heart of our business. We are devoted to
+                delivering only the finest foxnuts, sourced from Bihar's native
+                growing regions. Our extensive network of grassroots farmers
+                employs sustainable practices that benefit both the planet and
+                economy.
+              </p>
+            </div>
           </div>
 
-          <div className='flex flex-col items-center'>
+          {/* Farmer Network Section */}
+          <div className='relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
               src={network}
               alt='Farmer Network'
               width={500}
               height={350}
-              className='rounded-lg'
+              className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
-            <p className='pt-6 text-center'>
-              Our Trusted Farmer Network: Bringing You the Best Foxnuts from the
-              Source. We ensure that each foxnut is carefully harvested and
-              hand-popped with precision, preserving its quality and flavor.
-            </p>
+            <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
+              <p className='text-white text-lg font-medium px-6 text-center'>
+                Our Trusted Farmer Network: Bringing You the Best Foxnuts from
+                the Source. We ensure that each foxnut is carefully harvested
+                and hand-popped with precision, preserving its quality and
+                flavor.
+              </p>
+            </div>
           </div>
 
-          <div className='flex flex-col items-center'>
+          {/* Artisans Section */}
+          <div className='relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
               src={artisans}
               alt='Artisans'
               width={500}
               height={350}
-              className='rounded-lg'
+              className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
-            <p className='pt-6 text-center'>
-              Our artisans skillfully heat and pop each foxnut, preserving its
-              natural goodness and enhancing its flavor to deliver superior
-              quality. We go the extra mile to ensure every nut meets the
-              highest standards.
-            </p>
+            <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
+              <p className='text-white text-lg font-medium px-6 text-center'>
+                Our artisans skillfully heat and pop each foxnut, preserving its
+                natural goodness and enhancing its flavor to deliver superior
+                quality. We go the extra mile to ensure every nut meets the
+                highest standards.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -137,18 +147,21 @@ export default function About () {
         <h3 className='text-2xl font-semibold text-center py-6'>
           Certificates & Recognitions
         </h3>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 px-6 lg:px-32'>
-          <div className='bg-gray-100 rounded-lg h-28 flex items-center justify-center'>
+        <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
             A
           </div>
-          <div className='bg-gray-100 rounded-lg h-28 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
             B
           </div>
-          <div className='bg-gray-100 rounded-lg h-28 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
             C
           </div>
-          <div className='bg-gray-100 rounded-lg h-28 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
             D
+          </div>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
+            E
           </div>
         </div>
       </section>
