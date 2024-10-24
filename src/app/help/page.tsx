@@ -187,7 +187,7 @@ const FAQSection = () => {
                 <li key={faq.id} className='mb-1'>
                   <button
                     onClick={() => scrollToFAQ(faq.id)}
-                    className='text-blue-600 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 rounded'
+                    className='text-grey-600 hover:underline focus:outline-none focus:ring-2 focus:ring-grey-500 rounded'
                   >
                     {faq.question}
                   </button>
@@ -198,7 +198,7 @@ const FAQSection = () => {
         )}
         <button
           onClick={() => setExpandAll(!expandAll)}
-          className='mb-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+          className='mb-6 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
         >
           {expandAll ? 'Collapse All' : 'Expand All'}
         </button>
@@ -211,7 +211,7 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => toggleItem(faq.id)}
-                className='flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500'
+                className='flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500'
                 aria-expanded={activeItems.includes(faq.id)}
                 aria-controls={`faq-answer-${faq.id}`}
               >

@@ -103,7 +103,7 @@ const ImageCarousel: React.FC = () => {
 
       {/* Text overlay */}
       <div className='absolute inset-0 flex justify-center items-center'>
-        <h1 className='text-white text-6xl md:text-[8vw] font-bold tracking-wide text-white font-bold text-5xl flex space-x-2'>
+        <h1 className='text-white text-xl md:text-6xl md:text-[8vw] font-bold tracking-wide text-white font-bold flex space-x-2'>
           <div className='animate-wave-1'>E</div>
           <div className='animate-wave-2'>R</div>
           <div className='animate-wave-3'>A</div>
