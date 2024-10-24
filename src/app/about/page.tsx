@@ -148,19 +148,19 @@ export default function About () {
           Certificates & Recognitions
         </h3>
         <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             A
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             B
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             C
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             D
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center'>
+          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             E
           </div>
         </div>
