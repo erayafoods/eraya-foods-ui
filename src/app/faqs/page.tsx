@@ -163,7 +163,7 @@ const FAQSection = () => {
           / FAQs
         </h2>
       </div>
-      <div className='max-w-full  p-20 bg-white'>
+      <div className='max-w-screen-2xl content-center px-[8vw] bg-white'>
         <h2 className='text-3xl font-bold mb-6 text-center text-gray-800'>
           Frequently Asked Questions
         </h2>
