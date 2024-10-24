@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -63,4 +66,11 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+.breadcrumb {
+    font-family: "Playwrite GB S", serif;
+    font-size: 1.25rem; /* Adjust size as needed */
 }

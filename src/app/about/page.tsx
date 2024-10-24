@@ -10,9 +10,15 @@ import Image from 'next/image'
 export default function About () {
   return (
     <>
-      <h2 className='p-5 md:p-10 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight w-full text-center'>
-        About us
-      </h2>
+      {/* Updated About Us Breadcrumb Style */}
+      <div className='p-5 md:p-10 w-full'>
+        <h2 className='breadcrumb'>
+          <span className='text-gray-600 hover:text-gray-900 cursor-pointer'>
+            Home
+          </span>{' '}
+          / About Us
+        </h2>
+      </div>
 
       {/* Updated Image Section */}
       <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
@@ -25,8 +31,10 @@ export default function About () {
       </div>
 
       <section className='py-12'>
-        <h2 className='text-3xl font-semibold text-center py-6'>WHO ARE WE</h2>
-        <div className='px-6 lg:px-32 text-center'>
+        <h2 className='text-2xl md:text-3xl font-semibold text-center py-6'>
+          WHO ARE WE
+        </h2>
+        <div className='px-6 lg:px-32 text-center text-sm md:text-base'>
           Since 2016, we have proudly embraced the rich heritage of Bihar, the
           birthplace of our exceptional foxnuts. We are honored to extend our
           family legacy of domestic trade into the international market,
@@ -36,7 +44,7 @@ export default function About () {
       </section>
 
       <section className='bg-[#F7FCFE] py-12'>
-        <h2 className='text-3xl font-semibold text-center py-6'>
+        <h2 className='text-2xl md:text-3xl font-semibold text-center py-6'>
           Our Commitment to Quality
         </h2>
 
@@ -52,7 +60,7 @@ export default function About () {
               className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
-              <p className='text-white text-lg font-medium px-6 text-center'>
+              <p className='text-white text-md font-medium px-4 text-center'>
                 Excellence is at the heart of our business. We are devoted to
                 delivering only the finest foxnuts, sourced from Bihar's native
                 growing regions. Our extensive network of grassroots farmers
@@ -72,7 +80,7 @@ export default function About () {
               className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
-              <p className='text-white text-lg font-medium px-6 text-center'>
+              <p className='text-white text-md font-medium px-4 text-center'>
                 Our Trusted Farmer Network: Bringing You the Best Foxnuts from
                 the Source. We ensure that each foxnut is carefully harvested
                 and hand-popped with precision, preserving its quality and
@@ -91,7 +99,7 @@ export default function About () {
               className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
-              <p className='text-white text-lg font-medium px-6 text-center'>
+              <p className='text-white text-md font-medium px-4 text-center'>
                 Our artisans skillfully heat and pop each foxnut, preserving its
                 natural goodness and enhancing its flavor to deliver superior
                 quality. We go the extra mile to ensure every nut meets the
@@ -106,8 +114,8 @@ export default function About () {
       <section className='py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 px-6 lg:px-32'>
           <div className=''>
-            <h3 className='font-bold text-2xl'>Mission</h3>
-            <p className='pt-4'>
+            <h3 className='font-semibold text-xl'>Mission</h3>
+            <p className='pt-4 text-sm md:text-base'>
               Our mission is to be a trusted partner, delivering high-quality,
               pure foxnuts that surpass expectations. We prioritize
               sustainability, ensuring eco-friendly practices that benefit both
@@ -115,7 +123,7 @@ export default function About () {
               relationships with importers and buyers through mutual respect,
               offering cost-effective solutions and timely support.
             </p>
-            <p className='pt-2'>
+            <p className='pt-2 text-sm md:text-base'>
               Inspired by{' '}
               <span className='font-semibold'>
                 Vasudhaiva Kutumbakam—the world as one family,
@@ -126,14 +134,14 @@ export default function About () {
           </div>
 
           <div className=''>
-            <h3 className='font-bold text-2xl'>Vision</h3>
-            <p className='pt-4'>
+            <h3 className='font-semibold text-xl'>Vision</h3>
+            <p className='pt-4 text-sm md:text-base'>
               Our vision is to make premium-quality foxnuts a staple in every
               home, promoting a healthier lifestyle. We aim to position our
               foxnuts as a go-to superfood, providing a nutritious alternative
               to unhealthy snacks for diabetics, pregnant women, and children.
             </p>
-            <p className='pt-2'>
+            <p className='pt-2 text-sm md:text-base'>
               Honoring our farmers' dedication, we are committed to their
               success and recognition, ensuring our values of quality and
               sustainability remain the foundation of our brand.
