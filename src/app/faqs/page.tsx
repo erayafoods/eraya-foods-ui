@@ -160,7 +160,7 @@ const FAQSection = () => {
           <span className='text-gray-600 hover:text-gray-900 cursor-pointer'>
             Home
           </span>{' '}
-          / Contact us
+          / FAQs
         </h2>
       </div>
       <div className='max-w-full  p-20 bg-white'>
