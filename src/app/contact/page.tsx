@@ -67,10 +67,12 @@ const ContactUs: React.FC = () => {
       ...prev,
       [name]: value
     }))
-    if (errors[name]) {
+
+    // Cast name to keyof Errors
+    if (name in errors) {
       setErrors(prev => ({
         ...prev,
-        [name]: ''
+        [name as keyof Errors]: '' // Assert name as keyof Errors
       }))
     }
   }
@@ -215,13 +217,13 @@ const ContactUs: React.FC = () => {
                       className='p-4 bg-green-100 rounded-md text-green-700 text-center'
                       role='alert'
                     >
-                      Message sent successfully!
+                      Thank you for your message!
                     </div>
                   )}
                 </form>
               </div>
 
-              {/* Contact Information Section */}
+              {/* Image Section */}
               <div className='relative p-8 bg-gray-800 text-white'>
                 <div
                   className='absolute inset-0 bg-cover bg-center opacity-10'
@@ -246,17 +248,17 @@ const ContactUs: React.FC = () => {
                       </span>
                     </div>
                   </div>
+                </div>
 
-                  <div className='mt-12'>
-                    <h4 className='text-xl font-semibold mb-4'>Office Hours</h4>
-                    <p className='text-gray-300'>
-                      Monday - Friday: 9:00 AM - 6:00 PM (IST)
-                      <br />
-                      Saturday: 10:00 AM - 4:00 PM (IST)
-                      <br />
-                      Sunday: Closed
-                    </p>
-                  </div>
+                <div className='mt-12'>
+                  <h4 className='text-xl font-semibold mb-4'>Office Hours</h4>
+                  <p className='text-gray-300'>
+                    Monday - Friday: 9:00 AM - 6:00 PM (IST)
+                    <br />
+                    Saturday: 10:00 AM - 4:00 PM (IST)
+                    <br />
+                    Sunday: Closed
+                  </p>
                 </div>
               </div>
             </div>
