@@ -23,7 +23,7 @@ const WhyChooseUs: React.FC = () => {
           x='0'
           y='0'
           viewBox='0 0 64 64'
-          style={{ enableBackground: 'new 0 0 512 512' }}
+          enableBackground='new 0 0 512 512'
           xmlSpace='preserve'
         >
           <g>
@@ -59,7 +59,7 @@ const WhyChooseUs: React.FC = () => {
           x='0'
           y='0'
           viewBox='0 0 512 512'
-          style={{ enableBackground: 'new 0 0 512 512' }}
+          enableBackground='new 0 0 512 512'
           xmlSpace='preserve'
         >
           <g>
@@ -243,7 +243,7 @@ const WhyChooseUs: React.FC = () => {
           x='0'
           y='0'
           viewBox='0 0 512 512'
-          style={{ enableBackground: 'new 0 0 512 512' }}
+          enableBackground='new 0 0 512 512'
           xmlSpace='preserve'
         >
           <g>
@@ -304,7 +304,7 @@ const WhyChooseUs: React.FC = () => {
           x='0'
           y='0'
           viewBox='0 0 500 500'
-          style={{ enableBackground: 'new 0 0 512 512' }}
+          enableBackground='new 0 0 512 512'
           xmlSpace='preserve'
         >
           <g>
@@ -569,7 +569,7 @@ const WhyChooseUs: React.FC = () => {
           width='64'
           height='64'
           viewBox='0 0 512.061 512.061'
-          style={{ enableBackground: 'new 0 0 512 512' }}
+          enableBackground='new 0 0 512 512'
           xmlSpace='preserve'
         >
           <g>
