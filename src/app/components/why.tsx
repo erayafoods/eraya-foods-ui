@@ -12,7 +12,8 @@ const WhyChooseUs: React.FC = () => {
   const features: Feature[] = [
     {
       title: 'Top-Quality Sourcing',
-      description: '100% natural, organic, handcrafted, with no additives.',
+      description:
+        '100% natural, organic, handcrafted foxnuts with no additives.',
       icon: (
         <svg
           xmlns='http://www.w3.org/2000/svg'

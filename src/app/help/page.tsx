@@ -12,93 +12,173 @@ const FAQSection = () => {
   const [faqs, setFaqs] = useState([
     {
       id: 1,
-      question: 'What are foxnuts?',
+      question: "What makes Eraya Foods' foxnuts unique?",
       answer:
-        'Foxnuts, also known as makhana, are popped seeds from the Euryale Fox plant. They are a highly nutritious snack, rich in protein, antioxidants, and low in calories.'
+        'Our foxnuts are primarily sourced from Bihar, India, where they are cultivated using traditional methods. This ensures high quality, flavor, and nutritional value, setting us apart from competitors.'
     },
     {
       id: 2,
       question: "Are Eraya Foods' foxnuts organic?",
       answer:
-        'Yes, Eraya Foods offers 100% organic foxnuts sourced directly from local farmers in Bihar, India, ensuring natural, chemical-free cultivation and processing.'
+        'Yes, we guarantee that our foxnuts are 100% organic, cultivated without synthetic fertilizers or pesticides, ensuring a natural and healthy snack option.'
     },
     {
       id: 3,
-      question: "Where are Eraya Foods' foxnuts sourced from?",
+      question: 'What types of foxnuts do you offer?',
       answer:
-        'Our premium foxnuts are sourced from the fertile regions of Bihar, India, where local farmers hand-pick and process them with the utmost care.'
+        'We provide various grades of foxnuts suitable for culinary uses, snacking, and packaging. Options include raw, roasted, and flavored foxnuts to cater to different consumer preferences.'
     },
     {
       id: 4,
-      question: "What makes Eraya Foods' foxnuts different from others?",
+      question: 'How do you ensure the quality of your foxnuts?',
       answer:
-        'At Eraya Foods, we ensure that each foxnut is carefully popped, delivering a light, crunchy texture with unmatched purity and quality.'
+        'We maintain strict quality control at every stage, from sourcing to processing, ensuring that only the best foxnuts are packaged and delivered to our customers.'
     },
     {
       id: 5,
-      question: 'What packaging options do you offer?',
+      question: 'What support do you provide during trade and shipment?',
       answer:
-        'We offer eco-friendly, resealable packaging to preserve freshness. Custom packaging options are also available for bulk orders.'
+        'We offer comprehensive support throughout the trade process, including assistance with documentation, customs clearance, and shipment tracking to ensure a smooth delivery experience.'
     },
     {
       id: 6,
-      question: 'Do you export foxnuts internationally?',
+      question: 'Do you offer FOB basis trade?',
       answer:
-        'Yes, Eraya Foods exports high-quality foxnuts to multiple international markets, including North America, Europe, and Asia.'
+        'Yes, we provide flexible trading options, including Free on Board (FOB), allowing you to manage shipping arrangements according to your preferences.'
     },
     {
       id: 7,
-      question: 'Can I place bulk orders for foxnuts?',
+      question: 'How does Eraya Foods assist with marketing?',
       answer:
-        'Absolutely! We cater to bulk orders for businesses and importers globally. Contact us for custom pricing and logistics support.'
+        'We collaborate with our partners to develop tailored marketing strategies and provide promotional materials to enhance product visibility and drive sales in your market.'
     },
     {
       id: 8,
-      question: 'What certifications does Eraya Foods have?',
+      question: 'What innovative packaging solutions do you offer?',
       answer:
-        'Eraya Foods is certified by APEDA, FIEO, and FDA, ensuring that our products meet international standards for food safety and quality.'
+        'Our packaging is eco-friendly and resealable, designed to preserve freshness and quality. We can also customize packaging for bulk orders to align with your branding needs.'
     },
     {
       id: 9,
-      question: 'How do you ensure the quality of your foxnuts?',
+      question: 'What certifications does Eraya Foods have?',
       answer:
-        'Our foxnuts undergo strict quality checks at every stage, from sourcing to packaging, ensuring that only the best reach our customers.'
+        'Our products are certified by APEDA, FIEO, and FDA, which confirms our compliance with international food safety standards and regulations.'
     },
     {
       id: 10,
-      question: 'Are foxnuts gluten-free?',
+      question: 'Do you export foxnuts internationally?',
       answer:
-        'Yes, foxnuts are naturally gluten-free, making them a perfect snack for those with gluten sensitivities or those looking for healthy alternatives.'
+        'Yes, we export high-quality foxnuts to various international markets, including North America, Europe, and Asia, catering to diverse customer needs.'
     },
     {
       id: 11,
-      question: 'What is the shelf life of your foxnuts?',
+      question: 'Can I place bulk orders for foxnuts?',
       answer:
-        'Our foxnuts have a shelf life of 6-8 months when stored in a cool, dry place, thanks to our moisture-resistant, resealable packaging.'
+        'Absolutely! We cater to bulk orders for businesses and importers, offering competitive pricing and logistics support tailored to your requirements.'
     },
     {
       id: 12,
-      question: 'What are the health benefits of foxnuts?',
+      question: 'How do you ensure timely delivery of orders?',
       answer:
-        'Foxnuts are a great source of protein, fiber, and essential minerals. They promote heart health, weight management, and are ideal for people with diabetes.'
+        'With our established network of farmers and operational experience since 2016, we prioritize efficient logistics and faster delivery times for our clients.'
     },
     {
       id: 13,
-      question: 'Do you offer samples for businesses or importers?',
+      question: 'Do you offer private labeling services?',
       answer:
-        'Yes, we provide samples to importers and businesses interested in purchasing in bulk. Get in touch with our sales team to arrange a sample shipment.'
+        'Yes, we provide private labeling options, allowing businesses to sell our premium foxnuts under their own brand name.'
     },
     {
       id: 14,
-      question: 'How can I place an order with Eraya Foods?',
+      question: 'What is the shelf life of your foxnuts?',
       answer:
-        'You can place an order through our website or contact our sales team directly for bulk purchases and inquiries.'
+        'Our foxnuts have a shelf life of 6-8 months when stored properly in a cool, dry place, thanks to our moisture-resistant packaging.'
     },
     {
       id: 15,
-      question: 'Do you offer private labeling services?',
+      question: 'Where are your foxnuts sourced from?',
       answer:
-        'Yes, Eraya Foods offers private labeling services for businesses looking to sell premium foxnuts under their own brand.'
+        'We source our foxnuts exclusively from Bihar, where local farmers cultivate them with care and dedication, ensuring premium quality and taste.'
+    },
+    {
+      id: 16,
+      question: 'How can I place an order with Eraya Foods?',
+      answer:
+        'You can place orders through our website or contact our sales team directly for bulk purchases and inquiries.'
+    },
+    {
+      id: 17,
+      question: 'Do you offer samples for businesses?',
+      answer:
+        'Yes, we provide samples to importers and businesses interested in our products. Please reach out to our sales team to arrange a sample shipment.'
+    },
+    {
+      id: 18,
+      question: 'What health benefits do foxnuts provide?',
+      answer:
+        'Foxnuts are a rich source of protein, fiber, and essential minerals, promoting heart health, weight management, and suitable for diabetic diets.'
+    },
+    {
+      id: 19,
+      question: 'Are foxnuts gluten-free?',
+      answer:
+        'Yes, foxnuts are naturally gluten-free, making them a great snack choice for individuals with gluten sensitivities or dietary restrictions.'
+    },
+    {
+      id: 20,
+      question: 'What role do farmers play in your sourcing process?',
+      answer:
+        'We work closely with local farmers, providing them with fair trade practices and support, ensuring they receive equitable compensation for their high-quality crops.'
+    },
+    {
+      id: 21,
+      question: 'What types of customers do you cater to?',
+      answer:
+        'We serve a diverse clientele, including importers, retailers, and food manufacturers seeking high-quality foxnuts for their products.'
+    },
+    {
+      id: 22,
+      question: 'How do your foxnuts compare to other brands?',
+      answer:
+        'Our foxnuts are distinguished by their superior quality, organic certification, and unique flavor profiles, backed by a robust supply chain and customer support.'
+    },
+    {
+      id: 23,
+      question: 'Do you offer discounts for large orders?',
+      answer:
+        'Yes, we provide competitive pricing and discounts for bulk orders. Please contact our sales team to discuss your specific needs.'
+    },
+    {
+      id: 24,
+      question: 'How do you handle quality control?',
+      answer:
+        'Our quality assurance team conducts rigorous checks at each stage of production, ensuring that all foxnuts meet our high standards before reaching customers.'
+    },
+    {
+      id: 25,
+      question:
+        'Can you provide information on the nutritional content of your foxnuts?',
+      answer:
+        'Our foxnuts are high in protein, low in calories, and rich in antioxidants, making them a healthy snack option for a balanced diet.'
+    },
+    {
+      id: 26,
+      question: 'What are the health benefits of foxnuts?',
+      answer:
+        'Foxnuts promote heart health, aid in weight management, and are ideal for those with diabetes due to their high nutritional value.'
+    },
+    {
+      id: 27,
+      question: 'How can I contact Eraya Foods for inquiries?',
+      answer:
+        "You can reach us through our website's contact form or directly via email or phone for any inquiries or support."
+    },
+
+    {
+      id: 28,
+      question: 'What are the payment options available?',
+      answer:
+        'We offer various payment options, including bank transfers and letters of credit, to facilitate smooth transactions for our international clients.'
     }
   ])
 
@@ -155,18 +235,8 @@ const FAQSection = () => {
 
   return (
     <>
-      <div className='p-5 md:p-10 w-full'>
-        <h2 className='breadcrumb'>
-          <span className='text-gray-600 hover:text-gray-900 cursor-pointer'>
-            Home
-          </span>{' '}
-          / Help Center
-        </h2>
-      </div>
-      <div className='max-w-screen-2xl content-center px-[8vw] bg-white pb-[8vh]'>
-        <h2 className='text-3xl font-bold mb-6 text-center text-gray-800'>
-          Frequently Asked Questions
-        </h2>
+      <div className='max-w-screen-2xl content-center px-[8vw]  pb-[8vh]'>
+        <div className='backgroundImage3 w-96 h-96 mx-auto'></div>
         <div className='relative mb-6'>
           <input
             type='text'
@@ -200,7 +270,7 @@ const FAQSection = () => {
           onClick={() => setExpandAll(!expandAll)}
           className='mb-6 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
         >
-          {expandAll ? 'Collapse All' : 'Expand All'}
+          {expandAll ? 'Hide All' : 'See All'}
         </button>
         <div className='space-y-4'>
           {faqs.map(faq => (

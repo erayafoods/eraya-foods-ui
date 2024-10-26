@@ -84,8 +84,15 @@ body {
 }
 
 .backgroundImage2 {
-    background-image: url("../public/bg1.jpg");
-    background-size: cover;
+    background-image: url("../public/customer.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.backgroundImage3 {
+    background-image: url("../public/faq.jpg");
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }

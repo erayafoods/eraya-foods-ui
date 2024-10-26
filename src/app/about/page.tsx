@@ -1,5 +1,30 @@
-import '../globals.css'
+// import aboutPic from '../../public/about-bg-image.jpeg'
+// import network from '../../public/network.jpeg'
+// import artisans from '../../public/artisans.jpeg'
+// import handpick from '../../public/handpick.jpg'
+// import fssai from '../../public/fssai.png'
+// import apeda from '../../public/APEDA.png'
+// import fieo from '../../public/fieo.png'
+// import fda from '../../public/fda.png'
+// import iso from '../../public/iso-22000.webp'
+// import Image from 'next/image'
 
+// export default function About () {
+//   return (
+//     <>
+//       {/* Updated Image Section */}
+//       <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
+//         <Image
+//           src={aboutPic}
+//           alt='About Us Background'
+//           fill
+//           className='rounded-lg object-cover'
+//         />
+//       </div>
+
+'use client'
+import '../globals.css'
+import { useState, useEffect } from 'react'
 import aboutPic from '../../public/about-bg-image.jpeg'
 import network from '../../public/network.jpeg'
 import artisans from '../../public/artisans.jpeg'
@@ -12,24 +37,40 @@ import iso from '../../public/iso-22000.webp'
 import Image from 'next/image'
 
 export default function About () {
+  // State to control opacity of aboutPic
+  const [aboutPicOpacity, setAboutPicOpacity] = useState(1)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const fadeStart = 0 // Where the fade effect starts
+      const fadeEnd = 800 // Point at which image is fully faded
+      const scrollY = window.scrollY
+      const newOpacity = Math.max(
+        1 - (scrollY - fadeStart) / (fadeEnd - fadeStart),
+        0
+      )
+      setAboutPicOpacity(newOpacity)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <>
-      {/* Updated About Us Breadcrumb Style */}
-      <div className='p-5 md:p-10 w-full'>
-        <h2 className='breadcrumb'>
-          <span className='text-gray-600 hover:text-gray-900 cursor-pointer'>
-            Home
-          </span>{' '}
-          / About Us
-        </h2>
-      </div>
-
-      {/* Updated Image Section */}
+      {/* Updated Image Section with Fade Effect */}
       <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
         <Image
           src={aboutPic}
           alt='About Us Background'
           fill
+          style={{
+            opacity: aboutPicOpacity,
+            transition: 'opacity 0.2s ease-out'
+          }}
           className='rounded-lg object-cover'
         />
       </div>
@@ -52,7 +93,7 @@ export default function About () {
         </div>
       </section>
 
-      <section className='bg-[#F7FCFE] py-12'>
+      <section className=' py-12'>
         <h2 className='text-2xl md:text-3xl font-semibold text-center py-6'>
           Our Commitment to Quality
         </h2>
@@ -69,12 +110,10 @@ export default function About () {
               className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
-              <p className='text-white text-md font-medium px-4 text-center'>
-                Excellence is at the heart of our business. We are devoted to
-                delivering only the finest foxnuts, sourced from Bihar's native
-                growing regions. Our extensive network of grassroots farmers
-                employs sustainable practices that benefit both the planet and
-                economy.
+              <p className='text-white text-2xl font-medium px-4 text-center'>
+                Excellence drives us. We deliver the finest foxnuts, sourced
+                directly from Bihar’s native farms, using sustainable practices
+                that support both the planet and our economy
               </p>
             </div>
           </div>
@@ -89,10 +128,9 @@ export default function About () {
               className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
-              <p className='text-white text-md font-medium px-4 text-center'>
-                Our Trusted Farmer Network: Bringing You the Best Foxnuts from
-                the Source. We ensure that each foxnut is carefully harvested
-                and hand-popped with precision, preserving its quality and
+              <p className='text-white text-2xl font-medium px-4 text-center'>
+                Our Trusted Farmer Network brings you the finest foxnuts,
+                carefully harvested and hand-popped to preserve quality and
                 flavor.
               </p>
             </div>
@@ -108,11 +146,10 @@ export default function About () {
               className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
-              <p className='text-white text-md font-medium px-4 text-center'>
-                Our artisans skillfully heat and pop each foxnut, preserving its
-                natural goodness and enhancing its flavor to deliver superior
-                quality. We go the extra mile to ensure every nut meets the
-                highest standards.
+              <p className='text-white text-2xl font-medium px-4 text-center'>
+                Our artisans expertly pop each foxnut, preserving its natural
+                goodness and elevating flavor to ensure top quality in every
+                bite.
               </p>
             </div>
           </div>

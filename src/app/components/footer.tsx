@@ -60,7 +60,7 @@ export default function Footer () {
             {/* <img src={Logo} className='w-32' /> */}
             <Logo style={{ width: '70px', padding: '3px' }} />
             <p className='leading-relaxed mt-2 text-[15px]'>
-              Crafting Premium Foxnut Experiences Since 2016.
+              Transforming Foxnuts into a Global Delight
             </p>
           </div>
           <form onSubmit={e => e.preventDefault()}>
