@@ -75,3 +75,17 @@ body {
     font-family: "Playwrite GB S", serif;
     font-size: 1.25rem; /* Adjust size as needed */
 }
+
+.backgroundImage {
+    background-image: url("../public/bg4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.backgroundImage2 {
+    background-image: url("../public/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

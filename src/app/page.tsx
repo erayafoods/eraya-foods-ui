@@ -27,6 +27,7 @@ export default function Home () {
         and purity. Experience the natural goodness of Eraya Foods in every
         bite.
       </div>
+
       <WhyChooseUs />
     </>
   )

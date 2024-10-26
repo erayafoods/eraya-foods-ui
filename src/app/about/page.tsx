@@ -4,6 +4,11 @@ import aboutPic from '../../public/about-bg-image.jpeg'
 import network from '../../public/network.jpeg'
 import artisans from '../../public/artisans.jpeg'
 import handpick from '../../public/handpick.jpg'
+import fssai from '../../public/fssai.png'
+import apeda from '../../public/APEDA.png'
+import fieo from '../../public/fieo.png'
+import fda from '../../public/fda.png'
+import iso from '../../public/iso-22000.webp'
 import Image from 'next/image'
 
 export default function About () {
@@ -34,11 +39,16 @@ export default function About () {
           WHO ARE WE
         </h2>
         <div className='px-6 lg:px-32 text-center text-sm md:text-base'>
-          Since 2016, we have proudly embraced the rich heritage of Bihar, the
-          birthplace of our exceptional foxnuts. We are honored to extend our
-          family legacy of domestic trade into the international market,
-          offering 100% organic, pure, and natural foxnuts. These are cultivated
-          with care and precision to uphold the highest standards of excellence.
+          Since 2016, we’ve proudly shared Bihar’s rich heritage, the birthplace
+          of our premium foxnuts, with the world. Honoring our family’s legacy,
+          we offer 100% organic, pure, and natural foxnuts—cultivated with care
+          to the highest standards. With every bite, our customers enjoy the
+          unmatched taste and health benefits of this superfood, while
+          supporting sustainable practices and our commitment to farmer success.
+          By partnering with us, you gain a product that not only meets rising
+          consumer demand for healthy snacks but also helps drive your sales
+          growth. Together, we build a sustainable future, supporting our
+          farmers and fueling your business success.
         </div>
       </section>
 
@@ -115,35 +125,31 @@ export default function About () {
           <div className=''>
             <h3 className='font-semibold text-xl'>Mission</h3>
             <p className='pt-4 text-sm md:text-base'>
-              Our mission is to be a trusted partner, delivering high-quality,
-              pure foxnuts that surpass expectations. We prioritize
-              sustainability, ensuring eco-friendly practices that benefit both
-              the environment and our farmers. Our goal is to foster strong
-              relationships with importers and buyers through mutual respect,
-              offering cost-effective solutions and timely support.
+              Our mission is to be a trusted partner, delivering pure,
+              high-quality foxnuts with a commitment to sustainability that
+              supports both the environment and our farmers.
             </p>
             <p className='pt-2 text-sm md:text-base'>
-              Inspired by{' '}
+              Guided by
               <span className='font-semibold'>
-                Vasudhaiva Kutumbakam—the world as one family,
+                Vasudhaiva Kutumbakam—the world as one family
               </span>{' '}
-              we aim to unite global communities through our commitment to
-              quality and shared values.
+              we build lasting relationships with importers by providing
+              cost-effective solutions, timely support, and shared values.
             </p>
           </div>
 
           <div className=''>
             <h3 className='font-semibold text-xl'>Vision</h3>
             <p className='pt-4 text-sm md:text-base'>
-              Our vision is to make premium-quality foxnuts a staple in every
-              home, promoting a healthier lifestyle. We aim to position our
-              foxnuts as a go-to superfood, providing a nutritious alternative
-              to unhealthy snacks for diabetics, pregnant women, and children.
+              Our vision is to make premium foxnuts a household staple,
+              promoting healthier lifestyles with a nutritious alternative to
+              unhealthy snacks—especially for diabetics, pregnant women, and
+              children.
             </p>
             <p className='pt-2 text-sm md:text-base'>
-              Honoring our farmers' dedication, we are committed to their
-              success and recognition, ensuring our values of quality and
-              sustainability remain the foundation of our brand.
+              We honor our farmers’ dedication, upholding values of quality and
+              sustainability as the core of our brand.
             </p>
           </div>
         </div>
@@ -155,20 +161,20 @@ export default function About () {
           Certificates & Recognitions
         </h3>
         <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            A
+          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+            <Image src={fssai} height={160} />
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            B
+          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+            <Image src={fda} height={160} />
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            C
+          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+            <Image src={fieo} height={160} />
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            D
+          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+            <Image src={apeda} height={160} />
           </div>
-          <div className='bg-gray-100 rounded-lg h-36 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            E
+          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
+            <Image src={iso} height={160} />
           </div>
         </div>
       </section>

@@ -627,14 +627,7 @@ const WhyChooseUs: React.FC = () => {
   ]
 
   return (
-    <section
-      className='bg-black py-16 px-4 sm:px-6 lg:px-8 min-h-screen'
-      style={{
-        backgroundImage: `url(${Background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
+    <section className='backgroundImage bg-white py-16 px-4 sm:px-6 lg:px-8 min-h-screen'>
       <div className='max-w-7xl mx-auto'>
         <h2 className='text-3xl font-extrabold text-gray-900 text-center mb-12'>
           Why Choose Us
