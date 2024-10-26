@@ -162,19 +162,31 @@ export default function About () {
         </h3>
         <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image src={fssai} height={160} />
+            <Image src={fssai} height={160} alt={'We have FSSAI Certificate'} />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image src={fda} height={160} />
+            <Image
+              src={fda}
+              height={160}
+              alt={'We have FDA Certificate for USA importers'}
+            />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image src={fieo} height={160} />
+            <Image
+              src={fieo}
+              height={160}
+              alt={'We have FIEO Certificate from Indian government'}
+            />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image src={apeda} height={160} />
+            <Image src={apeda} height={160} alt={'We have APEDA Certificate'} />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image src={iso} height={160} />
+            <Image
+              src={iso}
+              height={160}
+              alt={'We have ISO-22000 Certificate'}
+            />
           </div>
         </div>
       </section>
