@@ -33,6 +33,13 @@ export default function RootLayout ({
           name='viewport'
           content='width=device-width, initial-scale=1, shrink-to-fit=no'
         />
+        <link rel='icon' type='icon' sizes='192X192' href='icon.ico' />
+        <link
+          rel='apple-touch-icon'
+          type='icon'
+          sizes='192X192'
+          href='icon.ico'
+        />
       </Head>
       <body className='flex flex-col min-h-screen'>
         <Nav />
