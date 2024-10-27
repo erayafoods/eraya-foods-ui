@@ -35,12 +35,17 @@ export default function RootLayout ({
           content='width=device-width, initial-scale=1, shrink-to-fit=no'
         />
 
-        <link rel='icon' type='image/png' sizes='192x192' href='/icon.ico' />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='192x192'
+          href='/public/icon.ico'
+        />
         <link
           rel='apple-touch-icon'
           type='image/png'
           sizes='192x192'
-          href='/icon.ico'
+          href='/public/icon.ico'
         />
       </Head>
       <body className='flex flex-col min-h-screen'>
