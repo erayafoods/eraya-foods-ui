@@ -4,12 +4,5 @@
     "start_url": "/",
     "lang": "en-IN",
     "theme_color": "#000000",
-    "display": "standalone",
-    "icons": [
-        {
-            "src": "/public/icon.ico",
-            "sizes": "192X192",
-            "type": "icon"
-        }
-    ]
+    "display": "standalone"
 }
