@@ -96,3 +96,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.backgroundImage4 {
+    background-image: url("/not-found.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Eraya Foods",
+    "description": "Best foxnut exporter from India",
+    "start_url": "/",
+    "lang": "en-IN",
+    "theme_color": "#000000",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "icon.ico",
+            "sizes": "192X192",
+            "type": "icon"
+        }
+    ]
+}
