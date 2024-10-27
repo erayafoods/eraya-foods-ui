@@ -3,7 +3,7 @@ import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa'
 import Image, { StaticImageData } from 'next/image'
 
 interface ImageType {
-  src: StaticImageData
+  src: string
   alt: string
 }
 
