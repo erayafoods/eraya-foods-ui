@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Background from '../../public/bg1.jpg'
+
 interface Feature {
   title: string
   description: string
