@@ -4,7 +4,7 @@
     "start_url": "/",
     "lang": "en-IN",
     "theme_color": "#000000",
-    "display": "standalone",
+    "display": "fullscreen",
     "icons": [
         {
             "src": "icon.ico",
