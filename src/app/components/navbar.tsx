@@ -63,6 +63,7 @@ const Navbar: React.FC = () => {
             >
               <Image
                 src={'/eraya.svg'}
+                alt='Eraya Foods, the best foxnut exporter from India'
                 width={70}
                 height={70}
                 style={{ width: '70px', padding: '3px' }}
