@@ -77,21 +77,21 @@ body {
 }
 
 .backgroundImage {
-    background-image: url("../public/bg4.jpg");
+    background-image: url("/bg4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .backgroundImage2 {
-    background-image: url("../public/customer.jpg");
-    background-size: contain;
+    background-image: url("/support.jpeg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .backgroundImage3 {
-    background-image: url("../public/faq.jpg");
+    background-image: url("/faq.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

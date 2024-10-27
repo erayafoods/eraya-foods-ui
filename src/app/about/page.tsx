@@ -1,39 +1,7 @@
-// import aboutPic from '../../public/about-bg-image.jpeg'
-// import network from '../../public/network.jpeg'
-// import artisans from '../../public/artisans.jpeg'
-// import handpick from '../../public/handpick.jpg'
-// import fssai from '../../public/fssai.png'
-// import apeda from '../../public/APEDA.png'
-// import fieo from '../../public/fieo.png'
-// import fda from '../../public/fda.png'
-// import iso from '../../public/iso-22000.webp'
-// import Image from 'next/image'
-
-// export default function About () {
-//   return (
-//     <>
-//       {/* Updated Image Section */}
-//       <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
-//         <Image
-//           src={aboutPic}
-//           alt='About Us Background'
-//           fill
-//           className='rounded-lg object-cover'
-//         />
-//       </div>
-
 'use client'
 import '../globals.css'
 import { useState, useEffect } from 'react'
-import aboutPic from '../../public/about-bg-image.jpeg'
-import network from '../../public/network.jpeg'
-import artisans from '../../public/artisans.jpeg'
-import handpick from '../../public/handpick.jpg'
-import fssai from '../../public/fssai.png'
-import apeda from '../../public/APEDA.png'
-import fieo from '../../public/fieo.png'
-import fda from '../../public/fda.png'
-import iso from '../../public/iso-22000.webp'
+
 import Image from 'next/image'
 
 export default function About () {
@@ -64,7 +32,7 @@ export default function About () {
       {/* Updated Image Section with Fade Effect */}
       <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
         <Image
-          src={aboutPic}
+          src={'/about-bg-image.jpeg'}
           alt='About Us Background'
           fill
           style={{
@@ -103,7 +71,7 @@ export default function About () {
           {/* Handpicked Section */}
           <div className='relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
-              src={handpick}
+              src={'/handpick.jpg'}
               alt='Handpicked Foxnuts'
               width={500}
               height={350}
@@ -121,7 +89,7 @@ export default function About () {
           {/* Farmer Network Section */}
           <div className='relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
-              src={network}
+              src={'/network.jpeg'}
               alt='Farmer Network'
               width={500}
               height={350}
@@ -139,7 +107,7 @@ export default function About () {
           {/* Artisans Section */}
           <div className='relative group overflow-hidden rounded-lg shadow-lg'>
             <Image
-              src={artisans}
+              src={'/artisans.jpeg'}
               alt='Artisans'
               width={500}
               height={350}
@@ -199,29 +167,42 @@ export default function About () {
         </h3>
         <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image src={fssai} height={160} alt={'We have FSSAI Certificate'} />
+            <Image
+              src={'/fssai.png'}
+              height={160}
+              width={160}
+              alt={'We have FSSAI Certificate'}
+            />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <Image
-              src={fda}
+              src={'/fda.png'}
               height={160}
+              width={160}
               alt={'We have FDA Certificate for USA importers'}
             />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <Image
-              src={fieo}
+              src={'/fieo.png'}
               height={160}
+              width={160}
               alt={'We have FIEO Certificate from Indian government'}
             />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image src={apeda} height={160} alt={'We have APEDA Certificate'} />
+            <Image
+              src={'/APEDA.png'}
+              height={160}
+              width={160}
+              alt={'We have APEDA Certificate'}
+            />
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <Image
-              src={iso}
+              src={'/iso-22000.webp'}
               height={160}
+              width={160}
               alt={'We have ISO-22000 Certificate'}
             />
           </div>

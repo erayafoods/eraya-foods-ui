@@ -13,8 +13,8 @@ const Products = () => {
           {/* Row 1 - 3 Cards */}
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <img
-              src='path_to_gradeA_image.jpg'
-              alt='Grade A Foxnuts'
+              src='/faq.jpg'
+              alt='Grade B Foxnuts'
               className='w-full h-48 object-cover'
             />
             <div className='p-6'>
@@ -25,20 +25,19 @@ const Products = () => {
               <p className='text-gray-600 mt-4'>
                 Specification: Best Quality Graded, Round Shaped
                 <br />
-                Ready to use, No Wastage
                 <br />
-                Size: [Insert Size Here]
+                Size: 14mm-16mm
                 <br />
-                Mandi: [Insert Mandi Here]
+                Mandi: 4 sutta
                 <br />
-                Bag Size: [Insert Bag Size Here]
+                Bag Size: 10kg
               </p>
             </div>
           </div>
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <img
-              src='path_to_gradeB_image.jpg'
+              src='/faq.jpg'
               alt='Grade B Foxnuts'
               className='w-full h-48 object-cover'
             />

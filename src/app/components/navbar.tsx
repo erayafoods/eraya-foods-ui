@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { FiChevronDown } from 'react-icons/fi'
-import Logo from '../../public/eraya.svg'
-import { usePathname } from 'next/navigation'
 
+import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 // Define the structure of the nav link
 interface NavLink {
   name: string
@@ -61,7 +61,12 @@ const Navbar: React.FC = () => {
               onClick={() => handleLinkClick('')}
               className='flex items-center'
             >
-              <Logo style={{ width: '70px', padding: '3px' }} />
+              <Image
+                src={'/eraya.svg'}
+                width={70}
+                height={70}
+                style={{ width: '70px', padding: '3px' }}
+              />
               <span className='ml-2 text-xl font-bold text-gray-800'></span>
             </a>
           </div>
@@ -101,7 +106,7 @@ const Navbar: React.FC = () => {
                       onClick={() => handleLinkClick(link.id)}
                       className={`${
                         currentPath === `/${link.id}`
-                          ? 'font-bold text-black'
+                          ? 'font-extrabold  text-black'
                           : 'text-gray-600 hover:text-amber-600'
                       } px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ease-in-out`}
                       aria-current={

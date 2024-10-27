@@ -1,6 +1,6 @@
 'use client'
 import '../globals.css'
-import Logo from '../../public/eraya.svg'
+import Image from 'next/image'
 
 export default function Footer () {
   const footerNavs = [
@@ -58,7 +58,12 @@ export default function Footer () {
         <div className='flex-1'>
           <div className='max-w-xs'>
             {/* <img src={Logo} className='w-32' /> */}
-            <Logo style={{ width: '70px', padding: '3px' }} />
+            <Image
+              src={'/eraya.svg'}
+              width={70}
+              height={70}
+              style={{ width: '70px', padding: '3px' }}
+            />
             <p className='leading-relaxed mt-2 text-[15px]'>
               Transforming Foxnuts into a Global Delight
             </p>

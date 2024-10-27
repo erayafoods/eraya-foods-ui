@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa'
 import Image, { StaticImageData } from 'next/image'
-import family from '../../public/family.jpeg'
-import handpick from '../../public/handpick.jpg'
-import network from '../../public/network.jpeg'
-import artisans from '../../public/artisans.jpeg'
+
 interface ImageType {
   src: StaticImageData
   alt: string
@@ -17,19 +14,19 @@ const ImageCarousel: React.FC = () => {
 
   const images: ImageType[] = [
     {
-      src: handpick,
+      src: '/handpick.jpg',
       alt: 'Handpicked'
     },
     {
-      src: family,
+      src: '/family.jpeg',
       alt: 'Family'
     },
     {
-      src: network,
+      src: '/network.jpeg',
       alt: 'Network'
     },
     {
-      src: artisans,
+      src: '/artisans.jpeg',
       alt: 'Artisans'
     }
   ]
