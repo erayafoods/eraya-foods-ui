@@ -36,8 +36,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## Application dev phases
-1. Version1 (basic)
-2. Content enhancment 
+1. Version1 (basic)       Done
+2. Content enhancment     In progress 
 3. Stylings finalise
 4. SEO Optimisations
 5. SEO 
