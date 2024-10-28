@@ -98,7 +98,7 @@ body {
 }
 
 .backgroundImage4 {
-    background-image: url("/not-found.jpeg");
+    background-image: url("/not-found.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
