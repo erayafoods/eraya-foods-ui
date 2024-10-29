@@ -58,13 +58,16 @@ export default function Footer () {
         <div className='flex-1'>
           <div className='max-w-xs'>
             {/* <img src={Logo} className='w-32' /> */}
-            <Image
-              src={'/eraya.svg'}
-              alt='Eraya Foods , the best foxnut exporter from India'
-              width={70}
-              height={70}
-              style={{ width: '70px', padding: '3px' }}
-            />
+            <picture>
+              <source srcSet='/eraya.svg?webp' type='image/webp' />
+              <Image
+                src={'/eraya.svg'}
+                alt='Eraya Foods , the best foxnut exporter from India'
+                width={70}
+                height={70}
+                style={{ width: '70px', padding: '3px' }}
+              />
+            </picture>
             <p className='leading-relaxed mt-2 text-[15px]'>
               Transforming Foxnuts into a Global Delight
             </p>

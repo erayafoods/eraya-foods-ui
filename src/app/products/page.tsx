@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image'
 const Products = () => {
   return (
     <div className='max-w-screen-2xl content-center px-[8vw] pb-[8vh] bg-gray-100'>
@@ -12,11 +12,16 @@ const Products = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-8'>
           {/* Row 1 - 3 Cards */}
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
-            <img
-              src='/faq.jpg'
-              alt='Grade B Foxnuts'
-              className='w-full h-48 object-cover'
-            />
+            <picture>
+              <source src='/faq.jpg?webp' type='image/webp' />
+              <Image
+                src='/faq.jpg'
+                alt='Grade B Foxnuts'
+                width={120}
+                height={200}
+                className='w-full h-48 object-cover'
+              />
+            </picture>
             <div className='p-6'>
               <h3 className='text-2xl font-bold text-gray-700 mb-4'>Grade A</h3>
               <p className='text-gray-600'>
@@ -36,11 +41,16 @@ const Products = () => {
           </div>
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
-            <img
-              src='/faq.jpg'
-              alt='Grade B Foxnuts'
-              className='w-full h-48 object-cover'
-            />
+            <picture>
+              <source src='/faq.jpg?webp' type='image/webp' />
+              <Image
+                src='/faq.jpg'
+                alt='Grade B Foxnuts'
+                width={120}
+                height={200}
+                className='w-full h-48 object-cover'
+              />
+            </picture>
             <div className='p-6'>
               <h3 className='text-2xl font-bold text-gray-700 mb-4'>Grade B</h3>
               <p className='text-gray-600'>
@@ -61,11 +71,16 @@ const Products = () => {
           </div>
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
-            <img
-              src='path_to_gradeC_image.jpg'
-              alt='Grade C Foxnuts'
-              className='w-full h-48 object-cover'
-            />
+            <picture>
+              <source src='/faq.jpg?webp' type='image/webp' />
+              <Image
+                src='/faq.jpg'
+                alt='Grade C Foxnuts'
+                width={120}
+                height={200}
+                className='w-full h-48 object-cover'
+              />
+            </picture>
             <div className='p-6'>
               <h3 className='text-2xl font-bold text-gray-700 mb-4'>Grade C</h3>
               <p className='text-gray-600'>
@@ -89,11 +104,16 @@ const Products = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-8 mt-8'>
           {/* Row 2 - 3 Cards */}
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
-            <img
-              src='path_to_small_package_image.jpg'
-              alt='Packaged Raw Makhana - Small'
-              className='w-full h-48 object-cover'
-            />
+            <picture>
+              <source src='/faq.jpg?webp' type='image/webp' />
+              <Image
+                src='/faq.jpg'
+                alt='Packaged Raw Makhana - Small'
+                width={120}
+                height={200}
+                className='w-full h-48 object-cover'
+              />
+            </picture>
             <div className='p-6'>
               <h3 className='text-2xl font-bold text-gray-700 mb-4'>
                 Packaged Raw Makhana - Small
@@ -116,11 +136,16 @@ const Products = () => {
           </div>
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
-            <img
-              src='path_to_large_package_image.jpg'
-              alt='Packaged Raw Makhana - Large'
-              className='w-full h-48 object-cover'
-            />
+            <picture>
+              <source src='/faq.jpg?webp' type='image/webp' />
+              <Image
+                src='/faq.jpg'
+                alt='Packaged Raw Makhana - Large'
+                width={120}
+                height={200}
+                className='w-full h-48 object-cover'
+              />
+            </picture>
             <div className='p-6'>
               <h3 className='text-2xl font-bold text-gray-700 mb-4'>
                 Packaged Raw Makhana - Large

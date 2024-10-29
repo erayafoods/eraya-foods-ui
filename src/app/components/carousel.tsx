@@ -85,16 +85,21 @@ const ImageCarousel: React.FC = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <Image
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className='w-full h-[75vh] md:h-[80vh] object-cover flex-shrink-0 transition-opacity duration-700 ease-in-out'
+          <picture
+            className='w-full h-[75vh] md:h-[80vh] object-contain flex-shrink-0 transition-opacity duration-700 ease-in-out'
             style={{ opacity: currentIndex === index ? 1 : 0.5 }}
-            width={1920}
-            height={1080}
-            priority
-          />
+            key={index}
+          >
+            <source srcSet={image.src + '?webp'} type='image/webp' />
+            <Image
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              height={1080}
+              width={1920}
+              priority
+            />
+          </picture>
         ))}
       </div>
 

@@ -61,13 +61,16 @@ const Navbar: React.FC = () => {
               onClick={() => handleLinkClick('')}
               className='flex items-center'
             >
-              <Image
-                src={'/eraya.svg'}
-                alt='Eraya Foods, the best foxnut exporter from India'
-                width={70}
-                height={70}
-                style={{ width: '70px', padding: '3px' }}
-              />
+              <picture>
+                <source srcSet='/eraya.svg?webp' type='image/webp' />
+                <Image
+                  src={'/eraya.svg'}
+                  alt='Eraya Foods, the best foxnut exporter from India'
+                  width={70}
+                  height={70}
+                  style={{ width: '70px', padding: '3px' }}
+                />
+              </picture>
               <span className='ml-2 text-xl font-bold text-gray-800'></span>
             </a>
           </div>

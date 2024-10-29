@@ -31,16 +31,19 @@ export default function About () {
     <>
       {/* Updated Image Section with Fade Effect */}
       <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
-        <Image
-          src={'/about-bg-image.jpeg'}
-          alt='About Us Background'
-          fill
-          style={{
-            opacity: aboutPicOpacity,
-            transition: 'opacity 0.2s ease-out'
-          }}
-          className='rounded-lg object-cover'
-        />
+        <picture>
+          <source srcSet='/about-bg-image.jpeg?webp' type='image/webp' />
+          <Image
+            src={'/about-bg-image.jpeg'}
+            alt='About Us Background'
+            fill
+            style={{
+              opacity: aboutPicOpacity,
+              transition: 'opacity 0.2s ease-out'
+            }}
+            className='rounded-lg object-cover'
+          />
+        </picture>
       </div>
 
       <section className='py-12'>
@@ -70,13 +73,16 @@ export default function About () {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-32'>
           {/* Handpicked Section */}
           <div className='relative group overflow-hidden rounded-lg shadow-lg'>
-            <Image
-              src={'/handpick.jpg'}
-              alt='Handpicked Foxnuts'
-              width={500}
-              height={350}
-              className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
-            />
+            <picture>
+              <source srcSet='/handpick.jpg?webp' type='image/webp' />
+              <Image
+                src={'/handpick.jpg'}
+                alt='Handpicked Foxnuts'
+                width={500}
+                height={350}
+                className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
+              />
+            </picture>
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
               <p className='text-white text-2xl font-medium px-4 text-center'>
                 Excellence drives us. We deliver the finest foxnuts, sourced
@@ -88,13 +94,16 @@ export default function About () {
 
           {/* Farmer Network Section */}
           <div className='relative group overflow-hidden rounded-lg shadow-lg'>
-            <Image
-              src={'/network.jpeg'}
-              alt='Farmer Network'
-              width={500}
-              height={350}
-              className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
-            />
+            <picture>
+              <source srcSet='/network.jpeg?webp' type='image/webp' />
+              <Image
+                src={'/network.jpeg'}
+                alt='Farmer Network'
+                width={500}
+                height={350}
+                className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
+              />
+            </picture>
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
               <p className='text-white text-2xl font-medium px-4 text-center'>
                 Our Trusted Farmer Network brings you the finest foxnuts,
@@ -106,13 +115,16 @@ export default function About () {
 
           {/* Artisans Section */}
           <div className='relative group overflow-hidden rounded-lg shadow-lg'>
-            <Image
-              src={'/artisans.jpeg'}
-              alt='Artisans'
-              width={500}
-              height={350}
-              className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
-            />
+            <picture>
+              <source srcSet='/artisans.jpeg?webp' type='image/webp' />
+              <Image
+                src={'/artisans.jpeg'}
+                alt='Artisans'
+                width={500}
+                height={350}
+                className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
+              />
+            </picture>
             <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center'>
               <p className='text-white text-2xl font-medium px-4 text-center'>
                 Our artisans expertly pop each foxnut, preserving its natural
@@ -167,36 +179,52 @@ export default function About () {
         </h3>
         <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image
-              src={'/fssai.png'}
-              height={160}
-              width={160}
-              alt={'We have FSSAI Certificate'}
-            />
+            <picture>
+              <source srcSet='/fssai.png?webp' type='image/wbep' />
+              <Image
+                src={'/fssai.png'}
+                height={160}
+                width={160}
+                alt={'We have FSSAI Certificate'}
+              />
+            </picture>
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image
-              src={'/fda.png'}
-              height={160}
-              width={160}
-              alt={'We have FDA Certificate for USA importers'}
-            />
+            <picture>
+              <source srcSet='/fda.png?webp' type='image/webp' />
+              <Image
+                src={'/fda.png'}
+                height={160}
+                width={160}
+                alt={'We have FDA Certificate for USA importers'}
+              />
+            </picture>
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image
-              src={'/fieo.png'}
-              height={160}
-              width={160}
-              alt={'We have FIEO Certificate from Indian government'}
-            />
+            <picture>
+              <source srcSet='/fieo.png?webp' type='image/webp' />
+              <Image
+                src={'/fieo.png'}
+                height={160}
+                width={160}
+                alt={'We have FIEO Certificate from Indian government'}
+              />
+            </picture>
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image
-              src={'/APEDA.png'}
-              height={160}
-              width={160}
-              alt={'We have APEDA Certificate'}
-            />
+            <picture>
+              {/* Use path directly in `srcSet` for WebP source */}
+              <source srcSet='/APEDA.png?webp' type='image/webp' />
+              {/* Fallback image */}
+              <img
+                src='/APEDA.png'
+                height={160}
+                width={160}
+                alt='We have APEDA Certificate'
+                loading='lazy'
+                className='rounded-lg'
+              />
+            </picture>
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <Image

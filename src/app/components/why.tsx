@@ -649,11 +649,14 @@ const WhyChooseUs: React.FC = () => {
                     {feature.title}
                   </h3>
                 </div>
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className='w-full h-48 object-cover rounded-md mb-4'
-                />
+                <picture>
+                  <source srcSet={feature.image + '?webp'} type='image/webp' />
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className='w-full h-48 object-cover rounded-md mb-4'
+                  />
+                </picture>
                 <p className='text-gray-600'>{feature.description}</p>
               </div>
             </div>
