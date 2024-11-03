@@ -99,7 +99,7 @@ export default function Footer () {
                 <li key={idx}>
                   <a
                     href={el.href}
-                    className='hover:underline hover:text-indigo-600'
+                    className='hover:underline hover:text-[#3c5759]'
                   >
                     {el.name}
                   </a>

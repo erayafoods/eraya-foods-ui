@@ -227,12 +227,12 @@ const ContactUs: React.FC = () => {
                   <div className='relative'>
                     <h3 className='text-2xl font-bold mb-8'>Get in Touch</h3>
                     <div className='space-y-6'>
-                      <div className='flex items-center space-x-4'>
-                        <FiMail className='w-6 h-6 text-black hover:text-stone-600 transition duration-200' />
+                      <div className='flex items-center space-x-4  text-black'>
+                        <FiMail className='w-6 h-6  hover:text-stone-600 transition duration-200' />
                         <span>info@erayafoods.com</span>
                       </div>
-                      <div className='flex items-center space-x-4'>
-                        <FiPhone className='w-6 h-6 text-black hover:text-black transition duration-200' />
+                      <div className='flex items-center space-x-4 text-black'>
+                        <FiPhone className='w-6 h-6    hover:text-black transition duration-200' />
                         <span> +91 9266462227</span>
                       </div>
                     </div>
