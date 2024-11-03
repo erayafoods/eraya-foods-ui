@@ -86,7 +86,7 @@ const ImageCarousel: React.FC = () => {
       >
         {images.map((image, index) => (
           <picture
-            className='w-full h-[75vh] md:h-[80vh] object-contain flex-shrink-0 transition-opacity duration-700 ease-in-out'
+            className='w-full aspect-[16/9] md:aspect-[4/3]  flex-shrink-0 transition-opacity duration-700 ease-in-out'
             style={{ opacity: currentIndex === index ? 1 : 0.5 }}
             key={index}
           >
@@ -97,6 +97,7 @@ const ImageCarousel: React.FC = () => {
               alt={image.alt}
               height={1080}
               width={1920}
+              className='w-full h-full object-cover'
               priority
             />
           </picture>
