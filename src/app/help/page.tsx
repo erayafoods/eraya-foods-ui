@@ -268,7 +268,7 @@ const FAQSection = () => {
         )}
         <button
           onClick={() => setExpandAll(!expandAll)}
-          className='mb-6 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
+          className='mb-6 px-4 py-2 bg-[#768a96] text-white rounded-md hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
         >
           {expandAll ? 'Hide All' : 'See All'}
         </button>

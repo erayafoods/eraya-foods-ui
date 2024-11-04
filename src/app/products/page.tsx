@@ -31,11 +31,11 @@ const Products = () => {
                 Specification: Best Quality Graded, Round Shaped
                 <br />
                 <br />
-                Size: 14mm-16mm
+                Size: 13mm-16mm
                 <br />
                 Mandi: 4 sutta
                 <br />
-                Bag Size: 10kg
+                Bag Size: 5kg/8kg/10kg
               </p>
             </div>
           </div>
@@ -61,11 +61,11 @@ const Products = () => {
                 <br />
                 Ready to use, No Wastage
                 <br />
-                Size: [Insert Size Here]
+                Size: 16mm -19 mm
                 <br />
-                Mandi: [Insert Mandi Here]
+                Mandi: 5 sutta
                 <br />
-                Bag Size: [Insert Bag Size Here]
+                Bag Size: 5kg/8kg/10kg
               </p>
             </div>
           </div>
@@ -91,11 +91,11 @@ const Products = () => {
                 <br />
                 Ready to use, No Wastage
                 <br />
-                Size: [Insert Size Here]
+                Size: 19mm+
                 <br />
-                Mandi: [Insert Mandi Here]
+                Mandi: 6 sutta
                 <br />
-                Bag Size: [Insert Bag Size Here]
+                Bag Size: 5kg/8kg/10kg
               </p>
             </div>
           </div>
@@ -126,11 +126,9 @@ const Products = () => {
                 <br />
                 Ready to use, No Wastage
                 <br />
-                Size: [Insert Size Here]
+                Size: 17-19 mm
                 <br />
-                Mandi: [Insert Mandi Here]
-                <br />
-                Bag Size: [Insert Bag Size Here]
+                Package Size: 200g
               </p>
             </div>
           </div>
@@ -158,11 +156,9 @@ const Products = () => {
                 <br />
                 Ready to use, No Wastage
                 <br />
-                Size: [Insert Size Here]
+                Size: 17-19mm
                 <br />
-                Mandi: [Insert Mandi Here]
-                <br />
-                Bag Size: [Insert Bag Size Here]
+                Package Size: 500g
               </p>
             </div>
           </div>

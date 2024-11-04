@@ -72,7 +72,7 @@ export default function About () {
         {/* Responsive Grid Section */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-32'>
           {/* Handpicked Section */}
-          <div className='relative group overflow-hidden rounded-lg shadow-lg'>
+          <div className='relative group overflow-hidden rounded-lg shadow-lg  '>
             <picture>
               <source srcSet='/handpick.jpg?webp' type='image/webp' />
               <Image
@@ -93,7 +93,7 @@ export default function About () {
           </div>
 
           {/* Farmer Network Section */}
-          <div className='relative group overflow-hidden rounded-lg shadow-lg'>
+          <div className='relative group overflow-hidden rounded-lg shadow-lg  '>
             <picture>
               <source srcSet='/network.jpeg?webp' type='image/webp' />
               <Image
@@ -114,7 +114,7 @@ export default function About () {
           </div>
 
           {/* Artisans Section */}
-          <div className='relative group overflow-hidden rounded-lg shadow-lg'>
+          <div className='relative group overflow-hidden rounded-lg shadow-lg  '>
             <picture>
               <source srcSet='/artisans.jpeg?webp' type='image/webp' />
               <Image
