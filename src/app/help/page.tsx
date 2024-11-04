@@ -281,7 +281,7 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => toggleItem(faq.id)}
-                className='flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500'
+                className='flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-200 transition duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500'
                 aria-expanded={activeItems.includes(faq.id)}
                 aria-controls={`faq-answer-${faq.id}`}
               >
