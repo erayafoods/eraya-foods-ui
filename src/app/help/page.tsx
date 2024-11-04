@@ -3,13 +3,15 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { FaSearch, FaPlus, FaMinus } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
+
 interface FAQ {
   id: number
   question: string
   answer: string
 }
+
 const FAQSection = () => {
-  const [faqs, setFaqs] = useState([
+  const [faqs, setFaqs] = useState<FAQ[]>([
     {
       id: 1,
       question: "What makes Eraya Foods' foxnuts unique?",
@@ -187,8 +189,12 @@ const FAQSection = () => {
   const [activeItems, setActiveItems] = useState<number[]>([])
   const [searchResults, setSearchResults] = useState<FAQ[]>([])
   const [error, setError] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
 
   const searchRef = useRef(null)
+
+  const itemsPerPage = 9 // Number of FAQs per page
+  const totalPages = Math.ceil(faqs.length / itemsPerPage)
 
   useEffect(() => {
     if (expandAll) {
@@ -225,19 +231,33 @@ const FAQSection = () => {
     setSearchTerm(e.target.value)
   }
 
+  const handleClearSearch = () => {
+    setSearchTerm('')
+    setSearchResults([])
+    setError('')
+  }
+
+  // Function to scroll to a specific FAQ item
   const scrollToFAQ = (id: number) => {
     const element = document.getElementById(`faq-${id}`)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      setActiveItems(prevActiveItems => [...prevActiveItems, id])
+      toggleItem(id) // Toggle the FAQ to open it when scrolling
     }
   }
 
+  // Paginated FAQs for the current page
+  const paginatedFaqs =
+    searchResults.length > 0
+      ? searchResults
+      : faqs.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+
   return (
     <>
-      <div className='max-w-screen-2xl content-center px-[8vw]  pb-[8vh]'>
+      <div className='max-w-screen-2xl content-center px-[8vw] pb-[8vh]'>
         <div className='backgroundImage3 w-96 h-96 mx-auto'></div>
-        <div className='relative mb-6'>
+
+        <div className='relative mb-3'>
           <input
             type='text'
             placeholder='Search FAQs...'
@@ -248,6 +268,17 @@ const FAQSection = () => {
           />
           <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />
         </div>
+
+        {/* Clear Button */}
+        {searchTerm && (
+          <button
+            onClick={handleClearSearch}
+            className='mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500'
+          >
+            Clear
+          </button>
+        )}
+
         {error && <p className='text-red-500 mb-4'>{error}</p>}
         {searchResults.length > 0 && (
           <div className='mb-6 p-4 bg-gray-100 rounded-md'>
@@ -266,14 +297,16 @@ const FAQSection = () => {
             </ul>
           </div>
         )}
+
         <button
           onClick={() => setExpandAll(!expandAll)}
           className='mb-6 px-4 py-2 bg-[#768a96] text-white rounded-md hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
         >
           {expandAll ? 'Hide All' : 'See All'}
         </button>
+
         <div className='space-y-4'>
-          {faqs.map(faq => (
+          {paginatedFaqs.map(faq => (
             <div
               key={faq.id}
               id={`faq-${faq.id}`}
@@ -310,6 +343,24 @@ const FAQSection = () => {
                 )}
               </AnimatePresence>
             </div>
+          ))}
+        </div>
+
+        {/* Pagination Controls */}
+        <div className='mt-6 flex justify-center space-x-2'>
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              disabled={currentPage === index + 1}
+              className={`px-4 py-2 rounded ${
+                currentPage === index + 1
+                  ? 'bg-[#57626a]'
+                  : 'bg-gray-300 text-white hover:bg-gray-500'
+              }`}
+            >
+              Page {index + 1}
+            </button>
           ))}
         </div>
       </div>
