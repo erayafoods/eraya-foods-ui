@@ -3,10 +3,25 @@ import React, { useState } from 'react'
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
-const FounderSection = () => {
-  const [followingStatus, setFollowingStatus] = useState({})
+interface FounderData {
+  name: string
+  title: string
+  image: string
+  bio: string
+  quote: string
+  socialMedia: {
+    linkedin: string
+    twitter: string
+    github: string
+  }
+}
 
-  const founders = [
+const FounderSection: React.FC = () => {
+  const [followingStatus, setFollowingStatus] = useState<{
+    [key: string]: boolean
+  }>({})
+
+  const founders: FounderData[] = [
     {
       name: 'Ankush Kumar',
       title: 'Founder & CEO',
@@ -24,10 +39,7 @@ const FounderSection = () => {
       name: 'Anubhi Shah',
       title: 'COO',
       image: '/anubhi.jpeg',
-      bio:
-        'With a background in hotel management, Anubhi Shah brings a unique perspective as the Chief Operating Officer at Eraya, expertly blending operational efficiency with a customer-first approach. Her commitment is to create seamless experiences that embody Eraya' +
-        "'" +
-        's dedication to quality and service, ensuring each step aligns with the highest standards for the satisfaction of both clients and partners.',
+      bio: 'With a background in hotel management, Anubhi Shah brings a unique perspective as the Chief Operating Officer at Eraya, expertly blending operational efficiency with a customer-first approach. Her commitment is to create seamless experiences that embody Eraya’s dedication to quality and service, ensuring each step aligns with the highest standards for the satisfaction of both clients and partners.',
       quote:
         'True service goes beyond meeting expectations; it’s about anticipating needs and creating lasting value in every experience.',
       socialMedia: {
@@ -39,14 +51,14 @@ const FounderSection = () => {
     // Add more founder data here as needed
   ]
 
-  const handleImageError = index => {
+  const handleImageError = (index: number) => {
     setFollowingStatus(prevStatus => ({
       ...prevStatus,
       [`imageError${index}`]: true
     }))
   }
 
-  const toggleFollow = index => {
+  const toggleFollow = (index: number) => {
     setFollowingStatus(prevStatus => ({
       ...prevStatus,
       [`isFollowing${index}`]: !prevStatus[`isFollowing${index}`]
@@ -127,7 +139,22 @@ const FounderSection = () => {
                   </motion.a>
                 </div>
 
-                <div className='mt-8 flex flex-wrap gap-4'></div>
+                <div className='mt-8 flex flex-wrap gap-4'>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => toggleFollow(index)}
+                    className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md ${
+                      followingStatus[`isFollowing${index}`]
+                        ? 'bg-gray-600 hover:bg-gray-700'
+                        : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
+                    }`}
+                  >
+                    {followingStatus[`isFollowing${index}`]
+                      ? 'Following'
+                      : 'Follow'}
+                  </motion.button>
+                </div>
               </div>
             </div>
           </motion.div>
