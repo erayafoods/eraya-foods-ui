@@ -13,7 +13,7 @@ export default function Home () {
       {/*  cool text*/}
 
       <div
-        className='text-gray-500 rounded-2xl py-5 max-w-screen-xl mx-auto md:px-8'
+        className=' text-gray-500 rounded-2xl py-5 max-w-screen-xl mx-auto md:px-8'
         style={{ fontFamily: 'Poppins, sans-serif' }}
       >
         Since 2016, Eraya Foods has been proudly delivering the finest premium
