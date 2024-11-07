@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 interface ImageType {
   src: string
@@ -13,22 +13,9 @@ const ImageCarousel: React.FC = () => {
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
   const images: ImageType[] = [
-    {
-      src: '/handpick.jpg',
-      alt: 'Handpicked'
-    },
-    {
-      src: '/family.jpeg',
-      alt: 'Family'
-    },
-    {
-      src: '/network.jpeg',
-      alt: 'Network'
-    },
-    {
-      src: '/artisans.jpeg',
-      alt: 'Artisans'
-    }
+    { src: '/000.png', alt: 'Handpicked' },
+    { src: '/001.png', alt: 'Family' },
+    { src: '/002.png', alt: 'Network' }
   ]
 
   const nextSlide = useCallback(() => {
@@ -55,7 +42,6 @@ const ImageCarousel: React.FC = () => {
     } else if (timerRef.current) {
       clearInterval(timerRef.current)
     }
-
     return () => {
       if (timerRef.current) clearInterval(timerRef.current)
     }
@@ -73,7 +59,7 @@ const ImageCarousel: React.FC = () => {
 
   return (
     <div
-      className='relative max-w-full mx-auto overflow-hidden shadow-lg rounded-lg'
+      className='relative max-w-full mx-auto overflow-hidden shadow-lg rounded-lg aspect-[16/9]'
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role='region'
@@ -85,40 +71,17 @@ const ImageCarousel: React.FC = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <picture
-            className='w-full aspect-[16/9] md:aspect-[4/3]  flex-shrink-0 transition-opacity duration-700 ease-in-out'
-            style={{ opacity: currentIndex === index ? 1 : 0.5 }}
+          <Image
             key={index}
-          >
-            <source srcSet={image.src + '?webp'} type='image/webp' />
-            <Image
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              height={1080}
-              width={1920}
-              className='w-full h-full object-cover'
-              priority
-            />
-          </picture>
+            src={image.src}
+            alt={image.alt}
+            className='w-full h-full object-contain flex-shrink-0 transition-opacity duration-700 ease-in-out'
+            style={{ opacity: currentIndex === index ? 1 : 0.5 }}
+            width={1920}
+            height={1080}
+            priority
+          />
         ))}
-      </div>
-
-      {/* Text overlay */}
-      <div className='absolute inset-0 flex justify-center items-center'>
-        <h1 className='text-white text-xl md:text-6xl md:text-[8vw] font-bold tracking-wide text-white font-bold flex space-x-2'>
-          <div className='animate-wave-1'>E</div>
-          <div className='animate-wave-2'>R</div>
-          <div className='animate-wave-3'>A</div>
-          <div className='animate-wave-4'>Y</div>
-          <div className='animate-wave-5'>A</div>
-          <div className='w-4'></div> {/* Space between words */}
-          <div className='animate-wave-6'>F</div>
-          <div className='animate-wave-7'>O</div>
-          <div className='animate-wave-8'>O</div>
-          <div className='animate-wave-9'>D</div>
-          <div className='animate-wave-10'>S</div>
-        </h1>
       </div>
 
       {/* Previous/Next buttons */}

@@ -15,7 +15,7 @@ export default function RootLayout ({
   return (
     <html lang='en'>
       <Head>
-        <link rel='icon' href='../icon.ico' type='image/svg+xml' />
+        <link rel='icon' href='/icon.ico' type='image/svg+xml' />
         <link rel='manifest' href='manifest.json' />
 
         <meta name='mobile-web-app-capable' content='yes' />
@@ -34,12 +34,12 @@ export default function RootLayout ({
           content='width=device-width, initial-scale=1, shrink-to-fit=no'
         />
 
-        <link rel='icon' type='icon' sizes='192X192' href='icon.ico' />
+        <link rel='icon' type='icon' sizes='192x192' href='/icon.ico' />
         <link
           rel='apple-touch-icon'
           type='icon'
-          sizes='192X192'
-          href='icon.ico'
+          sizes='192x192'
+          href='/icon.ico'
         />
       </Head>
       <body className='flex flex-col min-h-screen'>
