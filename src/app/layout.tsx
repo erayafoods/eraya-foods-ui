@@ -3,10 +3,12 @@ export const metadata = {
   description: 'From India’s Fields to the World’s Tables'
 }
 import Nav from './components/navbar'
-import Footer from './components/footer'
+
 import { Navbar } from '@nextui-org/navbar'
 import './globals.css'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+const Footer = dynamic(() => import('../app/components/footer'))
 export default function RootLayout ({
   children
 }: {

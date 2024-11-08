@@ -1,5 +1,4 @@
 'use client'
-
 import './globals.css'
 
 import ImageCarousel from './components/carousel'

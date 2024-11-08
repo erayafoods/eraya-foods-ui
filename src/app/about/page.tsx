@@ -1,7 +1,8 @@
 'use client'
 import '../globals.css'
 import { useState, useEffect } from 'react'
-import FounderSection from '../components/founder'
+import dynamic from 'next/dynamic'
+const FounderSection = dynamic(() => import('../components/founder'))
 import Image from 'next/image'
 
 export default function About () {
