@@ -44,8 +44,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image:
-        'https://images.unsplash.com/photo-1506808547685-e2ba962ded36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      image: '/smallPackaged.jpeg'
     },
     {
       title: 'Quality Consistency',
@@ -164,8 +163,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image:
-        'https://images.unsplash.com/photo-1563245371-bf340eb86f78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      image: '/smallPackaged.jpeg'
     },
     {
       title: 'Faster Delivery',
@@ -228,8 +226,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image:
-        'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      image: '/smallPackaged.jpeg'
     },
     {
       title: 'Customizable Packaging',
@@ -289,8 +286,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image:
-        'https://images.unsplash.com/photo-1536184071535-705a10c539b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      image: '/smallPackaged.jpeg'
     },
     {
       title: 'Marketing solutions',
@@ -556,8 +552,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ),
-      image:
-        'https://images.unsplash.com/photo-1573164574391-d0a908e33fdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      image: '/smallPackaged.jpeg'
     },
     {
       title: 'Order tracking',
@@ -623,8 +618,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image:
-        'https://images.unsplash.com/photo-1558976825-198b2b1e295c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      image: '/smallPackaged.jpeg'
     }
   ]
 
@@ -657,6 +651,8 @@ const WhyChooseUs: React.FC = () => {
                   <Image
                     src={feature.image}
                     alt={feature.title}
+                    width={150}
+                    height={150}
                     className='w-full h-48 object-cover rounded-md mb-4'
                   />
                 </picture>
