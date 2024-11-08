@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-
+import Image from 'next/image'
 interface FounderData {
   name: string
   title: string
@@ -82,7 +82,7 @@ const FounderSection: React.FC = () => {
             <div className='md:flex'>
               <div className='md:flex-shrink-0 md:w-1/2'>
                 {!followingStatus[`imageError${index}`] ? (
-                  <img
+                  <Image
                     src={`${founder.image}`}
                     alt={`Founder ${founder.name}`}
                     className='h-full w-full object-cover transform hover:scale-105 transition-transform duration-300'

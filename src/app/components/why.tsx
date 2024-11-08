@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import styles from '../styles/why.module.css'
+import Image from 'next/image'
 interface Feature {
   title: string
   description: string
@@ -653,7 +654,7 @@ const WhyChooseUs: React.FC = () => {
                 </div>
                 <picture>
                   <source srcSet={feature.image + '?webp'} type='image/webp' />
-                  <img
+                  <Image
                     src={feature.image}
                     alt={feature.title}
                     className='w-full h-48 object-cover rounded-md mb-4'
