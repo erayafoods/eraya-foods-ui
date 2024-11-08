@@ -13,7 +13,7 @@ const Products = () => {
           {/* Row 1 - 3 Cards */}
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source src='/gradeA.jpeg?webp' type='image/webp' />
+              <source srcSet='/gradeA.jpeg?webp' type='image/webp' />
               <Image
                 src='/gradeA.jpeg'
                 alt='Grade B Foxnuts'
@@ -42,7 +42,7 @@ const Products = () => {
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source src='/gradeB.jpeg?webp' type='image/webp' />
+              <source srcSet='/gradeB.jpeg?webp' type='image/webp' />
               <Image
                 src='/gradeB.jpeg'
                 alt='Grade B Foxnuts'
@@ -72,7 +72,7 @@ const Products = () => {
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source src='/gradeC.jpeg?webp' type='image/webp' />
+              <source srcSet='/gradeC.jpeg?webp' type='image/webp' />
               <Image
                 src='/gradeC.jpeg'
                 alt='Grade C Foxnuts'
@@ -105,7 +105,7 @@ const Products = () => {
           {/* Row 2 - 3 Cards */}
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source src='/smallPackaged.jpeg?webp' type='image/webp' />
+              <source srcSet='/smallPackaged.jpeg?webp' type='image/webp' />
               <Image
                 src='/smallPackaged.jpeg'
                 alt='Packaged Raw Makhana - Small'
@@ -135,7 +135,7 @@ const Products = () => {
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source src='/largePackaged.jpeg?webp' type='image/webp' />
+              <source srcSet='/largePackaged.jpeg?webp' type='image/webp' />
               <Image
                 src='/largePackaged.jpeg'
                 alt='Packaged Raw Makhana - Large'
