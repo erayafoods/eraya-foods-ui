@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -33,32 +32,6 @@
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
     }
-    .dark {
-        --background: 240 10% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 240 10% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 240 10% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 240 5.9% 10%;
-        --secondary: 240 3.7% 15.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 240 3.7% 15.9%;
-        --muted-foreground: 240 5% 64.9%;
-        --accent: 240 3.7% 15.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 240 3.7% 15.9%;
-        --input: 240 3.7% 15.9%;
-        --ring: 240 4.9% 83.9%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-    }
 }
 @layer base {
     * {
@@ -70,47 +43,4 @@
 }
 body {
     font-family: "Poppins", sans-serif;
-}
-
-.breadcrumb {
-    font-family: "Playwrite GB S", serif;
-    font-size: 1.25rem; /* Adjust size as needed */
-}
-
-.backgroundImage {
-    background-image: url("/bg4.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.backgroundImage2 {
-    background-image: url("/support.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-    /* Adjust the width as needed */
-    .backgroundImage2 {
-        background-image: url("/connect.jpg"); /* Different image for mobile */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-.backgroundImage3 {
-    background-image: url("/faq.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.backgroundImage4 {
-    background-image: url("/not-found.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 }

@@ -1,0 +1,6 @@
+.backgroundImage3 {
+    background-image: url("/faq.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

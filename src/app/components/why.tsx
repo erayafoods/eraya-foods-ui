@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-
+import styles from '../styles/why.module.css'
 interface Feature {
   title: string
   description: string
@@ -628,7 +628,9 @@ const WhyChooseUs: React.FC = () => {
   ]
 
   return (
-    <section className='backgroundImage bg-white py-16 px-4 sm:px-6 lg:px-8 min-h-screen'>
+    <section
+      className={`${styles.backgroundImage} bg-white py-16 px-4 sm:px-6 lg:px-8 min-h-screen`}
+    >
       <div className='max-w-7xl mx-auto'>
         <h2 className='text-3xl font-extrabold text-gray-900 text-center mb-12'>
           Why Choose Us

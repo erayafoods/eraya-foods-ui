@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, ChangeEvent, FormEvent } from 'react'
 import { FiMail, FiPhone } from 'react-icons/fi'
-
+import styles from '../styles/contact.module.css'
 interface FormData {
   name: string
   email: string
@@ -222,7 +222,7 @@ const ContactUs: React.FC = () => {
               </div>
 
               {/* Image Section */}
-              <div className='backgroundImage2'>
+              <div className={styles.backgroundImage2}>
                 <div className='relative p-8  text-black'>
                   <div className='relative'>
                     <h3 className='text-2xl font-bold mb-8'>Get in Touch</h3>

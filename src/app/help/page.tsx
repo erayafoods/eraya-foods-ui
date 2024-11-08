@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { FaSearch, FaPlus, FaMinus } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import styles from '../styles/help.module.css'
 interface FAQ {
   id: number
   question: string
@@ -255,7 +255,7 @@ const FAQSection = () => {
   return (
     <>
       <div className='max-w-screen-2xl content-center px-[8vw] pb-[8vh]'>
-        <div className='backgroundImage3 w-96 h-96 mx-auto'></div>
+        <div className={`${styles.backgroundImage3} w-96 h-96 mx-auto`}></div>
 
         <div className='relative mb-3'>
           <input
