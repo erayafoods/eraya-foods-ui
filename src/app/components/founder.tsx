@@ -85,6 +85,9 @@ const FounderSection: React.FC = () => {
                   <Image
                     src={`${founder.image}`}
                     alt={`Founder ${founder.name}`}
+                    width={150}
+                    height={150}
+                    loading='lazy'
                     className='h-full w-full object-cover transform hover:scale-105 transition-transform duration-300'
                     onError={() => handleImageError(index)}
                   />

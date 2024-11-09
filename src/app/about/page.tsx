@@ -81,6 +81,7 @@ export default function About () {
                 alt='Handpicked Foxnuts'
                 width={500}
                 height={350}
+                loading='lazy'
                 className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
               />
             </picture>
@@ -100,6 +101,7 @@ export default function About () {
               <Image
                 src={'/network.jpeg'}
                 alt='Farmer Network'
+                loading='lazy'
                 width={500}
                 height={350}
                 className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
@@ -123,6 +125,7 @@ export default function About () {
                 alt='Artisans'
                 width={500}
                 height={350}
+                loading='lazy'
                 className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
               />
             </picture>
@@ -217,7 +220,7 @@ export default function About () {
               {/* Use path directly in `srcSet` for WebP source */}
               <source srcSet='/APEDA.png?webp' type='image/webp' />
               {/* Fallback image */}
-              <img
+              <Image
                 src='/APEDA.png'
                 height={160}
                 width={160}
