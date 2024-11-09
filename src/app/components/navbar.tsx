@@ -9,6 +9,7 @@ import Image from 'next/image'
 interface NavLink {
   name: string
   id: string
+  describe: string
   dropdown?: NavLink[] // Optional dropdown property
 }
 
@@ -44,11 +45,33 @@ const Navbar: React.FC = () => {
   }
 
   const navLinks: NavLink[] = [
-    { name: 'Home', id: '' },
-    { name: 'About', id: 'about' },
-    { name: 'Products', id: 'products' },
-    { name: 'Contact Us', id: 'contact' },
-    { name: 'Help Center', id: 'help' }
+    {
+      name: 'Home',
+      id: '',
+      describe: 'Home Page of Eraya foods :the best foxnut exporter from India'
+    },
+    {
+      name: 'About',
+      id: 'about',
+      describe: 'About Page of Eraya foods :the best foxnut exporter from India'
+    },
+    {
+      name: 'Products',
+      id: 'products',
+      describe:
+        'Products Page of Eraya foods :the best foxnut exporter from India'
+    },
+    {
+      name: 'Contact Us',
+      id: 'contact',
+      describe:
+        'Contact Page of Eraya foods :the best foxnut exporter from India'
+    },
+    {
+      name: 'Help Center',
+      id: 'help',
+      describe: 'Help Page of Eraya foods :the best foxnut exporter from India'
+    }
   ]
 
   return (
@@ -57,6 +80,7 @@ const Navbar: React.FC = () => {
         <div className='flex items-center justify-between h-16'>
           <div className='flex-shrink-0'>
             <a
+              aria-label='Navbar Menu Button'
               href='/'
               onClick={() => handleLinkClick('')}
               className='flex items-center'
@@ -94,6 +118,7 @@ const Navbar: React.FC = () => {
                           {link.dropdown.map(subLink => (
                             <a
                               key={subLink.id}
+                              aria-label={subLink.describe}
                               href={`/${subLink.id}`}
                               onClick={() => handleLinkClick(subLink.id)}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'
@@ -106,6 +131,7 @@ const Navbar: React.FC = () => {
                     </div>
                   ) : (
                     <a
+                      aria-label={link.describe}
                       href={`/${link.id}`}
                       onClick={() => handleLinkClick(link.id)}
                       className={`${
@@ -157,6 +183,7 @@ const Navbar: React.FC = () => {
                       <div className='pl-4'>
                         {link.dropdown.map(subLink => (
                           <a
+                            aria-label={subLink.describe}
                             key={subLink.id}
                             href={`/${subLink.id}`}
                             onClick={() => handleLinkClick(subLink.id)}

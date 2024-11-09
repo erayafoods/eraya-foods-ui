@@ -1,4 +1,5 @@
 'use client'
+import { describe } from 'node:test'
 import '../globals.css'
 import Image from 'next/image'
 
@@ -13,19 +14,25 @@ export default function Footer () {
       items: [
         {
           href: '#',
-          name: 'Guidelines'
+          name: 'Guidelines',
+          describe:
+            'Guidelines for trading with Eraya foods foxnut, makhana, eurayle nuts'
         },
         {
           href: '#',
-          name: 'Insights'
+          name: 'Blogs',
+          describe:
+            'Blogs about current scenario of foxnuts,makhana,eurayle nuts'
         },
         {
           href: '#',
-          name: 'Specifications'
+          name: 'Nutritional Benefits',
+          describe: 'Nutritional benefits of foxnut, makhana, eurayle nuts'
         },
         {
           href: '#',
-          name: 'Logistics'
+          name: 'Logistics',
+          describe: 'All about logistic support at Eraya foods '
         }
       ]
     },
@@ -34,19 +41,23 @@ export default function Footer () {
       items: [
         {
           href: '/about',
-          name: 'About us'
+          name: 'About us',
+          describe: 'Navigates to about us page'
         },
         {
           href: '/products',
-          name: 'Products'
+          name: 'Products',
+          describe: 'Navigates to products page'
         },
         {
           href: '/contact',
-          name: 'Contact us'
+          name: 'Contact us',
+          describe: 'Navigates to contact us page'
         },
         {
           href: '/help',
-          name: 'Help Center'
+          name: 'Help Center',
+          describe: 'Navigates to help center page '
         }
       ]
     }
@@ -98,6 +109,7 @@ export default function Footer () {
               {item.items.map((el, idx) => (
                 <li key={idx}>
                   <a
+                    aria-label={el.describe}
                     href={el.href}
                     className='hover:underline hover:text-[#3c5759]'
                   >
@@ -116,7 +128,10 @@ export default function Footer () {
         <div className='mt-6 sm:mt-0'>
           <ul className='flex items-center space-x-4'>
             <li className='w-10 h-10 border rounded-full flex items-center justify-center'>
-              <a href='https://www.linkedin.com/company/105248122/admin/dashboard/'>
+              <a
+                href='https://www.linkedin.com/company/105248122/admin/dashboard/'
+                aria-label='Linkedin Page of Foxnut exporter Eraya Foods'
+              >
                 <span className='[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#0077b5]'>
                   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
                     <path d='M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z' />
@@ -126,7 +141,10 @@ export default function Footer () {
             </li>
 
             <li className='w-10 h-10 border rounded-full flex items-center justify-center'>
-              <a href='https://www.facebook.com/people/Eraya-Foods/61563902867735/'>
+              <a
+                href='https://www.facebook.com/people/Eraya-Foods/61563902867735/'
+                aria-label='Facebook Page of Foxnut exporter Eraya Foods'
+              >
                 <span className='[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#0077b5]'>
                   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'>
                     <linearGradient
@@ -154,7 +172,10 @@ export default function Footer () {
             </li>
 
             <li className='w-10 h-10 border rounded-full flex items-center justify-center'>
-              <a href='https://www.instagram.com/erayafoods/'>
+              <a
+                href='https://www.instagram.com/erayafoods/'
+                aria-label='Instagram Page of Foxnut exporter Eraya Foods'
+              >
                 <span className='[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]'>
                   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
                     <path d='M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.5 102.7-9 132.1z' />

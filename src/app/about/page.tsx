@@ -232,7 +232,7 @@ export default function About () {
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <Image
-              src={'/iso-22000.webp'}
+              src={'/iso-22000.avif'}
               height={160}
               width={160}
               alt={'We have ISO-22000 Certificate'}
