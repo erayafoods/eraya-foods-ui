@@ -25,7 +25,7 @@ const FounderSection: React.FC = () => {
     {
       name: 'Ankush Kumar',
       title: 'Founder & CEO',
-      image: '/ankush.jpeg',
+      image: '/ankush.avif',
       bio: 'Bringing over 7 years of expertise as an engineer and entrepreneur, Ankush Kumar is committed to setting new standards in the foxnut industry. His focus is on providing the highest quality foxnuts, bridging the gap between B2B and B2C needs, and ensuring exceptional value for all clients. Passionate about quality and innovation, Ankush strives to make Eraya Foods a trusted name worldwide.',
       quote:
         "Success isn't just in the products we deliver, but in the trust and value we bring to those who enjoy them.",
@@ -38,7 +38,7 @@ const FounderSection: React.FC = () => {
     {
       name: 'Anubhi Shah',
       title: 'COO',
-      image: '/anubhi.jpeg',
+      image: '/anubhi.avif',
       bio: 'With a background in hotel management, Anubhi Shah brings a unique perspective as the Chief Operating Officer at Eraya, expertly blending operational efficiency with a customer-first approach. Her commitment is to create seamless experiences that embody Eraya’s dedication to quality and service, ensuring each step aligns with the highest standards for the satisfaction of both clients and partners.',
       quote:
         'True service goes beyond meeting expectations; it’s about anticipating needs and creating lasting value in every experience.',

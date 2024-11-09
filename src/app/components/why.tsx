@@ -44,7 +44,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image: '/smallPackaged.jpeg'
+      image: '/smallPackaged.avif'
     },
     {
       title: 'Quality Consistency',
@@ -163,7 +163,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image: '/smallPackaged.jpeg'
+      image: '/smallPackaged.avif'
     },
     {
       title: 'Faster Delivery',
@@ -226,7 +226,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image: '/smallPackaged.jpeg'
+      image: '/smallPackaged.avif'
     },
     {
       title: 'Customizable Packaging',
@@ -286,7 +286,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image: '/smallPackaged.jpeg'
+      image: '/smallPackaged.avif'
     },
     {
       title: 'Marketing solutions',
@@ -552,7 +552,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ),
-      image: '/smallPackaged.jpeg'
+      image: '/smallPackaged.avif'
     },
     {
       title: 'Order tracking',
@@ -618,7 +618,7 @@ const WhyChooseUs: React.FC = () => {
           </g>
         </svg>
       ), // Reduced size
-      image: '/smallPackaged.jpeg'
+      image: '/smallPackaged.avif'
     }
   ]
 

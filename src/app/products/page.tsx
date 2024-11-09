@@ -13,9 +13,9 @@ const Products = () => {
           {/* Row 1 - 3 Cards */}
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source srcSet='/gradeA.jpeg?webp' type='image/webp' />
+              <source srcSet='/gradeA.avif?webp' type='image/webp' />
               <Image
-                src='/gradeA.jpeg'
+                src='/gradeA.avif'
                 alt='Grade B Foxnuts'
                 width={120}
                 height={200}
@@ -42,9 +42,9 @@ const Products = () => {
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source srcSet='/gradeB.jpeg?webp' type='image/webp' />
+              <source srcSet='/gradeB.avif?webp' type='image/webp' />
               <Image
-                src='/gradeB.jpeg'
+                src='/gradeB.avif'
                 alt='Grade B Foxnuts'
                 width={120}
                 height={200}
@@ -72,9 +72,9 @@ const Products = () => {
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source srcSet='/gradeC.jpeg?webp' type='image/webp' />
+              <source srcSet='/gradeC.avif?webp' type='image/webp' />
               <Image
-                src='/gradeC.jpeg'
+                src='/gradeC.avif'
                 alt='Grade C Foxnuts'
                 width={120}
                 height={200}
@@ -105,9 +105,9 @@ const Products = () => {
           {/* Row 2 - 3 Cards */}
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source srcSet='/smallPackaged.jpeg?webp' type='image/webp' />
+              <source srcSet='/smallPackaged.avif?webp' type='image/webp' />
               <Image
-                src='/smallPackaged.jpeg'
+                src='/smallPackaged.avif'
                 alt='Packaged Raw Makhana - Small'
                 width={120}
                 height={200}
@@ -135,9 +135,9 @@ const Products = () => {
 
           <div className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'>
             <picture>
-              <source srcSet='/largePackaged.jpeg?webp' type='image/webp' />
+              <source srcSet='/largePackaged.avif?webp' type='image/webp' />
               <Image
-                src='/largePackaged.jpeg'
+                src='/largePackaged.avif'
                 alt='Packaged Raw Makhana - Large'
                 width={120}
                 height={200}

@@ -33,9 +33,9 @@ export default function About () {
       {/* Updated Image Section with Fade Effect */}
       <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
         <picture>
-          <source srcSet='/about-bg-image.jpeg?webp' type='image/webp' />
+          <source srcSet='/about-bg-image.avif?webp' type='image/webp' />
           <Image
-            src={'/about-bg-image.jpeg'}
+            src={'/about-bg-image.avif'}
             alt='About Us Background'
             fill
             style={{
@@ -71,16 +71,16 @@ export default function About () {
         </h2>
 
         {/* Responsive Grid Section */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-32'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-32  '>
           {/* Handpicked Section */}
-          <div className='relative group overflow-hidden rounded-lg shadow-lg  '>
+          <div className='relative group overflow-hidden rounded-lg shadow-lg h-[350px]'>
             <picture>
-              <source srcSet='/handpick.jpg?webp' type='image/webp' />
+              <source srcSet='/handpick.avif?webp' type='image/webp' />
               <Image
-                src={'/handpick.jpg'}
-                alt='Handpicked Foxnuts'
-                width={500}
-                height={350}
+                src={'/handpick.avif'}
+                alt='Handpicked Foxnuts/Makhana from India which has traditional authentic taste, pureness and is free from machine processing '
+                layout='fill'
+                objectFit='cover'
                 loading='lazy'
                 className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
               />
@@ -95,15 +95,15 @@ export default function About () {
           </div>
 
           {/* Farmer Network Section */}
-          <div className='relative group overflow-hidden rounded-lg shadow-lg  '>
-            <picture>
-              <source srcSet='/network.jpeg?webp' type='image/webp' />
+          <div className='relative group overflow-hidden rounded-lg shadow-lg h-[350px] '>
+            <picture className='w-full h-full'>
+              <source srcSet='/network.avif?webp' type='image/webp' />
               <Image
-                src={'/network.jpeg'}
-                alt='Farmer Network'
+                src={'/network.avif'}
+                alt='We have reliable network of farmers for foxnut,makhana, eurayle nuts which makes us trust worthy in on time delevery with premium products'
                 loading='lazy'
-                width={500}
-                height={350}
+                layout='fill'
+                objectFit='cover'
                 className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
               />
             </picture>
@@ -117,14 +117,14 @@ export default function About () {
           </div>
 
           {/* Artisans Section */}
-          <div className='relative group overflow-hidden rounded-lg shadow-lg  '>
+          <div className='relative group overflow-hidden rounded-lg shadow-lg h-[350px] '>
             <picture>
-              <source srcSet='/artisans.jpeg?webp' type='image/webp' />
+              <source srcSet='/artisans.avif?webp' type='image/webp' />
               <Image
-                src={'/artisans.jpeg'}
-                alt='Artisans'
-                width={500}
-                height={350}
+                src={'/artisans.avif'}
+                alt='Eurayle nuts, foxnuts, makhana is not just an agriculutral product .It has to go through artisan craft of heating the seeds in phases and then popping it in proper timing'
+                layout='fill'
+                objectFit='cover'
                 loading='lazy'
                 className='rounded-lg object-cover transform transition-transform duration-500 group-hover:scale-110'
               />
@@ -184,9 +184,9 @@ export default function About () {
         <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <picture>
-              <source srcSet='/fssai.png?webp' type='image/wbep' />
+              <source srcSet='/fssai.avif?webp' type='image/wbep' />
               <Image
-                src={'/fssai.png'}
+                src={'/fssai.avif'}
                 height={160}
                 width={160}
                 alt={'We have FSSAI Certificate'}
@@ -195,9 +195,9 @@ export default function About () {
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <picture>
-              <source srcSet='/fda.png?webp' type='image/webp' />
+              <source srcSet='/fda.avif?webp' type='image/webp' />
               <Image
-                src={'/fda.png'}
+                src={'/fda.avif'}
                 height={160}
                 width={160}
                 alt={'We have FDA Certificate for USA importers'}
@@ -206,9 +206,9 @@ export default function About () {
           </div>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <picture>
-              <source srcSet='/fieo.png?webp' type='image/webp' />
+              <source srcSet='/fieo.avif?webp' type='image/webp' />
               <Image
-                src={'/fieo.png'}
+                src={'/fieo.avif'}
                 height={160}
                 width={160}
                 alt={'We have FIEO Certificate from Indian government'}
@@ -218,10 +218,10 @@ export default function About () {
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <picture>
               {/* Use path directly in `srcSet` for WebP source */}
-              <source srcSet='/APEDA.png?webp' type='image/webp' />
+              <source srcSet='/APEDA.avif?webp' type='image/webp' />
               {/* Fallback image */}
               <Image
-                src='/APEDA.png'
+                src='/APEDA.avif'
                 height={160}
                 width={160}
                 alt='We have APEDA Certificate'

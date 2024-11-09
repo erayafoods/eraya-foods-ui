@@ -14,15 +14,15 @@ const ImageCarousel: React.FC = () => {
 
   const images: ImageType[] = [
     {
-      src: '/000.png',
+      src: '/000.avif',
       alt: 'Eraya foods:Best foxnut Supplier,Raw ,Customized'
     },
     {
-      src: '/001.png',
+      src: '/001.avif',
       alt: 'Best Foxnut Supplier from India serving crunchy ,organic premium foxnuts sourced from lands of makhana :Bihar'
     },
     {
-      src: '/002.png',
+      src: '/002.avif',
       alt: 'Sales multifold where Eraya foxnuts are sold.What sets us apart is our premium foxnuts, on time delevery, dedicated support in whole export process,customizable packaging,quality consistency  and genius marketing solutions to boost your sales!!'
     }
   ]

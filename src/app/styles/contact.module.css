@@ -1,5 +1,5 @@
 .backgroundImage2 {
-    background-image: url("/support.jpeg");
+    background-image: url("/support.avif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 @media (max-width: 768px) {
     /* Adjust the width as needed */
     .backgroundImage2 {
-        background-image: url("/connect.jpg"); /* Different image for mobile */
+        background-image: url("/connect.avif"); /* Different image for mobile */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
