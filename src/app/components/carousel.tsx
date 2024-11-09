@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa'
 import Image from 'next/image'

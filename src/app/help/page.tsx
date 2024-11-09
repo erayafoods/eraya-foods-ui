@@ -1,5 +1,5 @@
 'use client'
-
+//we will change it to server component later to fetch FAQs and search query as well by splitting searchbar as client component and fetched-FAQs as server component
 import React, { useState, useEffect, useRef } from 'react'
 import { FaSearch, FaPlus, FaMinus } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'

@@ -1,4 +1,3 @@
-'use client'
 import React, { useState } from 'react'
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
 import { motion } from 'framer-motion'
@@ -17,10 +16,6 @@ interface FounderData {
 }
 
 const FounderSection: React.FC = () => {
-  const [followingStatus, setFollowingStatus] = useState<{
-    [key: string]: boolean
-  }>({})
-
   const founders: FounderData[] = [
     {
       name: 'Ankush Kumar',
@@ -51,20 +46,6 @@ const FounderSection: React.FC = () => {
     // Add more founder data here as needed
   ]
 
-  const handleImageError = (index: number) => {
-    setFollowingStatus(prevStatus => ({
-      ...prevStatus,
-      [`imageError${index}`]: true
-    }))
-  }
-
-  const toggleFollow = (index: number) => {
-    setFollowingStatus(prevStatus => ({
-      ...prevStatus,
-      [`isFollowing${index}`]: !prevStatus[`isFollowing${index}`]
-    }))
-  }
-
   return (
     <div className='py-[5vh]'>
       <div className='text-center font-bold text-cyan-950 text-5xl'>
@@ -81,7 +62,7 @@ const FounderSection: React.FC = () => {
           >
             <div className='md:flex'>
               <div className='md:flex-shrink-0 md:w-1/2'>
-                {!followingStatus[`imageError${index}`] ? (
+                {
                   <Image
                     src={`${founder.image}`}
                     alt={`Founder ${founder.name}`}
@@ -89,13 +70,8 @@ const FounderSection: React.FC = () => {
                     height={150}
                     loading='lazy'
                     className='h-full w-full object-cover transform hover:scale-105 transition-transform duration-300'
-                    onError={() => handleImageError(index)}
                   />
-                ) : (
-                  <div className='h-full w-full bg-gray-200 flex items-center justify-center'>
-                    <span className='text-gray-500'>Image not available</span>
-                  </div>
-                )}
+                }
               </div>
 
               <div className='p-8 md:w-1/2'>
@@ -146,17 +122,7 @@ const FounderSection: React.FC = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => toggleFollow(index)}
-                    className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md ${
-                      followingStatus[`isFollowing${index}`]
-                        ? 'bg-gray-600 hover:bg-gray-700'
-                        : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
-                    }`}
-                  >
-                    {followingStatus[`isFollowing${index}`]
-                      ? 'Following'
-                      : 'Follow'}
-                  </motion.button>
+                  ></motion.button>
                 </div>
               </div>
             </div>
