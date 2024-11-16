@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Get in Touch | Eraya Foods – Premium  Phool Makhana, foxnuts ',
+  title: 'Get in Touch | Eraya Foods – Premium  Phool Makhana, foxnuts',
   description:
-    'Reach out to Eraya Foods, Indian leading premium foxnuts and makhana exporter. Contact us for inquiries, partnerships,distributorship or customized solutions tailored to your business needs.',
+    "Contact Eraya Foods, India's leading exporter of premium foxnuts and makhana. Inquire about partnerships, distributorship, or tailored business solutions.",
   keywords: [
     'Contact Eraya Foods',
     'Premium foxnuts ,makhana exporter contact',
@@ -17,7 +17,10 @@ export const metadata: Metadata = {
     'Global foxnuts, makhana exporter contact',
     'Eraya Foods inquiry form',
     'Foxnuts ,makhana trade support'
-  ]
+  ],
+  alternates: {
+    canonical: 'https://erayafoods.com/contact'
+  }
 }
 import ContactUs from '../components/contactForm'
 export default function Contact () {

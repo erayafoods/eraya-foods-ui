@@ -7,7 +7,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Eraya Foods – Your Trusted Foxnut,Makhana Partner',
   description:
-    'Discover the story behind Eraya Foods – a trusted supplier of premium, handpicked foxnuts,makhana sourced from Bihar, India. Learn about our commitment to quality, innovation, and customer satisfaction. Our mission is to provide businesses with the finest foxnuts to fuel their growth and success',
+    'Eraya Foods: Trusted supplier of premium, handpicked foxnuts from Bihar, India. Committed to quality, innovation, and fueling business growth.',
   keywords: [
     'Premium Phool Makhana',
     'Organic Phool Makhana',
