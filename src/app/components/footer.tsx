@@ -96,7 +96,7 @@ export default function Footer () {
         <div className='flex-1 flex justify-between mt-10 md:mt-0'>
           {footerNavs.slice(1).map((item, idx) => (
             <div className='space-y-4 mx-4' key={idx}>
-              <h1 className='text-gray-800 font-medium mb-2'>{item.label}</h1>
+              <div className='text-gray-800 font-medium mb-2'>{item.label}</div>
               <ul className='space-y-4'>
                 {item.items.map((el, idx) => (
                   <li key={idx}>

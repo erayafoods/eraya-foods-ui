@@ -57,12 +57,12 @@ const FounderSection: React.FC = () => {
 
   return (
     <div className='py-[5vh]'>
-      <div
+      <h1
         className='text-center font-bold text-cyan-950 text-5xl'
         style={{ fontFamily: ibm.style.fontFamily }}
       >
         Meet Our Team
-      </div>
+      </h1>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12'>
         {founders.map((founder, index) => (
           <div
@@ -90,9 +90,9 @@ const FounderSection: React.FC = () => {
                 <div className='uppercase tracking-wide text-sm text-indigo-600 font-semibold'>
                   {founder.title}
                 </div>
-                <h1 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+                <h2 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
                   {founder.name}
-                </h1>
+                </h2>
 
                 <p className='mt-4 text-lg text-gray-600'>{founder.bio}</p>
 
