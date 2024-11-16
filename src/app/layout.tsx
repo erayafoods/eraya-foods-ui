@@ -5,25 +5,6 @@ const Footer = dynamic(() => import('../app/components/footer'))
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Eraya Foods: Best Indian Foxnut Exporter | Premium Makhana Supplier',
-  description:
-    'Eraya Foods is the leading Indian exporter of premium foxnuts and makhana. Explore organic, crunchy foxnuts with customizable packaging and global reach.',
-  keywords: [
-    'Eraya Foods',
-    'Premium Foxnuts',
-    'Makhana',
-    'Best Indian Makhana',
-    'Foxnut Exporter',
-    'Organic Foxnuts',
-    'Indian Makhana',
-    'Prickly Water Lily - Food',
-    'Euryale Ferox Benefits',
-    'Makhana Benefits',
-    'Makhana Nutrition',
-    'Makhana Calories',
-    'Makhana Food',
-    'Makhana Health Benefits'
-  ],
   icons: {
     icon: '/icon.ico',
     shortcut: '/icon-192x192.png',

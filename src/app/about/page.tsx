@@ -1,10 +1,49 @@
-'use client'
 import '../globals.css'
-import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 const FounderSection = dynamic(() => import('../components/founder'))
 import Image from 'next/image'
 import { Inter, IBM_Plex_Serif } from 'next/font/google'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'About Eraya Foods – Your Trusted Foxnut,Makhana Partner',
+  description:
+    'Discover the story behind Eraya Foods – a trusted supplier of premium, handpicked foxnuts,makhana sourced from Bihar, India. Learn about our commitment to quality, innovation, and customer satisfaction. Our mission is to provide businesses with the finest foxnuts to fuel their growth and success',
+  keywords: [
+    'Premium Phool Makhana',
+    'Organic Phool Makhana',
+    'Handpicked Makhana from Bihar',
+    'Pure and Natural Makhana',
+    'Healthy Makhana Snacks',
+    'Sustainably Sourced Phool Makhana',
+    'Superfood Makhana',
+    'Makhana for Healthy Living',
+    'Phool Makhana for Diabetics',
+    'Phool Makhana for Pregnant Women',
+    'Phool Makhana for Kids',
+    'Makhana: The Perfect Snack Alternative',
+    'High-Quality Phool Makhana',
+    'Freshly Popped Phool Makhana',
+    'Traditional Makhana Craftsmanship',
+    'Farm-to-Fork Phool Makhana',
+    'Certified Phool Makhana Supplier',
+    'Ethical Sourcing of Makhana',
+    'Phool Makhana Exporter',
+    'Makhana for Global Markets',
+    'Sustainable Makhana Farming',
+    'Delicious and Nutritious Makhana',
+    'Artisan-Crafted Phool Makhana',
+    'Trusted Makhana Supplier',
+    'Phool Makhana for Every Occasion',
+    'Quick and Easy Makhana Recipes',
+    'Makhana Recipe Ideas',
+    'Tasty Makhana Snack Recipes',
+    'Crunchy Makhana Snack',
+    'Spiced Makhana Recipes',
+    'Makhana as a Healthy Snack',
+    'Guilt-Free Makhana Snack',
+    'Flavorful Makhana Recipe Collection'
+  ]
+}
 const inter = Inter({
   subsets: ['latin'],
   weight: '400'
@@ -13,48 +52,14 @@ const ibm = IBM_Plex_Serif({
   subsets: ['latin'],
   weight: '700'
 })
+
+import FadeImage from '../components/fadeImage'
 export default function About () {
   // State to control opacity of aboutPic
-  const [aboutPicOpacity, setAboutPicOpacity] = useState(1)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const fadeStart = 0 // Where the fade effect starts
-      const fadeEnd = 800 // Point at which image is fully faded
-      const scrollY = window.scrollY
-      const newOpacity = Math.max(
-        1 - (scrollY - fadeStart) / (fadeEnd - fadeStart),
-        0
-      )
-      setAboutPicOpacity(newOpacity)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
     <>
-      {/* Updated Image Section with Fade Effect */}
-      <div className='relative h-[300px] sm:h-[500px] md:h-[600px] w-full'>
-        <picture>
-          <source srcSet='/about-bg-image.avif?webp' type='image/webp' />
-          <Image
-            src={'/about-bg-image.avif'}
-            alt='About Us Background Image'
-            fill
-            style={{
-              opacity: aboutPicOpacity,
-              transition: 'opacity 0.2s ease-out'
-            }}
-            className='rounded-lg object-cover'
-          />
-        </picture>
-      </div>
-
+      <FadeImage />
       <section className='py-12'>
         <h2
           className='text-3xl md:text-3xl font-semibold text-center py-6'

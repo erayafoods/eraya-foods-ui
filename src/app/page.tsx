@@ -11,7 +11,24 @@ const ibm = IBM_Plex_Serif({
 import ImageCarousel from './components/carousel'
 
 import WhyChooseUs from './components/why'
-
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Eraya Foods: Best Indian Foxnut Exporter | Premium Makhana Supplier',
+  description:
+    'Eraya Foods is the leading Indian exporter of premium foxnuts and makhana. Explore organic, crunchy foxnuts with customizable packaging and global reach.',
+  keywords: [
+    'Eraya Foods',
+    'Premium Foxnuts',
+    'Makhana',
+    'Best Indian Makhana',
+    'Foxnut Exporter',
+    'Organic Foxnuts',
+    'Indian Makhana',
+    'Prickly Water Lily - Food',
+    'Euryale Ferox Benefits',
+    'Makhana Food'
+  ]
+}
 export default function Home () {
   return (
     <>

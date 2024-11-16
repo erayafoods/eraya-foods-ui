@@ -1,6 +1,36 @@
 import React from 'react'
 import Image from 'next/image'
 import { Inter, IBM_Plex_Serif } from 'next/font/google'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Explore Premium Foxnuts ,Phool Makhana | Eraya Foods Products',
+  description:
+    'Discover Eraya Foods wide range of premium foxnuts and makhana. From organic raw foxnuts to roasted, flavored options, our products are sourced from Bihar, India, and tailored for global markets. Perfect for healthy snacking and culinary needs',
+  keywords: [
+    'premium phool makhana,foxnuts',
+    'raw phool makhana,foxnuts',
+    'packaged phool makhana,foxnuts',
+    'Grade A phool makhana,foxnuts',
+    'Grade B phool makhana,foxnuts',
+    'Grade C phool makhana,foxnuts',
+    'bulk phool makhana ,foxnuts supplier',
+    'healthy snacks',
+    'organic phool makhana,foxnuts',
+    'raw phool makhana ,foxnuts exporter',
+    'phool makhana,foxnuts packaging',
+    'best quality phool makhana,foxnuts',
+    'Bihar phool makhana,foxnuts',
+    'large-scale retail phool makhana',
+    'wholesale phool makhana,foxnut',
+    'culinary phool makhana,foxnuts',
+    'flavored phool makhana,foxnuts production',
+    'phool makhana ,foxnuts for snacks',
+    'retail phool makhana,foxnuts packaging',
+    'Eraya Foods phool makhana,foxnuts',
+    'phool makhana, foxnuts'
+  ]
+}
+
 const inter = Inter({
   subsets: ['latin'],
   weight: '400'

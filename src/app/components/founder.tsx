@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 interface FounderData {
   name: string
@@ -54,7 +53,6 @@ const FounderSection: React.FC = () => {
         description: 'Social Media of Anubhi Shah ,COO of Eraya Foods'
       }
     }
-    // Add more founder data here as needed
   ]
 
   return (
@@ -67,11 +65,8 @@ const FounderSection: React.FC = () => {
       </div>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12'>
         {founders.map((founder, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className='bg-white rounded-2xl shadow-xl overflow-hidden'
           >
             <div className='md:flex'>
@@ -106,8 +101,7 @@ const FounderSection: React.FC = () => {
                 </blockquote>
 
                 <div className='mt-8 flex items-center space-x-6'>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
+                  <a
                     href={founder.socialMedia.linkedin}
                     target='_blank'
                     rel='noopener noreferrer'
@@ -115,9 +109,8 @@ const FounderSection: React.FC = () => {
                     aria-label={founder.socialMedia.description}
                   >
                     <FaLinkedin className='h-6 w-6' />
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
+                  </a>
+                  <a
                     href={founder.socialMedia.twitter}
                     target='_blank'
                     rel='noopener noreferrer'
@@ -125,11 +118,11 @@ const FounderSection: React.FC = () => {
                     aria-label={founder.socialMedia.description}
                   >
                     <FaTwitter className='h-6 w-6' />
-                  </motion.a>
+                  </a>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
