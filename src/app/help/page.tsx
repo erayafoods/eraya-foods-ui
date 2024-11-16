@@ -355,8 +355,8 @@ const FAQSection = () => {
               disabled={currentPage === index + 1}
               className={`px-4 py-2 rounded ${
                 currentPage === index + 1
-                  ? 'bg-[#57626a]'
-                  : 'bg-gray-300 text-white hover:bg-gray-500'
+                  ? 'bg-gray-800 text-white'
+                  : 'bg-gray-400 text-white hover:bg-gray-500'
               }`}
             >
               Page {index + 1}
