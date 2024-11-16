@@ -2,21 +2,7 @@
 import withOptimizedImages from 'next-optimized-images'
 
 const nextConfig = withOptimizedImages({
-  webpack (config, { isServer }) {
-    // Add the string replace loader for disabling console logs in production
-    if (!isServer && process.env.NODE_ENV === 'production') {
-      config.module.rules.push({
-        test: /\.(js|jsx|ts|tsx)$/,
-        loader: 'string-replace-loader',
-        options: {
-          search: 'console.log',
-          replace: '',
-          flags: 'g'
-        }
-      })
-    }
-
-    // Add custom webpack rules (SVG handling)
+  webpack (config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack']
