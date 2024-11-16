@@ -24,23 +24,11 @@ export const metadata: Metadata = {
     'Makhana Food',
     'Makhana Health Benefits'
   ],
-  icon: [
-    {
-      rel: 'icon',
-      href: '/icon.ico',
-      type: 'image/svg+xml'
-    },
-    {
-      rel: 'icon',
-      sizes: '192x192',
-      href: '/icon-192x192.png'
-    },
-    {
-      rel: 'apple-touch-icon',
-      sizes: '192x192',
-      href: './icon-192x192.png'
-    }
-  ],
+  icons: {
+    icon: '/icon.ico',
+    shortcut: '/icon-192x192.png',
+    apple: '/icon-192x192.png'
+  },
   manifest: '/manifest.json',
   openGraph: {
     title:
