@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter, IBM_Plex_Serif } from 'next/font/google'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Explore Premium Foxnuts ,Phool Makhana | Eraya Foods Products',
+  title: 'Explore Premium Foxnuts,Phool Makhana | Eraya Foods Products',
   description:
     'Discover Eraya Foods wide range of premium foxnuts and makhana. From organic raw foxnuts to roasted, flavored options, our products are sourced from Bihar, India, and tailored for global markets. Perfect for healthy snacking and culinary needs',
   keywords: [
