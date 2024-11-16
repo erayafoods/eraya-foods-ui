@@ -7,10 +7,24 @@ const nextConfig = withOptimizedImages({
       test: /\.svg$/,
       use: ['@svgr/webpack']
     })
+
     return config
   },
   eslint: {
     ignoreDuringBuilds: true
+  },
+  async headers () {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          }
+        ]
+      }
+    ]
   }
 })
 
