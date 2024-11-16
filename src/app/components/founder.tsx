@@ -11,7 +11,7 @@ interface FounderData {
   socialMedia: {
     linkedin: string
     twitter: string
-    github: string
+    description: string
   }
 }
 
@@ -37,7 +37,8 @@ const FounderSection: React.FC = () => {
       socialMedia: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        github: 'https://github.com'
+        description:
+          'Social Media of Ankush Kumar ,Founder & CEO of Eraya Foods '
       }
     },
     {
@@ -50,7 +51,7 @@ const FounderSection: React.FC = () => {
       socialMedia: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        github: 'https://github.com'
+        description: 'Social Media of Anubhi Shah ,COO of Eraya Foods'
       }
     }
     // Add more founder data here as needed
@@ -111,6 +112,7 @@ const FounderSection: React.FC = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-gray-600 hover:text-indigo-600'
+                    aria-label={founder.socialMedia.description}
                   >
                     <FaLinkedin className='h-6 w-6' />
                   </motion.a>
@@ -120,25 +122,10 @@ const FounderSection: React.FC = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-gray-600 hover:text-indigo-600'
+                    aria-label={founder.socialMedia.description}
                   >
                     <FaTwitter className='h-6 w-6' />
                   </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    href={founder.socialMedia.github}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-gray-600 hover:text-indigo-600'
-                  >
-                    <FaGithub className='h-6 w-6' />
-                  </motion.a>
-                </div>
-
-                <div className='mt-8 flex flex-wrap gap-4'>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  ></motion.button>
                 </div>
               </div>
             </div>
