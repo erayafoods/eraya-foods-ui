@@ -20,11 +20,11 @@ const ImageCarousel: React.FC = () => {
     },
     {
       src: '/001.avif',
-      alt: 'Best Foxnut Supplier from India serving crunchy ,organic premium foxnuts sourced from lands of makhana :Bihar'
+      alt: 'Premium organic foxnuts from Bihar, India - Crunchy, best foxnut supplier'
     },
     {
       src: '/002.avif',
-      alt: 'Sales multifold where Eraya foxnuts are sold.What sets us apart is our premium foxnuts, on time delevery, dedicated support in whole export process,customizable packaging,quality consistency  and genius marketing solutions to boost your sales!!'
+      alt: "Boost sales with Eraya's premium foxnuts, on-time delivery, support, packaging & marketing"
     }
   ]
 

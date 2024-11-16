@@ -106,7 +106,7 @@ export default function About () {
               <source srcSet='/handpick.avif?webp' type='image/webp' />
               <Image
                 src={'/handpick.avif'}
-                alt='Handpicked Foxnuts/Makhana from India which has traditional authentic taste, pureness and is free from machine processing '
+                alt='Handpicked Foxnuts/Makhana from India with traditional taste, purity, and no machine processing'
                 layout='fill'
                 objectFit='cover'
                 loading='lazy'
@@ -128,7 +128,7 @@ export default function About () {
               <source srcSet='/network.avif?webp' type='image/webp' />
               <Image
                 src={'/network.avif'}
-                alt='We have reliable network of farmers for foxnut,makhana, eurayle nuts which makes us trust worthy in on time delevery with premium products'
+                alt='Reliable network of farmers for premium foxnuts, makhana, Euryale nuts & on-time delivery'
                 loading='lazy'
                 layout='fill'
                 objectFit='cover'
@@ -150,7 +150,7 @@ export default function About () {
               <source srcSet='/artisans.avif?webp' type='image/webp' />
               <Image
                 src={'/artisans.avif'}
-                alt='Eurayle nuts, foxnuts, makhana is not just an agriculutral product .It has to go through artisan craft of heating the seeds in phases and then popping it in proper timing'
+                alt='Euryale nuts, foxnuts, makhana go through artisan craft of heating and popping at right time'
                 layout='fill'
                 objectFit='cover'
                 loading='lazy'
