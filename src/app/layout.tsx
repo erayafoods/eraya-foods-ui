@@ -5,24 +5,60 @@ const Footer = dynamic(() => import('../app/components/footer'))
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Eraya Foods - Premium Foxnuts, Makhana Supplier',
+  title: 'Eraya Foods: Best Indian Foxnut Exporter | Premium Makhana Supplier',
   description:
-    'Premium foxnuts and makhana from Bihar , India. Eraya Foods offers organic, customizable products with unmatched quality and export support.',
+    'Eraya Foods is the leading Indian exporter of premium foxnuts and makhana. Explore organic, crunchy foxnuts with customizable packaging and global reach.',
   keywords: [
     'Eraya Foods',
     'Premium Foxnuts',
     'Makhana',
-    'Best Indian Makhana,Foxnut Exporter',
+    'Best Indian Makhana',
+    'Foxnut Exporter',
     'Organic Foxnuts',
     'Indian Makhana',
-    'Prickly water lily - Food',
-    'euryale ferox benefitsBreakout',
-    'makhana benefits',
-    'makhana nutrition',
-    'makhana calories',
+    'Prickly Water Lily - Food',
+    'Euryale Ferox Benefits',
+    'Makhana Benefits',
+    'Makhana Nutrition',
+    'Makhana Calories',
     'Makhana Food',
-    'makhana health benefits'
-  ]
+    'Makhana Health Benefits'
+  ],
+  icon: [
+    {
+      rel: 'icon',
+      href: '/icon.ico',
+      type: 'image/svg+xml'
+    },
+    {
+      rel: 'icon',
+      sizes: '192x192',
+      href: '/icon-192x192.png'
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '192x192',
+      href: './icon-192x192.png'
+    }
+  ],
+  manifest: '/manifest.json',
+  openGraph: {
+    title:
+      'Eraya Foods: Best Indian Foxnut Exporter | Premium Makhana Supplier',
+    description:
+      'Eraya Foods is the leading exporter of premium foxnuts and makhana from Bihar, India. We offer organic, crunchy foxnuts with customizable packaging options for global distribution.',
+    url: 'https://erayafoods.com',
+    siteName: 'Eraya Foods',
+    images: [
+      {
+        url: 'https://erayafoods.com/icon.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Eraya Foods Premium Foxnuts'
+      }
+    ],
+    type: 'website'
+  }
 }
 
 export default function RootLayout ({
@@ -32,20 +68,6 @@ export default function RootLayout ({
 }) {
   return (
     <html lang='en'>
-      <Head>
-        <link rel='icon' href='/icon.ico' type='image/svg+xml' />
-        <link rel='manifest' href='manifest.json' />
-        <title>
-          Eraya Foods: Best Indian Foxnut Exporter | Premium Makhana Supplier
-        </title>
-        <meta
-          name='description'
-          content='Eraya Foods is the leading Indian exporter of premium foxnuts and makhana. Explore organic, crunchy foxnuts with customizable packaging and global reach.'
-        />
-        <link rel='manifest' href='/manifest.json' />
-        <link rel='icon' sizes='192x192' href='/icon-192x192.png' />
-        <link rel='apple-touch-icon' sizes='192x192' href='/icon-192x192.png' />
-      </Head>
       <body className='flex flex-col min-h-screen'>
         <Nav />
         {children}
