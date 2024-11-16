@@ -118,7 +118,7 @@ const ImageCarousel: React.FC = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-5 h-5 rounded-full ${
               index === currentIndex ? 'bg-white' : 'bg-gray-400'
             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white`}
             aria-label={`Go to image ${index + 1}`}

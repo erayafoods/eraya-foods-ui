@@ -95,22 +95,22 @@ export default function Footer () {
 
         <div className='flex-1 flex justify-between mt-10 md:mt-0'>
           {footerNavs.slice(1).map((item, idx) => (
-            <ul className='space-y-4 mx-4' key={idx}>
-              {' '}
-              {/* Added mx-4 for horizontal margin */}
-              <h4 className='text-gray-800 font-medium'>{item.label}</h4>
-              {item.items.map((el, idx) => (
-                <li key={idx}>
-                  <a
-                    aria-label={el.describe}
-                    href={el.href}
-                    className='hover:underline hover:text-[#3c5759]'
-                  >
-                    {el.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className='space-y-4 mx-4' key={idx}>
+              <h4 className='text-gray-800 font-medium mb-2'>{item.label}</h4>
+              <ul className='space-y-4'>
+                {item.items.map((el, idx) => (
+                  <li key={idx}>
+                    <a
+                      aria-label={el.describe}
+                      href={el.href}
+                      className='hover:underline hover:text-[#3c5759]'
+                    >
+                      {el.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </div>
