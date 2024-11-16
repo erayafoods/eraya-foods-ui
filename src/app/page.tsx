@@ -27,7 +27,10 @@ export const metadata: Metadata = {
     'Prickly Water Lily - Food',
     'Euryale Ferox Benefits',
     'Makhana Food'
-  ]
+  ],
+  alternates: {
+    canonical: 'https://erayafoods.com'
+  }
 }
 export default function Home () {
   return (

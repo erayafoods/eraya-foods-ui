@@ -42,7 +42,10 @@ export const metadata: Metadata = {
     'Makhana as a Healthy Snack',
     'Guilt-Free Makhana Snack',
     'Flavorful Makhana Recipe Collection'
-  ]
+  ],
+  alternates: {
+    canonical: 'https://erayafoods.com/about'
+  }
 }
 const inter = Inter({
   subsets: ['latin'],
