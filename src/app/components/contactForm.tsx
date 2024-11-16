@@ -95,9 +95,9 @@ const ContactUs: React.FC = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2'>
               {/* Form Section */}
               <div className='p-8 lg:p-12'>
-                <h2 className='text-xl text-gray-900 mb-6'>
+                <h1 className='text-xl text-gray-900 mb-6'>
                   Connect with Us <br /> We’d Love to Hear From You!
-                </h2>
+                </h1>
                 <form onSubmit={handleSubmit} className='space-y-6'>
                   {/* Name Field */}
                   <div>

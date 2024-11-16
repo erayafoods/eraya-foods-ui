@@ -11,6 +11,16 @@ interface FAQ {
   answer: string
 }
 
+import { Inter, IBM_Plex_Serif } from 'next/font/google'
+const inter = Inter({
+  subsets: ['latin'],
+  weight: '400'
+})
+const ibm = IBM_Plex_Serif({
+  subsets: ['latin'],
+  weight: '700'
+})
+
 const FAQSection = () => {
   const [faqs, setFaqs] = useState<FAQ[]>([
     {
@@ -255,9 +265,17 @@ const FAQSection = () => {
 
   return (
     <>
-      <div className='max-w-screen-2xl content-center px-[8vw] pb-[8vh]'>
+      <div
+        className='max-w-screen-2xl content-center px-[8vw] pb-[8vh]'
+        style={{ fontFamily: inter.style.fontFamily }}
+      >
         <div className={`${styles.backgroundImage3} w-96 h-96 mx-auto`}></div>
-
+        <h1
+          className='text-center text-3xl font-bold pb-[5vh]'
+          style={{ fontFamily: ibm.style.fontFamily }}
+        >
+          Get the Information You Need
+        </h1>
         <div className='relative mb-3'>
           <input
             type='text'

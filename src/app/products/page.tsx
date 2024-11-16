@@ -47,12 +47,12 @@ const Products = () => {
     <div className='max-w-screen-2xl content-center px-[2vw] pb-[6vh] bg-gray-100'>
       {/* Foxnut Grades Section */}
       <section className='py-16'>
-        <h2
+        <h1
           className='text-4xl text-center font-extrabold text-gray-800 mb-12'
           style={{ fontFamily: ibm.style.fontFamily }}
         >
           Foxnut Grades & Packaged Raw Makhana
-        </h2>
+        </h1>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto lg:px-[6vw]'>
           {/* Row 1 - 3 Cards */}
