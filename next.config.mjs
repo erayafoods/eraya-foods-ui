@@ -13,6 +13,9 @@ const nextConfig = withOptimizedImages({
   eslint: {
     ignoreDuringBuilds: true
   },
+  compiler: {
+    removeConsole: true
+  },
   async headers () {
     return [
       {
