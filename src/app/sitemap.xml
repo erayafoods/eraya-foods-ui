@@ -8,7 +8,7 @@
 
       <lastmod>2024-10-27</lastmod>
 
-      <changefreq>daily</changefreq>
+      <changefreq>hourly</changefreq>
 
       <priority>1.0</priority>
 
@@ -21,7 +21,7 @@
 
       <changefreq>hourly</changefreq>
 
-      <priority>0.8</priority>
+      <priority>0.99</priority>
 
    </url>
     <url>
@@ -30,9 +30,9 @@
 
       <lastmod>2024-10-27</lastmod>
 
-      <changefreq>daily</changefreq>
+      <changefreq>hourly</changefreq>
 
-      <priority>0.9</priority>
+      <priority>0.98</priority>
 
    </url>
     <url>
@@ -41,9 +41,9 @@
 
       <lastmod>2024-10-27</lastmod>
 
-      <changefreq>daily</changefreq>
+      <changefreq>hourly</changefreq>
 
-      <priority>0.6</priority>
+      <priority>0.97</priority>
 
    </url>
    <url>
@@ -54,10 +54,10 @@
 
       <changefreq>daily</changefreq>
 
-      <priority>0.7</priority>
+      <priority>0.96</priority>
 
    </url>
 
-   
+
 
 </urlset> 
