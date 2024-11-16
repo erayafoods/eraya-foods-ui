@@ -13,7 +13,7 @@ interface NavLink {
   dropdown?: NavLink[] // Optional dropdown property
 }
 import { Poppins } from 'next/font/google'
-export const poppins = Poppins({
+const poppins = Poppins({
   subsets: ['latin'],
   weight: '400'
 })

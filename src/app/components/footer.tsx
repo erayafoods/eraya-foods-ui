@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Form from './Form'
 
 import { Poppins } from 'next/font/google'
-export const poppins = Poppins({
+const poppins = Poppins({
   subsets: ['latin'],
   weight: '400'
 })
