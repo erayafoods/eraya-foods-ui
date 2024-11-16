@@ -16,7 +16,7 @@ const ImageCarousel: React.FC = () => {
   const images: ImageType[] = [
     {
       src: '/000.avif',
-      alt: 'Eraya foods:Best foxnut Supplier,Raw ,Customized'
+      alt: 'Eraya foods:Best makhana Supplier,Raw ,Customized'
     },
     {
       src: '/001.avif',

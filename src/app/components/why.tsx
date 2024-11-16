@@ -7,7 +7,15 @@ interface Feature {
   icon: JSX.Element
   image: string
 }
-
+import { Inter, IBM_Plex_Serif } from 'next/font/google'
+const inter = Inter({
+  subsets: ['latin'],
+  weight: '400'
+})
+const ibm = IBM_Plex_Serif({
+  subsets: ['latin'],
+  weight: '700'
+})
 const WhyChooseUs: React.FC = () => {
   const features: Feature[] = [
     {
@@ -611,7 +619,10 @@ const WhyChooseUs: React.FC = () => {
       className={`${styles.backgroundImage} bg-white py-16 px-4 sm:px-6 lg:px-8 min-h-screen`}
     >
       <div className='max-w-7xl mx-auto'>
-        <h2 className='text-3xl font-extrabold text-gray-900 text-center mb-12'>
+        <h2
+          className='text-3xl font-extrabold text-gray-900 text-center mb-12'
+          style={{ fontFamily: ibm.style.fontFamily }}
+        >
           Why Choose Us
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -626,7 +637,10 @@ const WhyChooseUs: React.FC = () => {
               <div className='p-6'>
                 <div className='flex items-center mb-4'>
                   {feature.icon}
-                  <h3 className='ml-3 text-xl font-semibold text-gray-900'>
+                  <h3
+                    className='ml-3 text-xl font-semibold text-gray-900'
+                    style={{ fontFamily: ibm.style.fontFamily }}
+                  >
                     {feature.title}
                   </h3>
                 </div>
@@ -640,7 +654,12 @@ const WhyChooseUs: React.FC = () => {
                     className='w-full h-48 object-cover rounded-md mb-4'
                   />
                 </picture>
-                <p className='text-gray-600'>{feature.description}</p>
+                <p
+                  className='text-gray-600'
+                  style={{ fontFamily: inter.style.fontFamily }}
+                >
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}

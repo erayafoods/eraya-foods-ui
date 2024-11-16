@@ -322,9 +322,9 @@ const FAQSection = () => {
                   {faq.question}
                 </span>
                 {activeItems.includes(faq.id) ? (
-                  <FaMinus className='text-gray-500' />
+                  <FaMinus className='text-gray-600' />
                 ) : (
-                  <FaPlus className='text-gray-500' />
+                  <FaPlus className='text-gray-600' />
                 )}
               </button>
               <AnimatePresence>

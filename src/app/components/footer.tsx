@@ -2,6 +2,11 @@ import '../globals.css'
 import Image from 'next/image'
 import Form from './Form'
 
+import { Poppins } from 'next/font/google'
+export const poppins = Poppins({
+  subsets: ['latin'],
+  weight: '400'
+})
 export default function Footer () {
   const footerNavs = [
     {
@@ -63,7 +68,10 @@ export default function Footer () {
   ]
 
   return (
-    <footer className='text-gray-500 bg-white rounded-2xl py-5 max-w-screen-xl mx-auto md:px-8'>
+    <footer
+      className='text-gray-600 bg-white rounded-2xl py-5 max-w-screen-xl mx-auto md:px-8'
+      style={{ fontFamily: poppins.style.fontFamily }}
+    >
       <div className='flex flex-col md:flex-row justify-between md:space-x-10'>
         <div className='flex-1'>
           <div className='max-w-xs'>

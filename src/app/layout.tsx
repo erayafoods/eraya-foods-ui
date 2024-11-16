@@ -1,14 +1,30 @@
-export const metadata = {
-  title: 'Eraya Foods',
-  description: 'From India’s Fields to the World’s Tables'
-}
 import Nav from './components/navbar'
-
-import { Navbar } from '@nextui-org/navbar'
-import './globals.css'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 const Footer = dynamic(() => import('../app/components/footer'))
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Eraya Foods - Premium Foxnuts, Makhana Supplier',
+  description:
+    'Premium foxnuts and makhana from Bihar , India. Eraya Foods offers organic, customizable products with unmatched quality and export support.',
+  keywords: [
+    'Eraya Foods',
+    'Premium Foxnuts',
+    'Makhana',
+    'Best Indian Makhana,Foxnut Exporter',
+    'Organic Foxnuts',
+    'Indian Makhana',
+    'Prickly water lily - Food',
+    'euryale ferox benefitsBreakout',
+    'makhana benefits',
+    'makhana nutrition',
+    'makhana calories',
+    'Makhana Food',
+    'makhana health benefits'
+  ]
+}
+
 export default function RootLayout ({
   children
 }: {
@@ -19,30 +35,16 @@ export default function RootLayout ({
       <Head>
         <link rel='icon' href='/icon.ico' type='image/svg+xml' />
         <link rel='manifest' href='manifest.json' />
-
-        <meta name='mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-capable' content='yes' />
-        <meta name='application-name' content='Eraya Foods' />
-        <meta name='apple-mobile-web-app-title' content='Eraya Foods' />
-        <meta name='theme-color' content='#000000' />
-        <meta name='msapplication-navbutton-color' content='#000000' />
+        <title>
+          Eraya Foods: Best Indian Foxnut Exporter | Premium Makhana Supplier
+        </title>
         <meta
-          name='apple-mobile-web-app-status-bar-style'
-          content='black-translucent'
+          name='description'
+          content='Eraya Foods is the leading Indian exporter of premium foxnuts and makhana. Explore organic, crunchy foxnuts with customizable packaging and global reach.'
         />
-        <meta name='msapplication-starturl' content='/' />
-        <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1, shrink-to-fit=no'
-        />
-
-        <link rel='icon' type='icon' sizes='192x192' href='/icon.ico' />
-        <link
-          rel='apple-touch-icon'
-          type='icon'
-          sizes='192x192'
-          href='/icon.ico'
-        />
+        <link rel='manifest' href='/manifest.json' />
+        <link rel='icon' sizes='192x192' href='/icon-192x192.png' />
+        <link rel='apple-touch-icon' sizes='192x192' href='/icon-192x192.png' />
       </Head>
       <body className='flex flex-col min-h-screen'>
         <Nav />

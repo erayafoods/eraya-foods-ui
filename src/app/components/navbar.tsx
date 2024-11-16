@@ -12,7 +12,11 @@ interface NavLink {
   describe: string
   dropdown?: NavLink[] // Optional dropdown property
 }
-
+import { Poppins } from 'next/font/google'
+export const poppins = Poppins({
+  subsets: ['latin'],
+  weight: '400'
+})
 const Navbar: React.FC = () => {
   const currentPath = usePathname()
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -75,7 +79,10 @@ const Navbar: React.FC = () => {
   ]
 
   return (
-    <nav className='sticky top-0 z-10 bg-white shadow-md'>
+    <nav
+      className='sticky top-0 z-10 bg-white shadow-md'
+      style={{ fontFamily: poppins.style.fontFamily }}
+    >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex-shrink-0'>

@@ -15,6 +15,16 @@ interface FounderData {
   }
 }
 
+import { Inter, IBM_Plex_Serif } from 'next/font/google'
+const inter = Inter({
+  subsets: ['latin'],
+  weight: '400'
+})
+const ibm = IBM_Plex_Serif({
+  subsets: ['latin'],
+  weight: '700'
+})
+
 const FounderSection: React.FC = () => {
   const founders: FounderData[] = [
     {
@@ -48,7 +58,10 @@ const FounderSection: React.FC = () => {
 
   return (
     <div className='py-[5vh]'>
-      <div className='text-center font-bold text-cyan-950 text-5xl'>
+      <div
+        className='text-center font-bold text-cyan-950 text-5xl'
+        style={{ fontFamily: ibm.style.fontFamily }}
+      >
         Meet Our Team
       </div>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12'>
@@ -74,7 +87,10 @@ const FounderSection: React.FC = () => {
                 }
               </div>
 
-              <div className='p-8 md:w-1/2'>
+              <div
+                className='p-8 md:w-1/2'
+                style={{ fontFamily: inter.style.fontFamily }}
+              >
                 <div className='uppercase tracking-wide text-sm text-indigo-600 font-semibold'>
                   {founder.title}
                 </div>
@@ -82,7 +98,7 @@ const FounderSection: React.FC = () => {
                   {founder.name}
                 </h1>
 
-                <p className='mt-4 text-lg text-gray-500'>{founder.bio}</p>
+                <p className='mt-4 text-lg text-gray-600'>{founder.bio}</p>
 
                 <blockquote className='mt-6 border-l-4 border-indigo-600 pl-4 italic text-gray-600'>
                   {founder.quote}

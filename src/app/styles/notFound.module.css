@@ -1,6 +1,6 @@
 .backgroundImage4 {
     background-image: url("/not-found.avif");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }

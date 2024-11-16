@@ -1,11 +1,23 @@
 import React from 'react'
 import Image from 'next/image'
+import { Inter, IBM_Plex_Serif } from 'next/font/google'
+const inter = Inter({
+  subsets: ['latin'],
+  weight: '400'
+})
+const ibm = IBM_Plex_Serif({
+  subsets: ['latin'],
+  weight: '700'
+})
 const Products = () => {
   return (
     <div className='max-w-screen-2xl content-center px-[8vw] pb-[8vh] bg-gray-100'>
       {/* Foxnut Grades Section */}
       <section className='py-16'>
-        <h2 className='text-4xl text-center font-extrabold text-gray-800 mb-12'>
+        <h2
+          className='text-4xl text-center font-extrabold text-gray-800 mb-12'
+          style={{ fontFamily: ibm.style.fontFamily }}
+        >
           Foxnut Grades & Packaged Raw Makhana
         </h2>
 
@@ -22,7 +34,7 @@ const Products = () => {
                 className='w-full h-48 object-cover'
               />
             </picture>
-            <div className='p-6'>
+            <div className='p-6' style={{ fontFamily: inter.style.fontFamily }}>
               <h3 className='text-2xl font-bold text-gray-700 mb-4'>Grade A</h3>
               <p className='text-gray-600'>
                 Top quality foxnuts, ideal for premium snack packaging.
@@ -52,7 +64,12 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3 className='text-2xl font-bold text-gray-700 mb-4'>Grade B</h3>
+              <h3
+                className='text-2xl font-bold text-gray-700 mb-4'
+                style={{ fontFamily: inter.style.fontFamily }}
+              >
+                Grade B
+              </h3>
               <p className='text-gray-600'>
                 Perfect for roasted or flavored foxnut production.
               </p>
@@ -82,7 +99,12 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3 className='text-2xl font-bold text-gray-700 mb-4'>Grade C</h3>
+              <h3
+                className='text-2xl font-bold text-gray-700 mb-4'
+                style={{ fontFamily: inter.style.fontFamily }}
+              >
+                Grade C
+              </h3>
               <p className='text-gray-600'>
                 Used in culinary recipes like curries, gravies, and snacks.
               </p>
@@ -115,7 +137,10 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3 className='text-2xl font-bold text-gray-700 mb-4'>
+              <h3
+                className='text-2xl font-bold text-gray-700 mb-4'
+                style={{ fontFamily: inter.style.fontFamily }}
+              >
                 Packaged Raw Makhana - Small
               </h3>
               <p className='text-gray-600'>
@@ -145,7 +170,10 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3 className='text-2xl font-bold text-gray-700 mb-4'>
+              <h3
+                className='text-2xl font-bold text-gray-700 mb-4'
+                style={{ fontFamily: inter.style.fontFamily }}
+              >
                 Packaged Raw Makhana - Large
               </h3>
               <p className='text-gray-600'>

@@ -1,15 +1,21 @@
 {
     "name": "Eraya Foods",
-    "description": "Best foxnut exporter from India",
+    "short_name": "Eraya",
     "start_url": "/",
-    "lang": "en-IN",
+    "display": "standalone",
+    "background_color": "#000000",
     "theme_color": "#000000",
-    "display": "fullscreen",
+    "description": "Premium Foxnuts and Makhana by Eraya Foods",
     "icons": [
         {
-            "src": "icon.ico",
-            "sizes": "192X192",
-            "type": "icon"
+            "src": "/icon.ico",
+            "sizes": "192x192",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ]
 }

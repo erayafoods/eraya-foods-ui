@@ -11,8 +11,12 @@ export default function Form () {
           type='email'
           placeholder='Enter your email'
           className='w-full p-2.5 outline-none'
+          aria-label='Input your Email for Getting latest Insights and Updates on Premium Makhana from Eraya Foods'
         />
-        <button className='p-2.5 rounded-md text-white bg-[#5d1c34] outline-none shadow-md focus:shadow-none sm:px-5'>
+        <button
+          className='p-2.5 rounded-md text-white bg-[#5d1c34] outline-none shadow-md focus:shadow-none sm:px-5'
+          aria-label='Subscribe for Updates'
+        >
           Subscribe
         </button>
       </div>
