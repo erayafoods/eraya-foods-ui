@@ -31,7 +31,10 @@ export const metadata: Metadata = {
     'healthy snack foxnuts',
     'contact Eraya Foods for inquiries',
     'international payment options for foxnuts'
-  ]
+  ],
+  alternates: {
+    canonical: 'https://erayafoods.com/help'
+  }
 }
 import FAQSection from '../components/help'
 export default function Help () {
