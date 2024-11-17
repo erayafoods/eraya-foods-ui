@@ -317,14 +317,18 @@ const FAQSection = () => {
           </div>
         )}
 
+        {/* <button
+          onClick={() => setExpandAll(!expandAll)}
+          className='mb-6 px-4 py-2 rounded-md text-white bg-[#5d1c34] hover:bg-[#732043] transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-[#732043] focus:ring-offset-2'
+        > */}
         <button
           onClick={() => setExpandAll(!expandAll)}
-          className='mb-6 px-4 py-2 bg-[#768a96] text-white rounded-md hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
+          className='mb-6 px-4 py-2 rounded-md text-white bg-[#977D2C] hover:bg-[#5D4B1A] transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5D4B1A] focus:ring-offset-2'
         >
           {expandAll ? 'Hide All' : 'See All'}
         </button>
 
-        <div className='space-y-4'>
+        <div className='space-y-4' style={{ minHeight: '650px' }}>
           {paginatedFaqs.map(faq => (
             <div
               key={faq.id}
@@ -368,17 +372,27 @@ const FAQSection = () => {
         {/* Pagination Controls */}
         <div className='mt-6 flex justify-center space-x-2'>
           {[...Array(totalPages)].map((_, index) => (
+            // <button
+            //   key={index}
+            //   onClick={() => setCurrentPage(index + 1)}
+            //   disabled={currentPage === index + 1}
+            //   className={`px-4 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#732043] focus:ring-offset-2 ${
+            //     currentPage === index + 1
+            //       ? 'bg-[#5d1c34] text-white cursor-not-allowed' // Active button
+            //       : 'bg-[#732043] text-white hover:bg-[#873456]' // Inactive button
+            //   }`}
+            // >
             <button
               key={index}
               onClick={() => setCurrentPage(index + 1)}
               disabled={currentPage === index + 1}
-              className={`px-4 py-2 rounded ${
+              className={`px-4 py-2 rounded-md transition duration-300 focus:outline-none ${
                 currentPage === index + 1
-                  ? 'bg-gray-800 text-white'
-                  : 'bg-gray-400 text-white hover:bg-gray-500'
+                  ? 'font-extrabold text-black cursor-not-allowed' // Active button (text-only, bold, no background)
+                  : 'text-gray-500 hover:text-[#5D4B1A]' // Inactive button (text-only, hover effect)
               }`}
             >
-              Page {index + 1}
+              {index + 1}
             </button>
           ))}
         </div>
