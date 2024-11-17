@@ -60,7 +60,9 @@ const jsonLd = {
         '@type': 'Offer',
         url: 'https://erayafoods.com/gradeA.avif',
         itemCondition: 'https://schema.org/NewCondition',
-        availability: 'https://schema.org/InStock'
+        availability: 'https://schema.org/InStock',
+        price: 12,
+        priceCurrency: 'USD'
       }
     },
     {
@@ -86,7 +88,9 @@ const jsonLd = {
         '@type': 'Offer',
         url: 'https://erayafoods.com/gradeB.avif',
         itemCondition: 'https://schema.org/NewCondition',
-        availability: 'https://schema.org/InStock'
+        availability: 'https://schema.org/InStock',
+        price: 14,
+        priceCurrency: 'USD'
       }
     },
     {
@@ -111,7 +115,9 @@ const jsonLd = {
         '@type': 'Offer',
         url: 'https://erayafoods.com/gradeC.avif',
         itemCondition: 'https://schema.org/NewCondition',
-        availability: 'https://schema.org/InStock'
+        availability: 'https://schema.org/InStock',
+        price: 17,
+        priceCurrency: 'USD'
       }
     },
     {
@@ -136,7 +142,9 @@ const jsonLd = {
         '@type': 'Offer',
         url: 'https://erayafoods.com/smallPackaged.avif',
         itemCondition: 'https://schema.org/NewCondition',
-        availability: 'https://schema.org/InStock'
+        availability: 'https://schema.org/InStock',
+        price: 4,
+        priceCurrency: 'USD'
       }
     },
     {
@@ -161,7 +169,9 @@ const jsonLd = {
         '@type': 'Offer',
         url: 'https://erayafoods.com/largePackaged.avif',
         itemCondition: 'https://schema.org/NewCondition',
-        availability: 'https://schema.org/InStock'
+        availability: 'https://schema.org/InStock',
+        price: 9,
+        priceCurrency: 'USD'
       }
     }
   ]
