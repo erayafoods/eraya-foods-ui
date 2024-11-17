@@ -37,14 +37,20 @@ const Navbar: React.FC = () => {
   const toggleNavbar = () => setIsOpen(prev => !prev)
   const toggleDropdown = () => setIsDropdownOpen(prev => !prev)
 
-  // Specify the parameter type for link
-  const handleLinkClick = (link: string) => {
+  const handleLinkClick = (link: string, event: React.MouseEvent) => {
+    event.preventDefault() // Prevent default anchor behavior
     setIsOpen(false)
     setIsDropdownOpen(false)
 
-    const element = document.getElementById(link)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (currentPath === `/${link}` || (link === '' && currentPath === '/')) {
+      // If already on the target path, scroll to the element
+      const element = document.getElementById(link)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      // Navigate to the new path
+      window.location.href = `/${link}`
     }
   }
 
@@ -89,7 +95,7 @@ const Navbar: React.FC = () => {
             <a
               aria-label='Navbar Menu Button'
               href='/'
-              onClick={() => handleLinkClick('')}
+              onClick={event => handleLinkClick('', event)}
               className='flex items-center'
             >
               <picture>
@@ -127,7 +133,9 @@ const Navbar: React.FC = () => {
                               key={subLink.id}
                               aria-label={subLink.describe}
                               href={`/${subLink.id}`}
-                              onClick={() => handleLinkClick(subLink.id)}
+                              onClick={event =>
+                                handleLinkClick(subLink.id, event)
+                              }
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'
                             >
                               {subLink.name}
@@ -140,7 +148,7 @@ const Navbar: React.FC = () => {
                     <a
                       aria-label={link.describe}
                       href={`/${link.id}`}
-                      onClick={() => handleLinkClick(link.id)}
+                      onClick={event => handleLinkClick(link.id, event)}
                       className={`${
                         currentPath === `/${link.id}`
                           ? 'font-extrabold  text-black'
@@ -193,7 +201,9 @@ const Navbar: React.FC = () => {
                             aria-label={subLink.describe}
                             key={subLink.id}
                             href={`/${subLink.id}`}
-                            onClick={() => handleLinkClick(subLink.id)}
+                            onClick={event =>
+                              handleLinkClick(subLink.id, event)
+                            }
                             className='block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100'
                           >
                             {subLink.name}
@@ -205,7 +215,7 @@ const Navbar: React.FC = () => {
                 ) : (
                   <a
                     href={`/${link.id}`}
-                    onClick={() => handleLinkClick(link.id)}
+                    onClick={event => handleLinkClick(link.id, event)}
                     className={`${
                       currentPath === `/${link.id}`
                         ? 'font-bold text-black'
