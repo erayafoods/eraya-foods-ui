@@ -234,7 +234,7 @@ const ContactUs: React.FC = () => {
               <div className={styles.backgroundImage2}>
                 <div className='relative p-8  text-black'>
                   <div className='relative'>
-                    <h3 className='text-2xl font-bold mb-8'>Get in Touch</h3>
+                    <h2 className='text-2xl font-bold mb-8'>Get in Touch</h2>
                     <div className='space-y-6'>
                       <div className='flex items-center space-x-4  text-black'>
                         <FiMail className='w-6 h-6  hover:text-stone-600 transition duration-200' />
