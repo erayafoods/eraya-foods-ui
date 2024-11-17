@@ -68,7 +68,7 @@ const Products = () => {
               />
             </picture>
             <div className='p-6' style={{ fontFamily: inter.style.fontFamily }}>
-              <h3 className='text-2xl font-bold text-gray-700 mb-4'>Grade A</h3>
+              <h2 className='text-2xl font-bold text-gray-700 mb-4'>Grade A</h2>
               <p className='text-gray-600'>
                 Top quality foxnuts, ideal for premium snack packaging.
               </p>
@@ -97,12 +97,12 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3
+              <h2
                 className='text-2xl font-bold text-gray-700 mb-4'
                 style={{ fontFamily: inter.style.fontFamily }}
               >
                 Grade B
-              </h3>
+              </h2>
               <p className='text-gray-600'>
                 Perfect for roasted or flavored foxnut production.
               </p>
@@ -132,12 +132,12 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3
+              <h2
                 className='text-2xl font-bold text-gray-700 mb-4'
                 style={{ fontFamily: inter.style.fontFamily }}
               >
                 Grade C
-              </h3>
+              </h2>
               <p className='text-gray-600'>
                 Used in culinary recipes like curries, gravies, and snacks.
               </p>
@@ -170,12 +170,12 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3
+              <h2
                 className='text-2xl font-bold text-gray-700 mb-4'
                 style={{ fontFamily: inter.style.fontFamily }}
               >
                 Packaged Raw Makhana - Small
-              </h3>
+              </h2>
               <p className='text-gray-600'>
                 Small-sized packaged foxnuts for convenience stores.
               </p>
@@ -203,12 +203,12 @@ const Products = () => {
               />
             </picture>
             <div className='p-6'>
-              <h3
+              <h2
                 className='text-2xl font-bold text-gray-700 mb-4'
                 style={{ fontFamily: inter.style.fontFamily }}
               >
                 Packaged Raw Makhana - Large
-              </h3>
+              </h2>
               <p className='text-gray-600'>
                 Bulk packaged foxnuts for large-scale retail.
               </p>
