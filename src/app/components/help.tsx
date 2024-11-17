@@ -317,13 +317,9 @@ const FAQSection = () => {
           </div>
         )}
 
-        {/* <button
-          onClick={() => setExpandAll(!expandAll)}
-          className='mb-6 px-4 py-2 rounded-md text-white bg-[#5d1c34] hover:bg-[#732043] transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-[#732043] focus:ring-offset-2'
-        > */}
         <button
           onClick={() => setExpandAll(!expandAll)}
-          className='mb-6 px-4 py-2 rounded-md text-white bg-[#977D2C] hover:bg-[#5D4B1A] transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-[#5D4B1A] focus:ring-offset-2'
+          className='mb-6 px-4 py-2 rounded-md text-white bg-[#5d1c34] hover:bg-[#892244] transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-[#892244] focus:ring-offset-2'
         >
           {expandAll ? 'Hide All' : 'See All'}
         </button>
@@ -372,16 +368,6 @@ const FAQSection = () => {
         {/* Pagination Controls */}
         <div className='mt-6 flex justify-center space-x-2'>
           {[...Array(totalPages)].map((_, index) => (
-            // <button
-            //   key={index}
-            //   onClick={() => setCurrentPage(index + 1)}
-            //   disabled={currentPage === index + 1}
-            //   className={`px-4 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#732043] focus:ring-offset-2 ${
-            //     currentPage === index + 1
-            //       ? 'bg-[#5d1c34] text-white cursor-not-allowed' // Active button
-            //       : 'bg-[#732043] text-white hover:bg-[#873456]' // Inactive button
-            //   }`}
-            // >
             <button
               key={index}
               onClick={() => setCurrentPage(index + 1)}
