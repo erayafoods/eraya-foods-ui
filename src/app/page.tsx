@@ -12,6 +12,34 @@ import ImageCarousel from './components/carousel'
 
 import WhyChooseUs from './components/why'
 import { Metadata } from 'next'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  image: 'https://www.erayafoods.com/eraya.svg',
+  url: 'https://www.erayafoods.com',
+  sameAs: [
+    'https://www.linkedin.com/company/eraya-foods/',
+    'https://www.facebook.com/people/Eraya-Foods/61563902867735/',
+    'https://www.instagram.com/erayafoods/',
+    'https://x.com/erayafoods/'
+  ],
+  logo: 'https://www.erayafoods.com/eraya.svg',
+  name: 'Eraya Foods',
+  description:
+    'Eraya foods is an Indian premium foxnut,Phool Makhana exporter,supplier',
+  email: 'ankush@erayafoods.com',
+  telephone: '+91 9266462227',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress:
+      'RZ 426, 2nd Floor, Gali Number 31 Near Pradhan Chowk, Palam',
+    addressLocality: 'New Delhi',
+    addressCountry: 'India',
+    addressRegion: 'New Delhi',
+    postalCode: '110045'
+  }
+}
 export const metadata: Metadata = {
   title: 'Eraya Foods: Best Foxnut Exporter | Premium Phool Makhana',
   description:
@@ -35,6 +63,10 @@ export const metadata: Metadata = {
 export default function Home () {
   return (
     <>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ImageCarousel aria-label='Foxnut highlights by Eraya Foods' />
       {/*  cool text*/}
 
