@@ -35,7 +35,7 @@ const jsonLd = {
     streetAddress:
       'RZ 426, 2nd Floor, Gali Number 31 Near Pradhan Chowk, Palam',
     addressLocality: 'New Delhi',
-    addressCountry: 'India',
+    addressCountry: 'IN',
     addressRegion: 'New Delhi',
     postalCode: '110045'
   }
