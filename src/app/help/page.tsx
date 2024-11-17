@@ -40,23 +40,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  name: 'Eraya foods Help center',
   mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'a',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'b'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'x',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'y'
-      }
-    },
     {
       '@type': 'Question',
       name: "What makes Eraya Foods' foxnuts unique?",
