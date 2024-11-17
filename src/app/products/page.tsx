@@ -39,15 +39,140 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Product',
-      name: 'tshirt',
-      description: 'test copy 1.',
-      image: 'image.jpg'
+      sku: 'gradeA',
+      image: 'https://erayafoods.com/gradeA.avif',
+      name: 'Grade A Makhana',
+      description:
+        'Top quality foxnuts phool Makhana, ideal for premium snack packaging. Best Quality Graded, Round Shaped',
+      size: '13mm-16mm',
+      brand: {
+        '@type': 'Brand',
+        name: 'Eraya Foods'
+      },
+      hasCertification: {
+        '@type': 'Certification',
+        issuedBy: {
+          '@type': 'Organization',
+          name: 'fssai'
+        }
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://erayafoods.com/gradeA.avif',
+        itemCondition: 'https://schema.org/NewCondition',
+        availability: 'https://schema.org/InStock',
+        price: 'Reach out to us to get a quote',
+        priceCurrency: 'INR'
+      }
     },
     {
       '@type': 'Product',
-      name: 'tshirt 2',
-      description: 'test copy 2.',
-      image: 'image2.jpg'
+      sku: 'gradeB',
+      image: 'https://erayafoods.com/gradeB.avif',
+      name: 'Grade B Makhana',
+      description:
+        'Perfect for roasted or flavored foxnut production ,round Shaped',
+      size: '16mm-19mm',
+      brand: {
+        '@type': 'Brand',
+        name: 'Eraya Foods'
+      },
+      hasCertification: {
+        '@type': 'Certification',
+        issuedBy: {
+          '@type': 'Organization',
+          name: 'fssai'
+        }
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://erayafoods.com/gradeB.avif',
+        itemCondition: 'https://schema.org/NewCondition',
+        availability: 'https://schema.org/InStock',
+        price: 'Reach out to us to get a quote',
+        priceCurrency: 'INR'
+      }
+    },
+    {
+      '@type': 'Product',
+      sku: 'gradeC',
+      image: 'https://erayafoods.com/gradeC.avif',
+      name: 'Grade C Makhana',
+      description: 'Used in culinary recipes like curries, gravies, and snacks',
+      size: '19mm+',
+      brand: {
+        '@type': 'Brand',
+        name: 'Eraya Foods'
+      },
+      hasCertification: {
+        '@type': 'Certification',
+        issuedBy: {
+          '@type': 'Organization',
+          name: 'fssai'
+        }
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://erayafoods.com/gradeC.avif',
+        itemCondition: 'https://schema.org/NewCondition',
+        availability: 'https://schema.org/InStock',
+        price: 'Reach out to us to get a quote',
+        priceCurrency: 'INR'
+      }
+    },
+    {
+      '@type': 'Product',
+      sku: 'smallPack',
+      image: 'https://erayafoods.com/smallPackaged.avif',
+      name: 'Raw Packaged makhana small pack',
+      description: 'Small-sized packaged foxnuts for convenience stores',
+      size: '17-19 mm',
+      brand: {
+        '@type': 'Brand',
+        name: 'Eraya Foods'
+      },
+      hasCertification: {
+        '@type': 'Certification',
+        issuedBy: {
+          '@type': 'Organization',
+          name: 'fssai'
+        }
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://erayafoods.com/smallPackaged.avif',
+        itemCondition: 'https://schema.org/NewCondition',
+        availability: 'https://schema.org/InStock',
+        price: 'Reach out to us to get a quote',
+        priceCurrency: 'INR'
+      }
+    },
+    {
+      '@type': 'Product',
+      sku: 'largePack',
+      image: 'https://erayafoods.com/largePackaged.avif',
+      name: 'Raw Packaged makhana Large pack',
+      description: 'Bulk packaged foxnuts for large-scale retail.',
+      size: '17-19 mm',
+      brand: {
+        '@type': 'Brand',
+        name: 'Eraya Foods'
+      },
+      hasCertification: {
+        '@type': 'Certification',
+        issuedBy: {
+          '@type': 'Organization',
+          name: 'fssai'
+        }
+      },
+      offers: {
+        '@type': 'Offer',
+        url: 'https://erayafoods.com/largePackaged.avif',
+        itemCondition: 'https://schema.org/NewCondition',
+        availability: 'https://schema.org/InStock',
+        price: 'Reach out to us to get a quote',
+        priceCurrency: 'INR'
+      }
     }
   ]
 }
