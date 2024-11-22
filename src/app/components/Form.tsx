@@ -33,8 +33,7 @@ export default function Form () {
         })
 
         if (response.ok) {
-          setFormData({ email: '' }) // Reset the email input after successful submission
-          alert('Thank you for subscribing!')
+          setFormData({ email: '' })
         } else {
           const errorData = await response.json()
           console.error('Submission error:', errorData.error)
