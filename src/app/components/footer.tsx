@@ -1,7 +1,6 @@
 import '../globals.css'
 import Image from 'next/image'
 import Form from './Form'
-
 import { Poppins } from 'next/font/google'
 const poppins = Poppins({
   subsets: ['latin'],
@@ -29,7 +28,7 @@ export default function Footer () {
             'Blogs about current scenario of foxnuts,makhana,eurayle nuts'
         },
         {
-          href: '#',
+          href: '/healthBenefits',
           name: 'Nutritional Benefits',
           describe: 'Nutritional benefits of foxnut, makhana, eurayle nuts'
         },
@@ -80,7 +79,7 @@ export default function Footer () {
               <source srcSet='/eraya.svg?webp' type='image/webp' />
               <Image
                 src={'/eraya.svg'}
-                alt='Eraya Foods , the best foxnut exporter from India'
+                alt='Eraya Foods , the best foxnut ,Phool Makhana exporter from India'
                 width={70}
                 height={70}
                 style={{ width: '70px', padding: '3px' }}

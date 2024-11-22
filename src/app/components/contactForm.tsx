@@ -53,14 +53,31 @@ const ContactUs: React.FC = () => {
     return newErrors
   }
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault()
     const newErrors = validateForm()
     if (Object.keys(newErrors).length === 0) {
-      setSubmitted(true)
-      setFormData({ name: '', email: '', phone: '', message: '' })
-      // Hide the alert after 6 seconds
-      setTimeout(() => setSubmitted(false), 6000)
+      try {
+        const response = await fetch('/api/mail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+
+        if (response.ok) {
+          setSubmitted(true)
+          setFormData({ name: '', email: '', phone: '', message: '' })
+
+          setTimeout(() => setSubmitted(false), 6000)
+        } else {
+          const errorData = await response.json()
+          console.error('Submission error:', errorData.error)
+        }
+      } catch (error) {
+        console.error('Network error:', error)
+      }
     } else {
       setErrors(newErrors)
     }
