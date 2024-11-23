@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
                 pass: process.env.EMAIL_PASS,
             },
             tls: {
-                rejectUnauthorized: true,
+                rejectUnauthorized: false,
             },
         });
 
