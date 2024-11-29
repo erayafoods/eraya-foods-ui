@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@nextui-org/react": "^2.4.6",
+        "@sendgrid/mail": "^8.1.4",
         "clsx": "^2.1.1",
         "framer-motion": "^11.11.17",
         "lucide-react": "^0.455.0",

@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import sgMail from "@sendgrid/mail";
+
+// Set your SendGrid API Key from environment variables
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req: NextRequest) {
     const { email } = await req.json();
-
+    console.log("SendGrid API Key:", email);
     if (!email) {
         return NextResponse.json(
             { error: "Email is required." },
@@ -12,41 +15,19 @@ export async function POST(req: NextRequest) {
     }
 
     try {
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            port: 587,
-            secure: true,
-            auth: {
-                user: process.env.EMAIL_ID,
-                pass: process.env.EMAIL_PASS,
-            },
-            tls: {
-                rejectUnauthorized: true,
-            },
-        });
-
         // Define the email list
         const mailList = process.env.EMAIL_RECIPIENTS?.split(",") || [];
 
         // Loop through the email list and send the email to each recipient
-        for (let i = 0; i < mailList.length; i++) {
-            const mailOptions = {
-                from: "Blog subscriber",
-                to: mailList[i],
-                subject: "Subscriber",
-                text: `You have a new subscribor for blogs (${email}):
-        
-                
-                
-                Contact Details:
-                
-                Email: ${email}
-               
-                `,
-            };
+        const messages = mailList.map((recipient) => ({
+            to: recipient,
+            from: process.env.EMAIL_ID, // Your verified SendGrid email
+            subject: "New Blog Subscriber",
+            text: `You have a new subscriber for blogs (${email}):\n\nContact Details:\n\nEmail: ${email}`,
+        }));
 
-            await transporter.sendMail(mailOptions);
-        }
+        // Send all emails in parallel
+        await sgMail.send(messages);
 
         return NextResponse.json({
             message: "Your message has been sent successfully!",

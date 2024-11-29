@@ -31,7 +31,7 @@ export default function Form () {
           },
           body: JSON.stringify(formData)
         })
-
+        console.log('Body ye h ', formData)
         if (response.ok) {
           setFormData({ email: '' })
         } else {

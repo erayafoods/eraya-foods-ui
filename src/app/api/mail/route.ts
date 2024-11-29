@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import sgMail from "@sendgrid/mail";
+
+// Set your SendGrid API Key from environment variables
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req: NextRequest) {
     const { name, email, phone, message } = await req.json();
@@ -12,29 +15,15 @@ export async function POST(req: NextRequest) {
     }
 
     try {
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            port: 587,
-            secure: true,
-            auth: {
-                user: process.env.EMAIL_ID,
-                pass: process.env.EMAIL_PASS,
-            },
-            tls: {
-                rejectUnauthorized: false,
-            },
-        });
-
         // Define the email list
         const mailList = process.env.EMAIL_RECIPIENTS?.split(",") || [];
 
-        // Loop through the email list and send the email to each recipient
-        for (let i = 0; i < mailList.length; i++) {
-            const mailOptions = {
-                from: "Eraya Foods Message",
-                to: mailList[i],
-                subject: "MESSAGE FROM VISITOR",
-                text: `You have received a new message from ${name} (${email}):
+        // Create the email content
+        const messages = mailList.map((recipient) => ({
+            to: recipient,
+            from: process.env.EMAIL_ID, // Your verified SendGrid email
+            subject: "MESSAGE FROM VISITOR",
+            text: `You have received a new message from ${name} (${email}):
         
                 Message:
                 ${message}
@@ -44,20 +33,11 @@ export async function POST(req: NextRequest) {
                 Email: ${email}
                 Phone: ${phone}
                 Message: ${message}
-                `,
-            };
+            `,
+        }));
 
-            await new Promise((resolve, reject) => {
-                transporter.sendMail(mailOptions, (err, info) => {
-                    if (err) {
-                        console.error(err);
-                        reject(err);
-                    } else {
-                        resolve(info);
-                    }
-                });
-            });
-        }
+        // Send all emails in parallel using SendGrid
+        await sgMail.send(messages);
 
         return NextResponse.json({
             message: "Your message has been sent successfully!",
