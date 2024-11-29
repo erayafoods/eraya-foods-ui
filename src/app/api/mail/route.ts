@@ -1,8 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
 
+// Assert that the environment variables are defined
+const sendGridApiKey = process.env.SENDGRID_API_KEY;
+const emailId = process.env.EMAIL_ID;
+
+if (!sendGridApiKey || !emailId) {
+    throw new Error(
+        "SENDGRID_API_KEY and EMAIL_ID must be set in environment variables."
+    );
+}
+
 // Set your SendGrid API Key from environment variables
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(sendGridApiKey);
 
 export async function POST(req: NextRequest) {
     const { name, email, phone, message } = await req.json();
@@ -21,7 +31,7 @@ export async function POST(req: NextRequest) {
         // Create the email content
         const messages = mailList.map((recipient) => ({
             to: recipient,
-            from: process.env.EMAIL_ID, // Your verified SendGrid email
+            from: emailId, // Your verified SendGrid email
             subject: "MESSAGE FROM VISITOR",
             text: `You have received a new message from ${name} (${email}):
         
