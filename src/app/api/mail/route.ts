@@ -28,6 +28,14 @@ export async function POST(req: NextRequest) {
         // Define the email list
         const mailList = process.env.EMAIL_RECIPIENTS?.split(",") || [];
 
+        // Ensure `from` is a valid email before using it
+        if (!emailId) {
+            return NextResponse.json(
+                { error: "The sender email (EMAIL_ID) is not defined." },
+                { status: 500 }
+            );
+        }
+
         // Create the email content
         const messages = mailList.map((recipient) => ({
             to: recipient,
