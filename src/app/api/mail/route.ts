@@ -7,7 +7,7 @@ const emailId = process.env.EMAIL_ID;
 
 if (!sendGridApiKey || !emailId) {
     throw new Error(
-        "SENDGRID_API_KEY and EMAIL_ID must be set in environment variables."
+        "SENDGRID_API_KEY and EMAIL_ID must be set in environment variables GOt it ."
     );
 }
 
