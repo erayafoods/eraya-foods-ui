@@ -96,7 +96,8 @@ export default function Home () {
         </p>
       </section>
 
-      <WhyChooseUs aria-label='Reasons to choose Eraya Foods for premium foxnuts' />
+      {/* <WhyChooseUs aria-label='Reasons to choose Eraya Foods for premium foxnuts' /> */}
+      <WhyChooseUs />
     </>
   )
 }
