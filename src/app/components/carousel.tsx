@@ -52,7 +52,7 @@ const ImageCarousel: React.FC = () => {
 
   useEffect(() => {
     if (isPlaying) {
-      timerRef.current = setInterval(nextSlide, 4000)
+      timerRef.current = setInterval(nextSlide, 5000)
     } else if (timerRef.current) {
       clearInterval(timerRef.current)
     }
@@ -117,7 +117,7 @@ const ImageCarousel: React.FC = () => {
       </button>
 
       {/* Carousel indicators */}
-      <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2'>
+      {/* <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2'>
         {images.map((_, index) => (
           <button
             key={index}
@@ -128,7 +128,7 @@ const ImageCarousel: React.FC = () => {
             aria-label={`Go to image ${index + 1}`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }
