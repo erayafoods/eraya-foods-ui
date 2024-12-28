@@ -15,16 +15,20 @@ const ImageCarousel: React.FC = () => {
 
   const images: ImageType[] = [
     {
-      src: '/000.avif',
+      src: '/Home.avif',
       alt: 'Eraya foods:Best makhana Supplier,Raw ,Customized'
     },
     {
-      src: '/001.avif',
+      src: '/Home_1.avif',
       alt: 'Premium organic foxnuts from Bihar, India - Crunchy, best foxnut supplier'
     },
     {
-      src: '/002.avif',
+      src: '/Home_2.avif',
       alt: "Boost sales with Eraya's premium foxnuts, on-time delivery, support, packaging & marketing"
+    },
+    {
+      src: '/Home_3.avif',
+      alt: "From farmer's fields to world's table "
     }
   ]
 
