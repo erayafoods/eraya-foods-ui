@@ -6,9 +6,9 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/icon.ico',
-    shortcut: '/icon-192x192.png',
-    apple: '/icon-192x192.png'
+    icon: '/eraya.svg',
+    shortcut: '/eraya.svg',
+    apple: '/eraya.svg'
   },
   manifest: '/manifest.json',
   openGraph: {
