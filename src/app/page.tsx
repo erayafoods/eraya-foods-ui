@@ -6,7 +6,7 @@ import Roadmap from './components/roadmap'
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  image: 'https://www.erayafoods.com/eraya.svg',
+  image: 'https://www.erayafoods.com/Home.avif',
   url: 'https://www.erayafoods.com',
   sameAs: [
     'https://www.linkedin.com/company/eraya-foods/',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 }
 export default function Home () {
   return (
-    <div className='bg-[#f5f5ef] mb-[3vh] md:mb-[12vh]'>
+    <div className='bg-[#f5f5ef]'>
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
