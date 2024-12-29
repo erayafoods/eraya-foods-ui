@@ -2,15 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 const FoxnutBenefits: React.FC = () => {
   return (
-    <section className='bg-gradient-to-b from-blue-50 to-blue-100  '>
+    <section className='bg-[#f3f8db] '>
       <picture>
         <source srcSet={'/nutrition.svg'} type='image/webp' />
         <Image
           src={'/nutrition.svg'}
           alt={'Nutriotional value of Makhana'}
-          width={1200}
-          height={1200}
-          className='w-full object-contain'
+          width={1080}
+          height={1080}
+          className='w-4/6 mx-auto'
         />
       </picture>
       <picture>
@@ -20,7 +20,7 @@ const FoxnutBenefits: React.FC = () => {
           alt={'Benefits of Makhana'}
           width={1200}
           height={1200}
-          className='w-full object-contain'
+          className='w-4/6 mx-auto'
         />
       </picture>
     </section>
