@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Eraya Foods',
     images: [
       {
-        url: 'https://erayafoods.com/Home.avif',
+        url: 'https://erayafoods.com/Home.png',
         width: 1200,
         height: 630,
         alt: 'Eraya Foods Premium Foxnuts'
