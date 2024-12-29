@@ -106,7 +106,7 @@ Size: Varies (13mm-19mm)`
 const Products = () => {
   return (
     <>
-      <div className='content-center px-[8vh] pb-[6vh] bg-gray-100'>
+      <div className='content-center px-[2vh] md:px-[8vh] pb-[6vh] bg-gray-100'>
         <section className='py-16'>
           <h1
             className='text-4xl text-center font-extrabold text-gray-800 mb-12'
@@ -115,7 +115,7 @@ const Products = () => {
             Products Catalogue
           </h1>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto lg:px-[6vw]'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-[6vw]'>
             {products.map((product, index) => (
               <div
                 key={index}

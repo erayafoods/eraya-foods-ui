@@ -229,50 +229,46 @@ export default function About () {
       {/* Certificates Section */}
       <section className='py-12'>
         <h3
-          className='text-2xl font-semibold text-center py-[8vh]'
+          className='text-xl sm:text-2xl md:text-3xl font-semibold text-center py-12'
           style={{ fontFamily: ibm.style.fontFamily }}
         >
           Certificates & Recognitions
         </h3>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-32 px-6 lg:px-32'>
-          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <picture>
-              <source srcSet='/fssai.avif?webp' type='image/wbep' />
-              <Image
-                src={'/fssai.avif'}
-                height={160}
-                width={160}
-                alt={'We have FSSAI Certificate'}
-              />
-            </picture>
-          </div>
-
-          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <picture>
-              <source srcSet='/fieo.avif?webp' type='image/webp' />
-              <Image
-                src={'/fieo.avif'}
-                height={160}
-                width={160}
-                alt={'We have FIEO Certificate from Indian government'}
-              />
-            </picture>
-          </div>
-          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <picture>
-              {/* Use path directly in `srcSet` for WebP source */}
-              <source srcSet='/APEDA.avif?webp' type='image/webp' />
-              {/* Fallback image */}
-              <Image
-                src='/APEDA.avif'
-                height={160}
-                width={160}
-                alt='We have APEDA Certificate'
-                loading='lazy'
-                className='rounded-lg'
-              />
-            </picture>
-          </div>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 px-4 md:px-10 lg:px-32'>
+          {[
+            {
+              src: '/fssai.avif',
+              webp: '/fssai.avif?webp',
+              alt: 'FSSAI Certificate'
+            },
+            {
+              src: '/fieo.avif',
+              webp: '/fieo.avif?webp',
+              alt: 'FIEO Certificate from Indian government'
+            },
+            {
+              src: '/APEDA.avif',
+              webp: '/APEDA.avif?webp',
+              alt: 'APEDA Certificate'
+            }
+          ].map(({ src, webp, alt }, index) => (
+            <div
+              key={index}
+              className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl'
+            >
+              <picture>
+                <source srcSet={webp} type='image/webp' />
+                <Image
+                  src={src}
+                  height={160}
+                  width={160}
+                  alt={alt}
+                  loading='lazy'
+                  className='rounded-md'
+                />
+              </picture>
+            </div>
+          ))}
         </div>
       </section>
 
