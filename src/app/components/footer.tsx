@@ -68,7 +68,7 @@ export default function Footer () {
 
   return (
     <footer
-      className='text-gray-600 bg-white rounded-2xl py-5 max-w-screen-xl mx-auto px-7'
+      className='text-gray-600 bg-white rounded-2xl py-5 max-w-screen-xl mx-auto px-7 mt-[3vh] md:mt-[12vh]'
       style={{ fontFamily: poppins.style.fontFamily }}
     >
       <div className='flex flex-col md:flex-row justify-between md:space-x-10'>
