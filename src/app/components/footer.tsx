@@ -16,16 +16,15 @@ export default function Footer () {
       label: 'Resources',
       items: [
         {
-          href: '#',
-          name: 'Guidelines',
-          describe:
-            'Guidelines for trading with Eraya foods foxnut, makhana, eurayle nuts'
+          href: '/brochure',
+          name: 'Brochure',
+          describe: 'Brochure of Eraya Foods'
         },
         {
-          href: '#',
-          name: 'Blogs',
+          href: '/blog',
+          name: 'Blog',
           describe:
-            'Blogs about current scenario of foxnuts,makhana,eurayle nuts'
+            'Blog about current scenario of foxnuts,makhana,eurayle nuts'
         },
         {
           href: '/healthBenefits',
@@ -33,7 +32,7 @@ export default function Footer () {
           describe: 'Nutritional benefits of foxnut, makhana, eurayle nuts'
         },
         {
-          href: '#',
+          href: '/logistics',
           name: 'Logistics',
           describe: 'All about logistic support at Eraya foods '
         }
