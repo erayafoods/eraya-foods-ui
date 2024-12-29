@@ -43,38 +43,63 @@ const ibm = IBM_Plex_Serif({
   subsets: ['latin'],
   weight: '700'
 })
-
 const products = [
   {
-    image: '/gradeA.avif',
-    alt: 'Grade A Foxnuts',
-    title: 'Grade A',
-    description: 'Top quality foxnuts, ideal for premium snack packaging.',
+    image: '/1_sutta.avif',
+    alt: '1 Sutta Foxnuts',
+    title: '1 Sutta',
+    description: 'Top-quality foxnuts, ideal for premium snack packaging.',
     specifications: `Specification: Best Quality Graded, Round Shaped
-Size: 13mm-16mm
-Mandi: 4 sutta
-Bag Size: 5kg/8kg/10kg`
+Size: 13mm-16mm`
   },
   {
-    image: '/gradeB.avif',
-    alt: 'Grade B Foxnuts',
-    title: 'Grade B',
+    image: '/2_sutta.avif',
+    alt: '2 Sutta Foxnuts',
+    title: '2 Sutta',
     description: 'Perfect for roasted or flavored foxnut production.',
     specifications: `Specification: Best Quality Graded, Round Shaped
-Ready to use, No Wastage
-Size: 16mm -19 mm
-Mandi: 5 sutta
-Bag Size: 5kg/8kg/10kg`
+Size: 16mm-19mm`
   },
   {
-    image: '/gradeC.avif',
-    alt: 'Grade C Foxnuts',
-    title: 'Grade C',
+    image: '/3_sutta.avif',
+    alt: '3 Sutta Foxnuts',
+    title: '3 Sutta',
     description: 'Used in culinary recipes like curries, gravies, and snacks.',
     specifications: `Specification: Best Quality Graded, Round Shaped
-Size: 19mm+
-Mandi: 6 sutta
-Bag Size: 5kg/8kg/10kg`
+Size: 19mm+`
+  },
+  {
+    image: '/4_sutta.avif',
+    alt: '4 Sutta Foxnuts',
+    title: '4 Sutta',
+    description: 'Best for bulk usage in food manufacturing and exports.',
+    specifications: `Specification: Premium Quality, Slight Oval Shaped
+Size: 12mm-14mm`
+  },
+  {
+    image: '/5_sutta.avif',
+    alt: '5 Sutta Foxnuts',
+    title: '5 Sutta',
+    description: 'Ideal for health food brands focusing on high-grade quality.',
+    specifications: `Specification: High Grade, Evenly Sized
+Size: 14mm-16mm`
+  },
+  {
+    image: '/6_sutta.avif',
+    alt: '6 Sutta Foxnuts',
+    title: '6 Sutta',
+    description: 'Preferred by gourmet chefs for unique culinary applications.',
+    specifications: `Specification: High Quality, Larger Foxnuts
+Size: 17mm-19mm`
+  },
+  {
+    image: '/gitanjali.avif',
+    alt: 'Gitanjali Mix Foxnuts',
+    title: 'Gitanjali Mix',
+    description:
+      'A premium mix, perfect for diverse culinary and packaging needs.',
+    specifications: `Specification: Mixed Quality Graded, Multiple Sizes
+Size: Varies (13mm-19mm)`
   }
 ]
 
@@ -87,23 +112,23 @@ const Products = () => {
             className='text-4xl text-center font-extrabold text-gray-800 mb-12'
             style={{ fontFamily: ibm.style.fontFamily }}
           >
-            Foxnut Grades & Packaged Raw Makhana
+            Products Catalogue
           </h1>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto lg:px-[6vw]'>
             {products.map((product, index) => (
               <div
                 key={index}
-                className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform'
+                className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform p-[4vh]'
               >
                 <picture>
                   <source srcSet={`${product.image}?webp`} type='image/webp' />
                   <Image
                     src={product.image}
                     alt={product.alt}
-                    width={120}
+                    width={200}
                     height={200}
-                    className='w-full h-48 object-cover'
+                    className='w-full h-48 object-contain'
                   />
                 </picture>
                 <div

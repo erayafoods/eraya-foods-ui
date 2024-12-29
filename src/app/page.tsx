@@ -52,19 +52,19 @@ export const metadata: Metadata = {
 }
 export default function Home () {
   return (
-    <div className='bg-[#f5f5ef] '>
+    <div className='bg-[#f5f5ef] mb-[3vh] md:mb-[12vh]'>
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className='mb-[3vh] md:mb-[12vh]  '>
+      <div className='mb-[5vh] md:mb-[12vh]'>
         <ImageCarousel aria-label='Foxnut highlights by Eraya Foods' />
       </div>
-      <div className='mb-[3vh] md:mb-[12vh]'>
+      <div className='mb-[5vh] md:mb-[12vh]'>
         <WhyChooseUs />
       </div>
-      <div className='mb-[3vh] md:mb-[12vh]'>
+      <div className='mb-[5vh] md:mb-[12vh]'>
         <Roadmap />
       </div>
     </div>

@@ -68,24 +68,23 @@ export default function Footer () {
 
   return (
     <footer
-      className='text-gray-600 bg-white rounded-2xl py-5 max-w-screen-xl mx-auto md:px-8'
+      className='text-gray-600 bg-white rounded-2xl py-5 max-w-screen-xl mx-auto px-7'
       style={{ fontFamily: poppins.style.fontFamily }}
     >
       <div className='flex flex-col md:flex-row justify-between md:space-x-10'>
-        <div className='flex-1'>
-          <div className='max-w-xs'>
-            {/* <img src={Logo} className='w-32' /> */}
+        <div className='flex-1 space-y-4'>
+          <div className='flex items-center space-x-3'>
             <picture>
               <source srcSet='/eraya.svg?webp' type='image/webp' />
               <Image
-                src={'/eraya.svg'}
-                alt='Eraya Foods , the best foxnut ,Phool Makhana exporter from India'
+                src='/eraya.svg'
+                alt='Eraya Foods, the best foxnut exporter from India'
                 width={70}
                 height={70}
-                style={{ width: '70px', padding: '3px' }}
+                className='w-16'
               />
             </picture>
-            <p className='leading-relaxed mt-2 text-[15px]'>
+            <p className='leading-relaxed text-sm md:text-base'>
               Transforming Foxnuts into a Global Delight
             </p>
           </div>
