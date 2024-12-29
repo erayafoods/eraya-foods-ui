@@ -229,12 +229,12 @@ export default function About () {
       {/* Certificates Section */}
       <section className='py-12'>
         <h3
-          className='text-2xl font-semibold text-center py-6'
+          className='text-2xl font-semibold text-center py-[8vh]'
           style={{ fontFamily: ibm.style.fontFamily }}
         >
           Certificates & Recognitions
         </h3>
-        <div className='grid grid-cols-2 md:grid-cols-5 gap-6 px-6 lg:px-32'>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-32 px-6 lg:px-32'>
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <picture>
               <source srcSet='/fssai.avif?webp' type='image/wbep' />
@@ -246,17 +246,7 @@ export default function About () {
               />
             </picture>
           </div>
-          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <picture>
-              <source srcSet='/fda.avif?webp' type='image/webp' />
-              <Image
-                src={'/fda.avif'}
-                height={160}
-                width={160}
-                alt={'We have FDA Certificate for USA importers'}
-              />
-            </picture>
-          </div>
+
           <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
             <picture>
               <source srcSet='/fieo.avif?webp' type='image/webp' />
@@ -282,14 +272,6 @@ export default function About () {
                 className='rounded-lg'
               />
             </picture>
-          </div>
-          <div className='bg-gray-100 rounded-lg h-64 flex items-center justify-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'>
-            <Image
-              src={'/iso-22000.avif'}
-              height={160}
-              width={160}
-              alt={'We have ISO-22000 Certificate'}
-            />
           </div>
         </div>
       </section>

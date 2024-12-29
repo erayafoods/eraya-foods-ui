@@ -1,6 +1,7 @@
 import React from 'react'
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaTwitter } from 'react-icons/fa'
 import Image from 'next/image'
+
 interface FounderData {
   name: string
   title: string
@@ -42,7 +43,7 @@ const FounderSection: React.FC = () => {
     },
     {
       name: 'Anubhi Shah',
-      title: 'COO',
+      title: 'Chief Operating Officer',
       image: '/anubhi.avif',
       bio: 'With a background in hotel management, Anubhi Shah brings a unique perspective as the Chief Operating Officer at Eraya, expertly blending operational efficiency with a customer-first approach. Her commitment is to create seamless experiences that embody Eraya’s dedication to quality and service, ensuring each step aligns with the highest standards for the satisfaction of both clients and partners.',
       quote:
@@ -56,7 +57,7 @@ const FounderSection: React.FC = () => {
   ]
 
   return (
-    <div className='py-[5vh]'>
+    <div className='py-[8vh]'>
       <h1
         className='text-center font-bold text-cyan-950 text-5xl'
         style={{ fontFamily: ibm.style.fontFamily }}
@@ -67,59 +68,57 @@ const FounderSection: React.FC = () => {
         {founders.map((founder, index) => (
           <div
             key={index}
-            className='bg-white rounded-2xl shadow-xl overflow-hidden'
+            className='bg-white rounded-2xl  overflow-hidden flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0'
           >
-            <div className='md:flex'>
-              <div className='md:flex-shrink-0 md:w-1/2'>
-                {
-                  <Image
-                    src={`${founder.image}`}
-                    alt={`Founder ${founder.name}`}
-                    width={150}
-                    height={150}
-                    loading='lazy'
-                    className='h-full w-full object-cover transform hover:scale-105 transition-transform duration-300'
-                  />
-                }
+            <div className='flex justify-center items-center p-6 pt-20'>
+              <div className='w-32 h-32 rounded-full overflow-hidden border-4 border-[#5d1c34]'>
+                <Image
+                  src={`${founder.image}`}
+                  alt={`Founder ${founder.name}`}
+                  width={128}
+                  height={128}
+                  loading='lazy'
+                  className='w-full h-full object-cover'
+                />
               </div>
+            </div>
 
-              <div
-                className='p-8 md:w-1/2'
-                style={{ fontFamily: inter.style.fontFamily }}
-              >
-                <div className='uppercase tracking-wide text-sm text-indigo-600 font-semibold'>
-                  {founder.title}
-                </div>
-                <h2 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
-                  {founder.name}
-                </h2>
+            <div
+              className='p-8 flex-1'
+              style={{ fontFamily: inter.style.fontFamily }}
+            >
+              <div className='uppercase tracking-wide text-sm text-[#5d1c34] font-semibold'>
+                {founder.title}
+              </div>
+              <h2 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+                {founder.name}
+              </h2>
 
-                <p className='mt-4 text-lg text-gray-600'>{founder.bio}</p>
+              <p className='mt-4 text-lg text-gray-600'>{founder.bio}</p>
 
-                <blockquote className='mt-6 border-l-4 border-indigo-600 pl-4 italic text-gray-600'>
-                  {founder.quote}
-                </blockquote>
+              <blockquote className='mt-6 border-l-4 border-[#5d1c34] pl-4 italic text-gray-600'>
+                {founder.quote}
+              </blockquote>
 
-                <div className='mt-8 flex items-center space-x-6'>
-                  <a
-                    href={founder.socialMedia.linkedin}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-gray-600 hover:text-indigo-600'
-                    aria-label={founder.socialMedia.description}
-                  >
-                    <FaLinkedin className='h-6 w-6' />
-                  </a>
-                  <a
-                    href={founder.socialMedia.twitter}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-gray-600 hover:text-indigo-600'
-                    aria-label={founder.socialMedia.description}
-                  >
-                    <FaTwitter className='h-6 w-6' />
-                  </a>
-                </div>
+              <div className='mt-8 flex items-center space-x-6'>
+                <a
+                  href={founder.socialMedia.linkedin}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-gray-600 hover:text-indigo-600'
+                  aria-label={founder.socialMedia.description}
+                >
+                  <FaLinkedin className='h-6 w-6' />
+                </a>
+                <a
+                  href={founder.socialMedia.twitter}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-gray-600 hover:text-indigo-600'
+                  aria-label={founder.socialMedia.description}
+                >
+                  <FaTwitter className='h-6 w-6' />
+                </a>
               </div>
             </div>
           </div>

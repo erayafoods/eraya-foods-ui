@@ -266,10 +266,12 @@ const FAQSection = () => {
   return (
     <>
       <div
-        className='max-w-screen-2xl content-center px-[8vw] pb-[8vh]'
+        className='px-24 content-center items-center  pb-[8vh]'
         style={{ fontFamily: inter.style.fontFamily }}
       >
-        <div className={`${styles.backgroundImage3} w-96 h-96 mx-auto`}></div>
+        <div
+          className={`${styles.backgroundImage3} w-96 h-96 mx-auto content-center`}
+        ></div>
         <h1
           className='text-center text-3xl font-bold pb-[5vh]'
           style={{ fontFamily: ibm.style.fontFamily }}

@@ -108,7 +108,7 @@ const ContactUs: React.FC = () => {
         style={{ fontFamily: poppins.style.fontFamily }}
       >
         <div className='max-w-7xl mx-auto'>
-          <div className='bg-white rounded-2xl shadow-xl overflow-hidden'>
+          <div className='bg-white rounded-2xl  overflow-hidden'>
             <div className='grid grid-cols-1 lg:grid-cols-2'>
               {/* Form Section */}
               <div className='p-8 lg:p-12'>
@@ -238,7 +238,7 @@ const ContactUs: React.FC = () => {
                   {/* Alert Message */}
                   {submitted && (
                     <div
-                      className='p-6 bg-[#5d1c34] shadow-lg rounded-lg text-white text-lg font-semibold text-center mt-4 transition-transform transform hover:scale-105 focus-within:scale-105'
+                      className='p-6 bg-[#5d1c34]  rounded-lg text-white text-lg font-semibold text-center mt-4 transition-transform transform hover:scale-105 focus-within:scale-105'
                       role='alert'
                     >
                       Thank you for your message! We will reach out to you soon!
