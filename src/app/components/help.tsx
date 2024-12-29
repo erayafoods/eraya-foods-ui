@@ -266,7 +266,7 @@ const FAQSection = () => {
   return (
     <>
       <div
-        className='px-24 content-center items-center  pb-[8vh]'
+        className='px-[20vh] content-center items-center  pb-[8vh]'
         style={{ fontFamily: inter.style.fontFamily }}
       >
         <div

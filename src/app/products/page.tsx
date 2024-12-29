@@ -106,7 +106,7 @@ Size: Varies (13mm-19mm)`
 const Products = () => {
   return (
     <>
-      <div className='max-w-screen-2xl content-center px-[2vw] pb-[6vh] bg-gray-100'>
+      <div className='content-center px-[8vh] pb-[6vh] bg-gray-100'>
         <section className='py-16'>
           <h1
             className='text-4xl text-center font-extrabold text-gray-800 mb-12'
