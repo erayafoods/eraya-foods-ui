@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Inter, IBM_Plex_Serif } from 'next/font/google'
 import { Metadata } from 'next'
-
+import WhatsAppButton from '../components/whatsapp'
 export const metadata: Metadata = {
   title: 'Explore organic Foxnuts,Phool Makhana | Eraya Foods Products',
   description:
@@ -147,6 +147,7 @@ const Products = () => {
             ))}
           </div>
         </section>
+        <WhatsAppButton />
       </div>
     </>
   )

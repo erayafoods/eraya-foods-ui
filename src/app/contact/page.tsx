@@ -23,10 +23,12 @@ export const metadata: Metadata = {
   }
 }
 import ContactUs from '../components/contactForm'
+import WhatsAppButton from '../components/whatsapp'
 export default function Contact () {
   return (
     <>
       <ContactUs aria-label='Contact us by submitting this form' />
+      <WhatsAppButton />
     </>
   )
 }
