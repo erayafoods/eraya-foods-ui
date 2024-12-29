@@ -255,7 +255,7 @@ const ContactUs: React.FC = () => {
                     <div className='space-y-6'>
                       <div className='flex items-center space-x-4  text-black'>
                         <FiMail className='w-6 h-6  hover:text-stone-600 transition duration-200' />
-                        <span>info@erayafoods.com</span>
+                        <span>ankush@erayafoods.com</span>
                       </div>
                       <div className='flex items-center space-x-4 text-black'>
                         <FiPhone className='w-6 h-6    hover:text-black transition duration-200' />
