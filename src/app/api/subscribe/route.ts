@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
 
 export async function GET(req: NextRequest) {
     return NextResponse.json(
-        { message: "GET request not supported here" },
+        { message: "GET request not supported here , so dont request" },
         { status: 405 }
     );
 }
