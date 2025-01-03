@@ -10,7 +10,6 @@ interface FounderData {
   quote: string
   socialMedia: {
     linkedin: string
-    twitter: string
     description: string
   }
 }
@@ -35,8 +34,8 @@ const FounderSection: React.FC = () => {
       quote:
         "Success isn't just in the products we deliver, but in the trust and value we bring to those who enjoy them.",
       socialMedia: {
-        linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        linkedin: 'https://www.linkedin.com/in/ankush-kumar-foxnut/',
+
         description:
           'Social Media of Ankush Kumar ,Founder & CEO of Eraya Foods '
       }
@@ -49,8 +48,8 @@ const FounderSection: React.FC = () => {
       quote:
         'True service goes beyond meeting expectations; it’s about anticipating needs and creating lasting value in every experience.',
       socialMedia: {
-        linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        linkedin: '',
+
         description: 'Social Media of Anubhi Shah ,COO of Eraya Foods'
       }
     }
@@ -100,26 +99,19 @@ const FounderSection: React.FC = () => {
                 {founder.quote}
               </blockquote>
 
-              <div className='mt-8 flex items-center space-x-6'>
-                <a
-                  href={founder.socialMedia.linkedin}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-gray-600 hover:text-indigo-600'
-                  aria-label={founder.socialMedia.description}
-                >
-                  <FaLinkedin className='h-6 w-6' />
-                </a>
-                <a
-                  href={founder.socialMedia.twitter}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-gray-600 hover:text-indigo-600'
-                  aria-label={founder.socialMedia.description}
-                >
-                  <FaTwitter className='h-6 w-6' />
-                </a>
-              </div>
+              {founder.socialMedia.linkedin?.length > 0 && (
+                <div className='mt-8 flex items-center space-x-6'>
+                  <a
+                    href={founder.socialMedia.linkedin}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-gray-600 hover:text-indigo-600'
+                    aria-label={founder.socialMedia.description}
+                  >
+                    <FaLinkedin className='h-6 w-6' />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}
