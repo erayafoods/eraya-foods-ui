@@ -119,7 +119,7 @@ const Products = () => {
             {products.map((product, index) => (
               <div
                 key={index}
-                className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform p-[4vh]'
+                className='bg-[white] rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform p-[4vh]'
               >
                 <picture>
                   <source srcSet={`${product.image}?webp`} type='image/webp' />
