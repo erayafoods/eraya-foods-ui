@@ -169,18 +169,19 @@ export default function About () {
       </section>
 
       {/* Mission and Vision Section */}
+
       <section className='py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 px-6 lg:px-32'>
           <div className=''>
             <h3
               className='font-semibold text-xl'
-              style={{ fontFamily: ibm.style.fontFamily }}
+              style={{ fontFamily: ibm.style.fontFamily }} // Assuming this is the preferred font for titles
             >
               Mission
             </h3>
             <p
-              className=' text-gray-600 pt-4 text-sm md:text-base'
-              style={{ fontFamily: inter.style.fontFamily }}
+              className='text-gray-600 pt-4 text-sm md:text-base'
+              style={{ fontFamily: inter.style.fontFamily }} // Assuming this is the preferred font for paragraph text
             >
               Our mission is to be a trusted partner, delivering pure,
               high-quality foxnuts with a commitment to sustainability that
@@ -202,13 +203,13 @@ export default function About () {
           <div>
             <h3
               className='font-semibold text-xl'
-              style={{ fontFamily: inter.style.fontFamily }}
+              style={{ fontFamily: ibm.style.fontFamily }} // Apply the same title font style here for consistency
             >
               Vision
             </h3>
             <p
               className='text-gray-600 pt-4 text-sm md:text-base'
-              style={{ fontFamily: inter.style.fontFamily }}
+              style={{ fontFamily: inter.style.fontFamily }} // Use the same font family for vision text
             >
               Our vision is to make premium foxnuts a household staple,
               promoting healthier lifestyles with a nutritious alternative to
@@ -216,7 +217,7 @@ export default function About () {
               children.
             </p>
             <p
-              className=' text-gray-600 pt-2 text-sm md:text-base'
+              className='text-gray-600 pt-2 text-sm md:text-base'
               style={{ fontFamily: inter.style.fontFamily }}
             >
               We honor our farmers’ dedication, upholding values of quality and
