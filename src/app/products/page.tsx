@@ -95,6 +95,14 @@ const products = [
     description:
       'A premium mix, perfect for diverse culinary and packaging needs.',
     specifications: `Specification: Mixed Quality Graded, Multiple Sizes\nSize: Mix of 4,5+ Sutta`
+  },
+  {
+    image: '/customized.avif',
+    alt: 'Customized Packaging',
+    title: 'White Label Customized Packaging',
+    description:
+      'Tailored packaging solutions that meet diverse culinary requirements, offering a premium mix of high-quality ingredients for various packaging needs.',
+    specifications: `Specification: Premium Quality Graded, Multiple Sizes\nSize: Mix of 4, 5+ Sutta`
   }
 ]
 
@@ -123,7 +131,7 @@ const Products = () => {
                     alt={product.alt}
                     width={100}
                     height={100}
-                    className='w-full h-36 object-contain rounded-lg mb-4'
+                    className='w-full h-56 object-contain rounded-lg mb-4'
                   />
                 </picture>
                 <div className='p-4'>
