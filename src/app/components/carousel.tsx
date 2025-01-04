@@ -19,15 +19,15 @@ const ImageCarousel: React.FC = () => {
       alt: 'Eraya foods:Best makhana Supplier,Raw ,Customized'
     },
     {
-      src: '/Home_1.avif',
+      src: '/Home_1.svg',
       alt: 'Premium organic foxnuts from Bihar, India - Crunchy, best foxnut supplier'
     },
     {
-      src: '/Home_2.avif',
+      src: '/Home_2.svg',
       alt: "Boost sales with Eraya's premium foxnuts, on-time delivery, support, packaging & marketing"
     },
     {
-      src: '/Home_3.avif',
+      src: '/Home_3.svg',
       alt: "From farmer's fields to world's table "
     }
   ]
@@ -81,7 +81,7 @@ const ImageCarousel: React.FC = () => {
     >
       {/* Carousel images */}
       <div
-        className='flex transition-transform duration-700 ease-in-out'
+        className='flex transition-transform duration-700 bg-contain ease-in-out'
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
