@@ -73,7 +73,7 @@ const ImageCarousel: React.FC = () => {
 
   return (
     <div
-      className='relative max-w-full mx-auto overflow-hidden   aspect-[16/9]'
+      className='relative max-w-full mx-auto overflow-hidden  aspect-ration[16/9]'
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role='region'
@@ -89,7 +89,7 @@ const ImageCarousel: React.FC = () => {
             key={index}
             src={image.src}
             alt={image.alt}
-            className='flex-shrink-0 transition-opacity duration-700 ease-in-out'
+            className='flex-shrink-0 transition-opacity duration-700 ease-in-out '
             style={{ opacity: currentIndex === index ? 1 : 0.5 }}
             width={1920}
             height={1080}
