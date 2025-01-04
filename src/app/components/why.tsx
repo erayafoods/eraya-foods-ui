@@ -5,9 +5,9 @@ const WhyChooseUs: React.FC = () => {
   return (
     <div className='relative max-w-full mx-auto overflow-hidden  aspect-[16/9]'>
       <picture>
-        <source srcSet='/ourStory.avif?webp' type='image/webp' />
+        <source srcSet='/ourStory.svg?webp' type='image/webp' />
         <Image
-          src='/ourStory.avif'
+          src='/ourStory.svg'
           alt='Eraya Foods, the best foxnut exporter from India'
           layout='fill' // Ensures the image fits its container
           objectFit='cover' // Prevents stretching or distortion

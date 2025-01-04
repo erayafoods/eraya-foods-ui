@@ -5,9 +5,9 @@ const Roadmap: React.FC = () => {
   return (
     <div className='relative max-w-full mx-auto overflow-hidden aspect-[16/9]'>
       <picture>
-        <source srcSet='/roadmap.avif?webp' type='image/webp' />
+        <source srcSet='/roadmap.svg?webp' type='image/webp' />
         <Image
-          src='/roadmap.avif'
+          src='/roadmap.svg'
           alt='Eraya Foods, the best foxnut exporter from India'
           layout='fill' // Ensures the image fills the container
           objectFit='cover' // Prevents stretching or distortion
