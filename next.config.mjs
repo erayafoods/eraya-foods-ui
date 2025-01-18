@@ -23,7 +23,8 @@ const nextConfig = withOptimizedImages({
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'ALLOW-FROM https://drive.google.com'
+            value:
+              'ALLOW-FROM https://drive.google.com  https://www.google.com/maps '
           },
           {
             key: 'Referrer-Policy',
@@ -36,7 +37,7 @@ const nextConfig = withOptimizedImages({
           {
             key: 'Content-Security-Policy',
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://drive.google.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'self' https://drive.google.com frame-src 'self' https://www.google.com/maps"
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://drive.google.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'self' https://drive.google.com  https://www.google.com/maps"
           }
         ]
       }
