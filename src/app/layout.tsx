@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   openGraph: {
     title:
-      'Eraya Foods: Best Indian Foxnut Exporter | Premium Makhana Supplier',
+      'Eraya Foods: Best Indian Makhana Exporter | Premium Makhana Supplier',
     description:
-      'Eraya Foods is the leading exporter of premium foxnuts and makhana from Bihar, India. We offer organic, crunchy foxnuts with customizable packaging options for global distribution.',
+      'Eraya Foods is the leading exporter of premium foxnuts , makhana from Bihar, India. We offer organic, crunchy foxnuts with customizable packaging options for global distribution.',
     url: 'https://erayafoods.com',
     siteName: 'Eraya Foods',
     images: [
       {
-        url: 'https://erayafoods.com/Home.png',
+        url: 'https://erayafoods.com/eraya.jpeg',
         width: 1200,
         height: 630,
         alt: 'Eraya Foods Premium Foxnuts'

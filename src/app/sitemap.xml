@@ -32,7 +32,7 @@
 
       <changefreq>hourly</changefreq>
 
-      <priority>0.98</priority>
+      <priority>0.99</priority>
 
    </url>
     <url>
@@ -57,6 +57,56 @@
       <priority>0.96</priority>
 
    </url>
+
+   <url>
+
+      <loc>https://erayafoods.com/healthBenefits</loc>
+
+      <lastmod>2025-01-18</lastmod>
+
+      <changefreq>daily</changefreq>
+
+      <priority>0.98</priority>
+
+   </url>
+
+
+   <url>
+
+      <loc>https://erayafoods.com/brochure</loc>
+
+      <lastmod>2025-01-18</lastmod>
+
+      <changefreq>daily</changefreq>
+
+      <priority>0.98</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://erayafoods.com/blog</loc>
+
+      <lastmod>2025-01-18</lastmod>
+
+      <changefreq>hourly</changefreq>
+
+      <priority>0.98</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://erayafoods.com/logistics</loc>
+
+      <lastmod>2025-01-18</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.98</priority>
+
+   </url>
+
 
 
 

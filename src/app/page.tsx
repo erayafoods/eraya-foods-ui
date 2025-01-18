@@ -31,18 +31,18 @@ const jsonLd = {
   }
 }
 export const metadata: Metadata = {
-  title: 'Eraya Foods: Best Foxnut Exporter | Premium Phool Makhana',
+  title: 'Eraya Foods: Best Makhana Exporter | Premium Phool Makhana',
   description:
-    'Eraya Foods is the leading Indian exporter of premium foxnuts and makhana. Explore organic, crunchy foxnuts with customizable packaging and global reach.',
+    'Eraya Foods is the leading Indian exporter of premium foxnuts , makhana. Explore organic, crunchy foxnuts with customizable packaging and global reach.',
   keywords: [
     'Eraya Foods',
-    'Premium Foxnuts',
+    'Premium Phool Makhana',
     'Makhana',
     'Best Indian Makhana',
-    'Foxnut Exporter',
-    'Organic Foxnuts',
+    'Foxnut, Makhana Exporter',
+    'Organic Makhana,Foxnuts',
     'Indian Makhana',
-    'Prickly Water Lily - Food',
+    'Makhana, Prickly Water Lily - Food ',
     'Euryale Ferox Benefits',
     'Makhana Food'
   ],

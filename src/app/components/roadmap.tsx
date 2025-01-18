@@ -8,7 +8,7 @@ const Roadmap: React.FC = () => {
         <source srcSet='/roadmap.svg?webp' type='image/webp' />
         <Image
           src='/roadmap.svg'
-          alt='Eraya Foods, the best foxnut exporter from India'
+          alt='Eraya Foods makhana production process: sourcing from nature, cleaning and sorting, roasting to perfection, packing for freshness, and delivering globally.'
           layout='fill' // Ensures the image fills the container
           objectFit='cover' // Prevents stretching or distortion
           className='roadmap-image'

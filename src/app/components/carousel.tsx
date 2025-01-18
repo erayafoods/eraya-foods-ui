@@ -16,15 +16,15 @@ const ImageCarousel: React.FC = () => {
   const images: ImageType[] = [
     {
       src: '/Home.svg',
-      alt: 'Eraya foods:Best makhana Supplier,Raw ,Customized'
+      alt: 'Eraya foods:Best Makhana Supplier,Raw ,Customized'
     },
     {
       src: '/Home_1.svg',
-      alt: 'Premium organic foxnuts from Bihar, India - Crunchy, best foxnut supplier'
+      alt: 'Premium organic  Makhana,foxnuts from Bihar, India - Crunchy, best Makhana,foxnut supplier'
     },
     {
       src: '/Home_2.svg',
-      alt: "Boost sales with Eraya's premium foxnuts, on-time delivery, support, packaging & marketing"
+      alt: "Boost sales with Eraya's premium Makhana,foxnuts, on-time delivery, support, packaging & marketing"
     },
     {
       src: '/Home_3.svg',
