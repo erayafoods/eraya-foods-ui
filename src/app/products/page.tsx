@@ -103,6 +103,46 @@ const products = [
     description:
       'Tailored packaging solutions that meet diverse culinary requirements, offering a premium mix of high-quality ingredients for various packaging needs.',
     specifications: `Specification: Premium Quality Graded, Multiple Sizes\nSize: Mix of 4, 5+ Sutta`
+  },
+  {
+    image: '/greenCardamom.jpeg',
+    alt: 'Green Cardamom',
+    title: 'Premium Green Cardamom',
+    description:
+      'Fresh and aromatic green cardamom pods, carefully selected for their rich flavor and superior quality, ideal for culinary and packaging needs.',
+    specifications: `Specification: Bold Graded, 8mm and 8.5mm\nSize: Multiple Size Grades Available`
+  },
+  {
+    image: '/blackPepper.webp',
+    alt: 'Black Pepper',
+    title: 'Bold Black Pepper',
+    description:
+      'High-grade black pepper sourced from the finest farms, offering bold flavor and strong aroma, perfect for diverse culinary applications.',
+    specifications: `Specification: Idukki Bold 630GL, Mini Bold 580GL\nSize: Multiple Grades Available`
+  },
+  {
+    image: '/coriander.webp',
+    alt: 'Coriander Seeds',
+    title: 'Pure Coriander Seeds',
+    description:
+      'Aromatic and flavorful coriander seeds, ensuring freshness and purity, ideal for both domestic and international packaging standards.',
+    specifications: `Specification: 99% Purity, Husk Removed\nSize: Available in Bulk Quantities`
+  },
+  {
+    image: '/cuminSeeds.webp',
+    alt: 'Cumin Seeds',
+    title: 'Aromatic Cumin Seeds',
+    description:
+      'Highly aromatic cumin seeds with a distinct flavor, sourced and processed for premium quality, suitable for various culinary uses.',
+    specifications: `Specification: 99.5% Purity (Singapore Quality), 99% Purity (Dubai Quality)\nSize: Multiple Sizes Available`
+  },
+  {
+    image: '/cashewNuts.jpg',
+    alt: 'Cashew Nuts',
+    title: 'Premium Cashew Nuts',
+    description:
+      'Finest quality cashew nuts, handpicked and processed to ensure premium standards, perfect for white label and bulk packaging.',
+    specifications: `Specification: Graded Quality, W180, W240, W320\nSize: Multiple Grades Available`
   }
 ]
 
