@@ -179,7 +179,7 @@ const Products = () => {
                     {product.title}
                   </h2>
                   <p className='text-gray-600 mb-4'>{product.description}</p>
-                  <p className='text-gray-600 text-sm mt-2 whitespace-pre-line'>
+                  <p className='text-gray-600  mt-2 whitespace-pre-line'>
                     {product.specifications}
                   </p>
                 </div>
